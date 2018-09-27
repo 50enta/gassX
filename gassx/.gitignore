@@ -1,14 +1,12 @@
-/node_modules
-/public/hot
-/public/storage
-/storage/*.key
-/vendor
-/.idea
-/.vscode
-/.vagrant
-Homestead.json
-Homestead.yaml
+.DS_Store
+node_modules/
+dist/
 npm-debug.log
 yarn-error.log
-.env
-.phpunit.result.cache
+
+# Editor directories and files
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
