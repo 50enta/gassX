@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateContribuicaosTable extends Migration
+class CreateEventoUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,13 @@ class CreateContribuicaosTable extends Migration
      */
     public function up()
     {
-        Schema::create('contribuicaos', function (Blueprint $table) {
+        Schema::create('evento_users', function (Blueprint $table) {
             $table->increments('id');
+
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->integer('evento_id')->unsigned();
+            $table->foreign('evento_id')->references('id')->on('eventos');
             $table->timestamps();
         });
     }
@@ -26,6 +31,6 @@ class CreateContribuicaosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('contribuicaos');
+        Schema::dropIfExists('evento_users');
     }
 }

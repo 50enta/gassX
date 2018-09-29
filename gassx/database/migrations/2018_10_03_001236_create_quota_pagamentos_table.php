@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateEventosTable extends Migration
+class CreateQuotaPagamentosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,13 @@ class CreateEventosTable extends Migration
      */
     public function up()
     {
-        Schema::create('eventos', function (Blueprint $table) {
+        Schema::create('quota_pagamentos', function (Blueprint $table) {
             $table->increments('id');
+
+            $table->integer('pagamento_id')->unsigned();
+            $table->foreign('pagamento_id')->references('id')->on('pagamentos');
+            $table->integer('quota_id')->unsigned();
+            $table->foreign('quota_id')->references('id')->on('quotas');
             $table->timestamps();
         });
     }
@@ -26,6 +31,6 @@ class CreateEventosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('eventos');
+        Schema::dropIfExists('quota_pagamentos');
     }
 }

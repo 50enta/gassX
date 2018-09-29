@@ -15,6 +15,11 @@ class CreateDespesaEventosTable extends Migration
     {
         Schema::create('despesa_eventos', function (Blueprint $table) {
             $table->increments('id');
+
+            $table->integer('contribuicao_evento_id')->unsigned();
+            $table->foreign('contribuicao_evento_id')->references('id')->on('contribuicao_eventos');
+            $table->integer('despesa_id')->unsigned();
+            $table->foreign('despesa_id')->references('id')->on('despesas');
             $table->timestamps();
         });
     }

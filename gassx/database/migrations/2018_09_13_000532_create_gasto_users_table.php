@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAcessosTable extends Migration
+class CreateGastoUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,11 @@ class CreateAcessosTable extends Migration
      */
     public function up()
     {
-        Schema::create('acessos', function (Blueprint $table) {
+        Schema::create('gasto_users', function (Blueprint $table) {
             $table->increments('id');
+
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }
@@ -26,6 +29,6 @@ class CreateAcessosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('acessos');
+        Schema::dropIfExists('gasto_users');
     }
 }

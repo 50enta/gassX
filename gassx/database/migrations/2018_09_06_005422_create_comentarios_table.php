@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDespesaUsersTable extends Migration
+class CreateComentariosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateDespesaUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('despesa_users', function (Blueprint $table) {
+        Schema::create('comentarios', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
         });
@@ -26,6 +26,6 @@ class CreateDespesaUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('despesa_users');
+        Schema::dropIfExists('comentarios');
     }
 }

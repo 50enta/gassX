@@ -4,8 +4,8 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePagamentosTable extends Migration
-{
+class CreateMesTable extends Migration
+{  
     /**
      * Run the migrations.
      *
@@ -13,7 +13,7 @@ class CreatePagamentosTable extends Migration
      */
     public function up()
     {
-        Schema::create('pagamentos', function (Blueprint $table) {
+        Schema::create('mes', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
         });
@@ -26,6 +26,6 @@ class CreatePagamentosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pagamentos');
+        Schema::dropIfExists('mes');
     }
 }

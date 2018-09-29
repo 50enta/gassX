@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateQuotasTable extends Migration
+class CreateDespesasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,11 @@ class CreateQuotasTable extends Migration
      */
     public function up()
     {
-        Schema::create('quotas', function (Blueprint $table) {
+        Schema::create('despesas', function (Blueprint $table) {
             $table->increments('id');
+
+            $table->integer('saida_id')->unsigned();
+            $table->foreign('saida_id')->references('id')->on('saidas');
             $table->timestamps();
         });
     }
@@ -26,6 +29,6 @@ class CreateQuotasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('quotas');
+        Schema::dropIfExists('despesas');
     }
 }

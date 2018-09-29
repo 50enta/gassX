@@ -15,6 +15,11 @@ class CreateDespesaParceirosTable extends Migration
     {
         Schema::create('despesa_parceiros', function (Blueprint $table) {
             $table->increments('id');
+
+            $table->integer('parceiro_id')->unsigned();
+            $table->foreign('parceiro_id')->references('id')->on('parceiros');
+            $table->integer('despesa_id')->unsigned();
+            $table->foreign('despesa_id')->references('id')->on('despesas');
             $table->timestamps();
         });
     }

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMesTable extends Migration
+class CreateEntradasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,11 @@ class CreateMesTable extends Migration
      */
     public function up()
     {
-        Schema::create('mes', function (Blueprint $table) {
+        Schema::create('entradas', function (Blueprint $table) {
             $table->increments('id');
+
+            //   $table->integer('dinheiro_id')->unsigned();
+            // $table->foreign('dinheiro_id')->references('id')->on('dinheiros');
             $table->timestamps();
         });
     }
@@ -26,6 +29,6 @@ class CreateMesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('mes');
+        Schema::dropIfExists('entradas');
     }
 }
