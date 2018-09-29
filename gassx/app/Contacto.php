@@ -15,4 +15,13 @@ class Contacto extends Model
     protected $fillable = [
         'activo', 'numero',  
     ];
+
+    /**
+     * Retorna o utilizador do contacto   
+     *
+     * @var array
+     */
+    public function user(){
+        return $this->hasOne('App\User');
+    }
 }

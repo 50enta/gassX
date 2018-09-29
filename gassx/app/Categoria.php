@@ -15,4 +15,14 @@ class Categoria extends Model
     protected $fillable = [
         'activo', 'apagado', 'descricao', 'dataRegisto', 
     ];
+
+
+     /**
+     * Retorna o 
+     *
+     * @var array
+     */
+    public function eventos(){
+        return $this->hasMany('App\Evento');
+    }
 }

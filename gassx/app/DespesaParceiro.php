@@ -15,4 +15,23 @@ class DespesaParceiro extends Model
     protected $fillable = [
         'activo', 'apagado', 'descricao', 'dataRegisto', 
     ];
+
+
+    /**
+     * Retorna o 
+     *
+     * @var array
+     */
+    public function despesa(){
+        return $this->belongsTo('App\Despesa');
+    }
+
+    /**
+     * Retorna o 
+     *
+     * @var array
+     */
+    public function parceiro(){
+        return $this->belongsTo('App\Parceiro');
+    }
 }

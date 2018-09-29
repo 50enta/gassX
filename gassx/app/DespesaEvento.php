@@ -15,4 +15,24 @@ class DespesaEvento extends Model
     protected $fillable = [
         'activo', 'apagado', 'descricao', 'dataRegisto', 
     ];
+
+    /**
+     * Retorna o 
+     *
+     * @var array
+     */
+    public function contribuicaoEvento(){
+        return $this->belongsTo('App\ContribuicaoEvento');
+    }
+
+    /**
+     * Retorna o 
+     *
+     * @var array
+     */
+    public function despesa(){
+        return $this->belongsTo('App\Despesa');
+    }
+
+
 }

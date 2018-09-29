@@ -15,4 +15,23 @@ class DespesaUser extends Model
     protected $fillable = [
         'activo', 'apagado', 'descricao', 'dataRegisto', 
     ];
+
+
+    /**
+     * Retorna o 
+     *
+     * @var array
+     */
+    public function user(){
+        return $this->belongsTo('App\User');
+    }
+
+    /**
+     * Retorna o 
+     *
+     * @var array
+     */
+    public function despesa(){
+        return $this->belongsTo('App\Despesa');
+    }
 }

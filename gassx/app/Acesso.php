@@ -15,4 +15,14 @@ class Acesso extends Model
     protected $fillable = [
         'activo', 'dataAcesso', 
     ];
+
+
+    /**
+     * Retorna o 
+     *
+     * @var array
+     */
+    public function user(){
+        return $this->belongsTo('App\User');
+    }
 }

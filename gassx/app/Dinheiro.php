@@ -15,4 +15,24 @@ class Dinheiro extends Model
     protected $fillable = [
         'activo', 'apagado', 'descricao', 'dataRegisto', 
     ];
+
+
+
+    /**
+     * Retorna 
+     *
+     * @var array
+     */
+    public function saida(){
+        return $this->hasOne('App\Saida');
+    }
+
+    /**
+     * Retorna 
+     *
+     * @var array
+     */
+    public function entrada(){
+        return $this->hasOne('App\Entrada');
+    }
 }

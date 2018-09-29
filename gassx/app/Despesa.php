@@ -15,4 +15,41 @@ class Despesa extends Model
     protected $fillable = [
         'activo', 'apagado', 'dataRegisto', 
     ];
+
+
+    /**
+     * Retorna 
+     *
+     * @var array
+     */
+    public function DespesaEventos(){
+        return $this->hasMany('App\DespesaEvento');
+    }
+
+    /**
+     * Retorna 
+     *
+     * @var array
+     */
+    public function despesaParceiros(){
+        return $this->hasMany('App\DespesaParceiro');
+    }
+
+     /**
+     * Retorna 
+     *
+     * @var array
+     */
+    public function despesaUsers(){
+        return $this->hasMany('App\DespesaUser');
+    }
+
+    /**
+     * Retorna o 
+     *
+     * @var array
+     */
+    public function saida(){
+        return $this->belongsTo('App\Saida');
+    }
 }
