@@ -1,5 +1,8 @@
-<?php
+ <?php
+ import vue from 'vue'
+ import VueRouter  from 'vue-router'
 
+ vue.use(vueRouter);
 /*
 |--------------------------------------------------------------------------
 | Web Routes
