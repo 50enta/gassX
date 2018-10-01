@@ -23,6 +23,7 @@ class Despesa extends Model
      * @var array
      */
     public function DespesaEventos(){
+    
         return $this->hasMany('App\DespesaEvento');
     }
 
