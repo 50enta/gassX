@@ -13,7 +13,7 @@ class Acesso extends Model
      * @var array
      */
     protected $fillable = [
-        'activo', 'dataAcesso', 
+        'activo', 'dataEntrada', 'dataSaida' ,
     ];
 
 

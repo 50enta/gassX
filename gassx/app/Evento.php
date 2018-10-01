@@ -7,7 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 class Evento extends Model
 {
     //
-
+     /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'activo', 'descricao', 'objectivo', 'valorAContribuir','dataInicio','dataFim', 
+        'endereco_id', 'categoria_id', 
+    ];
 
 	/**
      * Retorna 

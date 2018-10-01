@@ -7,6 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class UserContribuicao extends Model
 {
     //
+     protected $fillable = [
+        'activo', 'gasto_user_id','contribuicao_id',
+    ];
 
 
     /**

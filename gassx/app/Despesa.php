@@ -13,7 +13,7 @@ class Despesa extends Model
      * @var array
      */
     protected $fillable = [
-        'activo', 'apagado', 'dataRegisto', 
+        'activo', 'descricao', 'saida_id', 
     ];
 
 

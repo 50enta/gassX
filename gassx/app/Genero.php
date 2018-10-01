@@ -8,7 +8,7 @@ class Genero extends Model
 {
     //
 	 protected $fillable = [
-        'descricao', 
+        'activo', 'descricao',
     ];
 
 

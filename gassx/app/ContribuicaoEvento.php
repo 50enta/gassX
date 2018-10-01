@@ -13,7 +13,7 @@ class ContribuicaoEvento extends Model
      * @var array
      */
     protected $fillable = [
-        'activo', 'apagado', 'dataRegisto', 
+        'activo', 'evento_id', 'entrada_id', 
     ];
 
 

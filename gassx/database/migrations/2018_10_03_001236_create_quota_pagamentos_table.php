@@ -15,7 +15,8 @@ class CreateQuotaPagamentosTable extends Migration
     {
         Schema::create('quota_pagamentos', function (Blueprint $table) {
             $table->increments('id');
-
+            $table->boolean('activo');
+            
             $table->integer('pagamento_id')->unsigned();
             $table->foreign('pagamento_id')->references('id')->on('pagamentos');
             $table->integer('quota_id')->unsigned();

@@ -14,9 +14,9 @@ class CreateParceiroContribuicaosTable extends Migration
     public function up()
     {
         Schema::create('parceiro_contribuicaos', function (Blueprint $table) {
-            $table->engine = 'InnoDB';
             $table->increments('id');
-
+            $table->boolean('activo');
+            
             $table->integer('parceiro_id')->unsigned();
             $table->foreign('parceiro_id')->references('id')->on('parceiros');
             $table->integer('contribuicao_id')->unsigned();

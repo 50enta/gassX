@@ -15,8 +15,9 @@ class CreatePagamentosTable extends Migration
     {
         Schema::create('pagamentos', function (Blueprint $table) {
             $table->increments('id');
+            $table->boolean('activo');
 
-              $table->integer('gasto_user_id')->unsigned();
+            $table->integer('gasto_user_id')->unsigned();
             $table->foreign('gasto_user_id')->references('id')->on('gasto_users');
             $table->integer('entrada_id')->unsigned();
             $table->foreign('entrada_id')->references('id')->on('entradas');

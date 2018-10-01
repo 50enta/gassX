@@ -7,6 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 class QuotaPagamento extends Model
 {
     //
+     /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'activo', 'pagamento_id', 'quota_id' ,
+    ];
+
 
 	 /**
      * Retorna o 

@@ -13,7 +13,7 @@ class DespesaEvento extends Model
      * @var array
      */
     protected $fillable = [
-        'activo', 'apagado', 'descricao', 'dataRegisto', 
+        'activo', 'contribuicao_evento_id', 'despesa_id',  
     ];
 
     /**

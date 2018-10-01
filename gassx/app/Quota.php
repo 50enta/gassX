@@ -8,7 +8,14 @@ class Quota extends Model
 {
     //
 
-
+     /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'activo', 'mes_id', 'ano_id' ,
+    ];
 
      /**
      * Retorna 

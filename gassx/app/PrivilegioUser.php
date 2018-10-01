@@ -7,7 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class PrivilegioUser extends Model
 {
     //
-
+    protected $fillable = [
+        'activo', 'user_id','privilegio_id',
+    ];
     /**
      * Retorna o 
      *

@@ -7,7 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class EventoUser extends Model
 {
     //
-
+     protected $fillable = [
+        'activo', 'user_id','evento_id'
+    ];
 
 
     /**

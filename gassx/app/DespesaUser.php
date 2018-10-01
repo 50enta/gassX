@@ -13,7 +13,7 @@ class DespesaUser extends Model
      * @var array
      */
     protected $fillable = [
-        'activo', 'apagado', 'descricao', 'dataRegisto', 
+        'activo', 'user_id', 'despesa_id', 
     ];
 
 

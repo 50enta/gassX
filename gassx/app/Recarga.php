@@ -7,7 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class Recarga extends Model
 {
     //
-
+	 protected $fillable = [
+        'activo', 'valor','user_id', 
+    ];
 
 	/**
      * Retorna o 

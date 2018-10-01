@@ -13,7 +13,7 @@ class Dinheiro extends Model
      * @var array
      */
     protected $fillable = [
-        'activo', 'apagado', 'descricao', 'dataRegisto', 
+        'activo', 'valor', 
     ];
 
 

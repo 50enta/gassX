@@ -15,6 +15,8 @@ class CreateDinheirosTable extends Migration
     {
         Schema::create('dinheiros', function (Blueprint $table) {
             $table->increments('id');
+            $table->boolean('activo');
+            $table->double('valor');
             $table->timestamps();
         });
     }

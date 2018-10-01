@@ -15,6 +15,8 @@ class CreateSaidasTable extends Migration
     {
         Schema::create('saidas', function (Blueprint $table) {
             $table->increments('id');
+            $table->boolean('activo');
+            $table->double('valor');
 
             $table->integer('dinheiro_id')->unsigned();
             $table->foreign('dinheiro_id')->references('id')->on('dinheiros');

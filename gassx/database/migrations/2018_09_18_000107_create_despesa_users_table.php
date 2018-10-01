@@ -15,8 +15,8 @@ class CreateDespesaUsersTable extends Migration
     {
         Schema::create('despesa_users', function (Blueprint $table) {
             $table->increments('id');
-
-             $table->integer('user_id')->unsigned();
+            $table->boolean('activo');
+            $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
             $table->integer('despesa_id')->unsigned();
             $table->foreign('despesa_id')->references('id')->on('despesas');

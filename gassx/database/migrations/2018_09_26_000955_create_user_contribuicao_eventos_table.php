@@ -15,7 +15,7 @@ class CreateUserContribuicaoEventosTable extends Migration
     {
         Schema::create('user_contribuicao_eventos', function (Blueprint $table) {
             $table->increments('id');
-
+            $table->boolean('activo');
 
              $table->integer('gasto_user_id')->unsigned();
             $table->foreign('gasto_user_id')->references('id')->on('gasto_users');

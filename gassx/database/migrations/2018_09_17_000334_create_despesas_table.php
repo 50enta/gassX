@@ -15,6 +15,8 @@ class CreateDespesasTable extends Migration
     {
         Schema::create('despesas', function (Blueprint $table) {
             $table->increments('id');
+            $table->boolean('activo');
+            $table->string('descricao');
 
             $table->integer('saida_id')->unsigned();
             $table->foreign('saida_id')->references('id')->on('saidas');
