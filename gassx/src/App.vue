@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div class="container" id="app">
         <navbar></navbar>
         
@@ -98,3 +98,4 @@ body {
 }
 
 </style>
+ -->
