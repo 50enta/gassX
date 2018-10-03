@@ -1,22 +1,22 @@
-<template>
+<!-- <template>
   <div class="container" id="app">
-        <CcNavbar></CcNavbar>
+        <navbar></navbar>
         
   </div>
 </template>
 
 <script>
-import CcNavbar from '../resources/js/components/Navbar.vue'
+import navbar from '../resources/js/components/Navbar.vue'
 export default {
 components:{
-   CcNavbar
+   navbar
 }
-  
+
 }
 
 </script>
 
-<style >
+<style scoped>
 /* Space out content a bit */
 body {
   padding-top: 1.5rem;
@@ -98,3 +98,4 @@ body {
 }
 
 </style>
+ -->

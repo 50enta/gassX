@@ -1,10 +1,5 @@
- <?php
-<<<<<<< HEAD
-=======
+<?php
 
-
- 
->>>>>>> 3db53902de4abfb98fc41b118ff1aa5331ad3139
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,9 +18,3 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-// rotas do utilizador
-// Route::group(['prefix' => 'user'], function () {
-//     Route::get('submeter', 'UserController@submeter'); //user/submeter
-
-// });
