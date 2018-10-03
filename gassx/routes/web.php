@@ -1,8 +1,4 @@
  <?php
- import vue from 'vue'
- import VueRouter  from 'vue-router'
-
- vue.use(vueRouter);
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,3 +17,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+// rotas do utilizador
+// Route::group(['prefix' => 'user'], function () {
+//     Route::get('submeter', 'UserController@submeter'); //user/submeter
+
+// });
