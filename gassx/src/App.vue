@@ -14,8 +14,8 @@ components:{
 
 }
 
-</script>
-
+</script> -->
+<!--
 <style scoped>
 /* Space out content a bit */
 body {
