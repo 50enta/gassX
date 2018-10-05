@@ -1,5 +1,10 @@
  <?php
+<<<<<<< HEAD
+=======
 
+
+ 
+>>>>>>> 3db53902de4abfb98fc41b118ff1aa5331ad3139
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,8 +24,12 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-// rotas do utilizador
-// Route::group(['prefix' => 'user'], function () {
-//     Route::get('submeter', 'UserController@submeter'); //user/submeter
+// rotas do admin
+Route::group(['prefix' => 'admin'], function () {
+    Route::get('/', 'AdminController@telaAdmin');
+    Route::get('/eventos', 'AdminController@telaListarEventosAdmin'); 
+});
 
-// });
+Route::get('/principal', function () {
+    return view('minton.inicio');
+});
