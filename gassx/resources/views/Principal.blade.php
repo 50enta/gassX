@@ -172,7 +172,7 @@
                                     <span class="menu-arrow"></span>
                                 </a>
                                 <ul class="list-unstyled">
-                                    <li><a href="tables-basic.html">Todos eventos</a></li>
+                                    <li><a href="{{url('eventos')}}">Todos eventos</a></li>
                                     <li><a href="tables-datatable.html">Meus eventos</a></li>
                                 </ul>
                             </li>

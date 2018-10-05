@@ -19,12 +19,19 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+// Rotas do utilizador
+Route::get('/principal', function () {
+    return view('minton.inicio');
+});
+
+Route::get('/eventos', function () {
+    return view('user.TelaEvento');
+});
+
+
 // rotas do admin
 Route::group(['prefix' => 'admin'], function () {
     Route::get('/', 'AdminController@telaAdmin');
     Route::get('/eventos', 'AdminController@telaListarEventosAdmin'); 
 });
 
-Route::get('/principal', function () {
-    return view('minton.inicio');
-});
