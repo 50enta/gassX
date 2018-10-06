@@ -29,7 +29,7 @@
                     <div class="col-lg-6">
                         <div class="message-box">
                             <h1 class="m-b-0">GassX</h1>
-                            <h5>Dando mais vida à associações</h5>
+                            <h5>Gestao de Associacoes-Xitiques</h5>
                             <div class="buttons-con">
                                 <div class="action-link-wrap">
                                     {{-- <a onclick="history.back(-1)" href="#" class="btn btn-custom btn-primary waves-effect waves-light m-t-20">Go Back</a>

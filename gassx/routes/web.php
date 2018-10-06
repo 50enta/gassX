@@ -27,11 +27,26 @@ Route::get('/principal', function () {
 Route::get('/eventos', function () {
     return view('user.TelaEvento');
 });
+Route::get('/contas', function () {
+    return view('user.TelaContas');
+});
+
 
 
 // rotas do admin
 Route::group(['prefix' => 'admin'], function () {
-    Route::get('/', 'AdminController@telaAdmin');
-    Route::get('/eventos', 'AdminController@telaListarEventosAdmin'); 
+	Route::get('/', 'AdminController@telaAdmin');
+    Route::get('/financas', 'QuotaController@telaFinancas');
+    Route::get('/eventos', 'EventoController@telaEventos'); 
+    Route::get('/contribuicoes', 'ContribuicaoController@telaContribuicoes'); 
+    Route::get('/despesas', 'DespesaController@telaDespesas'); 
+    Route::get('/entrSaidas', 'DinheiroController@telaEntrSaidas');
+    Route::get('/outros', 'Controller@telaOutros');  
+    Route::get('/parceiros', 'ParceiroController@telaParceiros'); 
+    Route::get('/quotas', 'QuotaController@telaQuotas'); 
+    Route::get('/utilizadores', 'UserController@telaUtilizadores'); 
 });
 
+Route::get('/a', function () {
+    return view('admin.telaAdmin');
+});

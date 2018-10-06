@@ -8,6 +8,8 @@ class UserController extends Controller
 {
     //
 
-
+	public function telaUtilizadores() {
+        return view('admin.telaUtilizadores');
+    }
 
 }
