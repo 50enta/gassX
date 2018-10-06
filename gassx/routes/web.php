@@ -24,8 +24,11 @@ Route::get('/principal', function () {
     return view('minton.inicio');
 });
 
-Route::get('/eventos', function () {
-    return view('user.TelaEvento');
+Route::get('/eventos/todosEventos', function () {
+    return view('user.telaTodosEventos');
+});
+Route::get('/eventos/meusEventos', function () {
+    return view('user.telaMeusEventos');
 });
 Route::get('/contas', function () {
     return view('user.TelaContas');
