@@ -9,14 +9,16 @@
 <div class="col-md-12">
     <div class="card-box">
         <h4 class="header-title m-t-0 m-b-30">Eventos</h4>
-=======
+
 @section('base')
 
     <div class="col-md-12">
+        
+        <h4 class="header-title m-t-0 m-b-30">Eventos</h4>
         <div class="card-box">
-            <h4 class="header-title m-t-0 m-b-30">Eventos</h4>
+            
 
->>>>>>> 3e5a67efac733f9958fa963680e082e27a8396cb
+
 
         <ul class="nav nav-tabs">
             <li class="nav-item">

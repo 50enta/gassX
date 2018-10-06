@@ -5,7 +5,11 @@
 
 
 <div class="tab-content">
+	<hr>
+<h4 class="header-title m-t-0 m-b-30">Meus Eventos</h4>
 	    <div class="row">  
+	    	
+
 	                   
 	        <div class="col-md-6 col-lg-3">
 	                    <!-- Simple card -->
