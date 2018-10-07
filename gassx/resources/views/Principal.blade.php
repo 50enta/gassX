@@ -11,6 +11,11 @@
         <link rel="shortcut icon" href="{{asset('minton/images/favicon.ico')}}">
 
         <title>GassX</title>
+
+         <!-- DataTables -->
+        <link href="{{asset('minton/plugins/datatables/dataTables.bootstrap4.min.css')}}" rel="stylesheet" type="text/css"/>
+        <link href="{{asset('minton/plugins/datatables/responsive.bootstrap4.min.css')}}" rel="stylesheet" type="text/css"/>
+
         <link href="{{asset('minton/plugins/bootstrap-tagsinput/dist/bootstrap-tagsinput.css')}}" rel="stylesheet" />
         <link href="{{asset('minton/plugins/multiselect/css/multi-select.css')}}"  rel="stylesheet" type="text/css" />
         <link href="{{asset('minton/plugins/select2/css/select2.min.css')}}" rel="stylesheet" type="text/css" />
@@ -432,12 +437,32 @@
         <!-- Page js  -->
         <script src="{{asset('minton/pages/jquery.dashboard.js')}}"></script>
 
+        <script src="{{asset('minton/plugins/datatables/jquery.dataTables.min.js')}}"></script>
+        <script src="{{asset('minton/plugins/datatables/dataTables.bootstrap4.min.js')}}"></script>
+        <script src="{{asset('minton/plugins/datatables/dataTables.responsive.min.js')}}"></script>
+
+
         <!-- Examples -->
         <script src="{{asset('minton/plugins/magnific-popup/dist/jquery.magnific-popup.min.js')}}"></script>
         <script src="{{asset('minton/plugins/datatables/jquery.dataTables.min.js')}}"></script>
         <script src="{{asset('minton/plugins/datatables/dataTables.bootstrap4.min.js')}}"></script>
         <script src="{{asset('minton/plugins/tiny-editable/mindmup-editabletable.js')}}"></script>
         <script src="{{asset('minton/plugins/tiny-editable/numeric-input-example.js')}}"></script>
+
+
+        <script src="{{asset('minton/plugins/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js')}}"></script>
+        <script type="text/javascript" src="{{asset('minton/plugins/multiselect/js/jquery.multi-select.js')}}"></script>
+        <script type="text/javascript" src="{{asset('minton/plugins/jquery-quicksearch/jquery.quicksearch.js')}}"></script>
+        <script src="{{asset('minton/plugins/select2/js/select2.min.js')}}" type="text/javascript"></script>
+        <script src="{{asset('minton/plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js')}}" type="text/javascript"></script>
+        <script src="{{asset('minton/plugins/bootstrap-inputmask/bootstrap-inputmask.min.js')}}" type="text/javascript"></script>
+
+        <script src="{{asset('minton/plugins/moment/moment.js')}}"></script>
+        <script src="{{asset('minton/plugins/mjolnic-bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js')}}"></script>
+        <script src="{{asset('minton/plugins/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js')}}"></script>
+        <script src="{{asset('minton/plugins/bootstrap-daterangepicker/daterangepicker.js')}}"></script>
+
+        <script src="{{asset('minton/pages/jquery.form-advanced.init.js')}}"></script>
 
      
         <!-- Custom main Js -->
@@ -458,6 +483,11 @@
             $('#mainTable').editableTableWidget().numericInputExample().find('td:first').focus();
         </script>
 
+         <script type="text/javascript">
+            $(document).ready(function () {
+                $('#datatable').dataTable();
+            });
+        </script>
 
         <script src="{{asset('minton/pages/datatables.editable.init.js')}}"></script>
         <script>
