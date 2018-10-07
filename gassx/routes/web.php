@@ -27,6 +27,10 @@ Route::get('/principal', function () {
 Route::get('/eventos', function () {
     return view('user.TelaEvento');
 });
+Route::get('/contas', function () {
+    return view('user.TelaContas');
+});
+
 
 
 // rotas do admin

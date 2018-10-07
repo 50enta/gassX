@@ -176,7 +176,7 @@
                                 </a>
                                 <ul class="list-unstyled">
                                     <li><a href="{{url('eventos')}}">Todos eventos</a></li>
-                                    <li><a href="tables-datatable.html">Meus eventos</a></li>
+                                    <li><a href="{{url('eventos')}}">Meus eventos</a></li>
                                 </ul>
                             </li>
 
@@ -186,8 +186,8 @@
                                     <span class="menu-arrow"></span>
                                 </a>
                                 <ul class="list-unstyled">
-                                    <li><a href="tables-basic.html">Gastos</a></li>
-                                    <li><a href="tables-datatable.html">Recargas</a></li>
+                                    <li><a href="{{url('contas')}}">Gastos</a></li>
+                                    <li><a href="{{url('contas')}}">Recargas</a></li>
                                 </ul>
                             </li>
 
