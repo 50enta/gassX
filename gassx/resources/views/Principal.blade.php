@@ -12,6 +12,9 @@
 
         <title>GassX</title>
 
+        <link rel="stylesheet" href="{{asset('minton/plugins/magnific-popup/dist/magnific-popup.css')}}" />
+        <link rel="stylesheet" href="{{asset('minton/plugins/jquery-datatables-editable/dataTables.bootstrap4.min.css')}}" />
+
         <link href="{{asset('minton/plugins/switchery/switchery.min.css')}}" rel="stylesheet" />
         <link rel="stylesheet" href="{{asset('minton/plugins/morris/morris.css')}}">
 
@@ -242,15 +245,15 @@
                                     <span class="menu-arrow"></span>
                                 </a>
                                 <ul class="list-unstyled">
-                                    <li><a href="tables-tablesaw.html">Finanças</a></li>
-                                    <li><a href="tables-tablesaw.html">Despesas</a></li>
-                                    <li><a href="tables-basic.html">Utilizadores</a></li>
-                                     <li><a href="tables-foo-tables.html">Eventos</a></li>
-                                    <li><a href="tables-datatable.html">Parceiros</a></li>
-                                    <li><a href="tables-editable.html">Quotas</a></li>
-                                     <li><a href="tables-foo-tables.html">Entradas/ Saídas</a></li>
-                                    <li><a href="tables-responsive.html">Contribuíções</a></li>
-                                    <li><a href="tables-foo-tables.html">Outros</a></li>
+                                    <li><a href="{{url('/admin/financas')}}">Finanças</a></li>
+                                    <li><a href="{{url('/admin/despesas')}}">Despesas</a></li>
+                                    <li><a href="{{url('/admin/utilizadores')}}">Utilizadores</a></li>
+                                     <li><a href="{{url('/admin/eventos')}}">Eventos</a></li>
+                                    <li><a href="{{url('/admin/parceiros')}}">Parceiros</a></li>
+                                    <li><a href="{{url('/admin/quotas')}}">Quotas</a></li>
+                                     <li><a href="{{url('/admin/entrSaidas')}}">Entradas/ Saídas</a></li>
+                                    <li><a href="{{url('/admin/contribuicoes')}}">Contribuíções</a></li>
+                                    <li><a href="{{url('/admin/outros')}}">Outros</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -438,6 +441,13 @@
         <!-- Page js  -->
         <script src="{{asset('minton/pages/jquery.dashboard.js')}}"></script>
 
+        <!-- Examples -->
+        <script src="{{asset('minton/plugins/magnific-popup/dist/jquery.magnific-popup.min.js')}}"></script>
+        <script src="{{asset('minton/plugins/datatables/jquery.dataTables.min.js')}}"></script>
+        <script src="{{asset('minton/plugins/datatables/dataTables.bootstrap4.min.js')}}"></script>
+        <script src="{{asset('minton/plugins/tiny-editable/mindmup-editabletable.js')}}"></script>
+        <script src="{{asset('minton/plugins/tiny-editable/numeric-input-example.js')}}"></script>
+
         <!-- Custom main Js -->
         <script src="{{asset('minton/js/jquery.core.js')}}"></script>
         <script src="{{asset('minton/js/jquery.app.js')}}"></script>
@@ -451,8 +461,12 @@
                 });
             });
         </script>
+        <script>
+            $('#mainTable').editableTableWidget().numericInputExample().find('td:first').focus();
+        </script>
+        <script src="{{asset('minton/pages/datatables.editable.init.js')}}"></script>
     
+   
     </body>
 
-<!-- Mirrored from coderthemes.com/minton/new-layout/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 05 Oct 2018 03:19:28 GMT -->
 </html>
