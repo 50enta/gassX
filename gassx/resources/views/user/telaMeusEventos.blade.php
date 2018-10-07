@@ -34,7 +34,10 @@
 	                	<h5 class="card-title">Card title</h5>
 	                 	<p class="card-text">Some quick example text to build on the card title and make
 	                    up the bulk of the card's content. Some quick example text to build on the card title and make up.</p>
-	                    <a href="javascript: void(0);" class="btn btn-primary">Button</a>
+	                    <a href="javascript: void(0);" class="btn btn-primary">
+						<i class="mdi mdi-arrow-right-bold-hexagon-outline"></i> mais detalhes
+                         
+	                    </a>
 	                </div> <!-- end card-body-->
 	            </div> <!-- end card-->
 	        </div><!-- end col -->
@@ -50,8 +53,8 @@
 	                <div class="card-body">
 	                    <p class="card-text">Some quick example text to build on the card title and make
 	                            up the bulk of the card's content.</p>
-	                    <a href="javascript: void(0);" class="card-link text-custom">Card link</a>
-	                    <a href="javascript: void(0);" class="card-link text-custom">Another link</a>
+	                    
+	                    <a href="javascript: void(0);" class="card-link text-custom"><i class="mdi mdi-arrow-right-bold-hexagon-outline"></i> mais detalhes</a>
 	                </div> <!-- end card-body-->
 	            </div> <!-- end card-->
 	        </div><!-- end col -->
@@ -68,8 +71,7 @@
 	            <div class="card-body">
 	                    <p class="card-text">Some quick example text to build on the card title and make
 	                            up the bulk of the card's content.</p>
-	                <a href="javascript: void(0);" class="card-link text-custom">Card link</a>
-	                <a href="javascript: void(0);" class="card-link text-custom">Another link</a>
+	                <a href="javascript: void(0);" class="card-link text-custom"><i class="mdi mdi-arrow-right-bold-hexagon-outline"></i> mais detalhes</a>
 	            </div> <!-- end card-body-->
 	        </div> <!-- end card-->
 	    </div><!-- end col -->
