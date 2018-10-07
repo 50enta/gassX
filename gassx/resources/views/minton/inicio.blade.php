@@ -1,8 +1,23 @@
 @extends('principal')
 
 @section('base')
-
+<!-- Start content -->
+          <div class="content">
             <div class="container">
+               <!-- Page-Title -->
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="page-title-box">
+                                    <h4 class="page-title">Início</h4>
+                                    <ol class="breadcrumb float-right">
+                                        <li class="breadcrumb-item"><a href="#">Minton</a></li>
+                                        <li class="breadcrumb-item"><a href="#">Extras</a></li>
+                                        <li class="breadcrumb-item active">Calendar</li>
+                                    </ol>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </div>
                 <div class="row">
                     <div class="col-lg-6">
                         <svg class="svg-box" width="380px" height="500px" viewBox="0 0 837 1045" version="1.1"
@@ -40,6 +55,8 @@
                     </div>
                 </div>
             </div>
+            </div>
+                <!-- end content -->
 
 
 @endsection

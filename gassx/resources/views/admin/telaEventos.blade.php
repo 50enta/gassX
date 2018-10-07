@@ -1,4 +1,5 @@
 @extends('principal')
 @section('base')
-	Eventos
+
+            Eventos
 @endsection
