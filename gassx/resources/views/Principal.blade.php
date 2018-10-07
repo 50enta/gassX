@@ -182,8 +182,8 @@
                                     <span class="menu-arrow"></span>
                                 </a>
                                 <ul class="list-unstyled">
-                                    <li><a href="{{url('eventos')}}">Todos eventos</a></li>
-                                    <li><a href="{{url('eventos')}}">Meus eventos</a></li>
+                                    <li><a href="{{url('eventos/todosEventos')}}">Todos eventos</a></li>
+                                    <li><a href="{{url('eventos/meusEventos')}}">Meus eventos</a></li>
                                 </ul>
                             </li>
 
