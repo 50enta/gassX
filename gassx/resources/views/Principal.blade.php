@@ -11,6 +11,13 @@
         <link rel="shortcut icon" href="{{asset('minton/images/favicon.ico')}}">
 
         <title>GassX</title>
+        <link href="{{asset('minton/plugins/bootstrap-tagsinput/dist/bootstrap-tagsinput.css')}}" rel="stylesheet" />
+        <link href="{{asset('minton/plugins/multiselect/css/multi-select.css')}}"  rel="stylesheet" type="text/css" />
+        <link href="{{asset('minton/plugins/select2/css/select2.min.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset('minton/plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.css')}}" rel="stylesheet" />
+        <link href="{{asset('minton/plugins/mjolnic-bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css')}}" rel="stylesheet">
+        <link href="{{asset('minton/plugins/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css')}}" rel="stylesheet">
+        <link href="{{asset('minton/plugins/bootstrap-daterangepicker/daterangepicker.css')}}" rel="stylesheet">
 
         <link rel="stylesheet" href="{{asset('minton/plugins/magnific-popup/dist/magnific-popup.css')}}" />
         <link rel="stylesheet" href="{{asset('minton/plugins/jquery-datatables-editable/dataTables.bootstrap4.min.css')}}" />
@@ -407,9 +414,20 @@
         <script src="{{asset('minton/plugins/waypoints/lib/jquery.waypoints.min.js')}}"></script>
         <script src="{{asset('minton/plugins/counterup/jquery.counterup.min.js')}}"></script>
 
-        <!--Morris Chart-->
-		<script src="{{asset('minton/plugins/morris/morris.min.js')}}"></script>
-		<script src="{{asset('minton/plugins/raphael/raphael-min.js')}}"></script>
+        {{-- Dat piker sei lá --}}
+        <script src="{{asset('minton/plugins/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js')}}"></script>
+        <script src="{{asset('minton/plugins/multiselect/js/jquery.multi-select.js')}}"></script>
+        <script src="{{asset('minton/plugins/jquery-quicksearch/jquery.quicksearch.js')}}"></script>
+        <script src="{{asset('minton/plugins/select2/js/select2.min.js" type="text/javascript')}}"></script>
+        <script src="{{asset('minton/plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js" type="text/javascript')}}"></script>
+        <script src="{{asset('minton/plugins/bootstrap-inputmask/bootstrap-inputmask.min.js" type="text/javascript')}}"></script>
+
+        <script src="{{asset('minton/plugins/moment/moment.js')}}"></script>
+        <script src="{{asset('minton/plugins/mjolnic-bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js')}}"></script>
+        <script src="{{asset('minton/plugins/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js')}}"></script>
+        <script src="{{asset('minton/plugins/bootstrap-daterangepicker/daterangepicker.js')}}"></script>
+        
+        <script src="{{asset('minton/pages/jquery.form-advanced.init.js')}}"></script>
 
         <!-- Page js  -->
         <script src="{{asset('minton/pages/jquery.dashboard.js')}}"></script>
@@ -434,12 +452,41 @@
                     time: 1200
                 });
             });
+
         </script>
         <script>
             $('#mainTable').editableTableWidget().numericInputExample().find('td:first').focus();
         </script>
-        <script src="{{asset('minton/pages/datatables.editable.init.js')}}"></script>
 
+
+        <script src="{{asset('minton/pages/datatables.editable.init.js')}}"></script>
+        <script>
+            var startDate = new Date();
+            var fechaFin = new Date();
+            var FromEndDate = new Date();
+            var ToEndDate = new Date();
+
+            $('.from').datepicker({
+                autoclose: true,
+                minViewMode: 1,
+                format: 'mm/yyyy'
+            }).on('changeDate', function(selected){
+                    startDate = new Date(selected.date.valueOf());
+                    startDate.setDate(startDate.getDate(new Date(selected.date.valueOf())));
+                    $('.to').datepicker('setStartDate', startDate);
+                }); 
+
+            $('.to').datepicker({
+                autoclose: true,
+                minViewMode: 1,
+                format: 'mm/yyyy'
+            }).on('changeDate', function(selected){
+                    FromEndDate = new Date(selected.date.valueOf());
+                    FromEndDate.setDate(FromEndDate.getDate(new Date(selected.date.valueOf())));
+                    $('.from').datepicker('setEndDate', FromEndDate);
+                });
+
+        </script>
 
     </body>
 
