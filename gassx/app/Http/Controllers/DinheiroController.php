@@ -10,4 +10,15 @@ class DinheiroController extends Controller
     public function telaEntrSaidas() {
         return view('admin.telaEntrSaidas');
     }
+
+
+
+    public function store(Request $request){
+		
+		$data = explode('/', $request['mes_ano']);
+		$mes = (int) $data[0];
+		$ano =  (int) $data[1];
+        
+        return view('admin.telaFinancas', compact('dados'));
+	}
 }

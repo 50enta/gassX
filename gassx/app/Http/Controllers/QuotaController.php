@@ -13,22 +13,34 @@ class QuotaController extends Controller
 		return view('admin.telaFinancas');
 	}
 
-	function telaQuotas(){
+	
+
+
+	public function telaQuotas($ma = '0/0'){
 		$dados = [];
+
+		$data = explode('/', $ma);
+		$mes = (int) $data[0];
+		$ano =  (int) $data[1];
+
 		$dados['pagamentos'] = Pagamento::all();
 		
 		foreach ($dados['pagamentos'] as $k) {
 			// $dados['gastoUsers'][] = $k->gastoUser();
 			$dados['quotaPagamentos'][] = $k->quotaPagamentos();
 		}
-
-
 		return view("admin.telaQuotas", compact('dados'));
 	}
 
-	// public function listar() {
- //        $eventos = Evento::all();
- //        return view("listar", compact('eventos'));
- //    }
+
+
+	public function store(Request $request){
+		
+		$data = explode('/', $request['mes_ano']);
+		$mes = (int) $data[0];
+		$ano =  (int) $data[1];
+        
+        return view('admin.telaQuotas', compact('dados'));
+	}
 
 }

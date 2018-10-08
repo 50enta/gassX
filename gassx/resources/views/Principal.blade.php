@@ -118,27 +118,17 @@
                             <div class="dropdown-menu dropdown-menu-right profile-dropdown " aria-labelledby="Preview">
                                 <!-- item-->
                                 <div class="dropdown-item noti-title">
-                                    <h5 class="text-overflow"><small>Bem vindo! User</small> </h5>
+                                    <h5 class="text-overflow"><small> Cinquenta </small> </h5>
                                 </div>
 
                                 <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <a href="{{url('/user/perfil')}}" class="dropdown-item notify-item">
                                     <i class="mdi mdi-account"></i> <span>Perfil</span>
                                 </a>
 
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <i class="mdi mdi-settings"></i> <span>Configurações</span>
-                                </a>
-
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <i class="mdi mdi-lock-open"></i> <span>Bloquear tela</span>
-                                </a>
-
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <i class="mdi mdi-logout"></i> <span>Logout</span>
+                                    <i class="mdi mdi-logout"></i> <span>Sair</span>
                                 </a>
 
                             </div>
@@ -192,26 +182,13 @@
                                 </ul>
                             </li>
 
-                             <li class="has_sub">
-                                <a href="javascript:void(0);" class="waves-effect waves-primary">
-                                    <i class=" mdi mdi-clipboard-account"></i><span> Minha conta </span> 
-                                    <span class="menu-arrow"></span>
-                                </a>
-                                <ul class="list-unstyled">
-                                    <li><a href="{{url('contas')}}">Gastos</a></li>
-                                    <li><a href="{{url('contas')}}">Recargas</a></li>
-                                </ul>
-                            </li>
-
                             <li class="has_sub">
                                 <a href="javascript:void(0);" class="waves-effect waves-primary">
                                     <i class="mdi mdi-credit-card"></i><span> Pagamentos </span> 
                                     <span class="menu-arrow"></span>
                                 </a>
                                 <ul class="list-unstyled">
-                                    <li><a href="mail-inbox.html">Inbox</a></li>
-                                    <li><a href="mail-compose.html">Compose Mail</a></li>
-                                    <li><a href="mail-read.html">Histórico</a></li>
+                                    <li><a href="mail-inbox.html">Quotas</a></li>
                                 </ul>
                             </li>
 
@@ -221,8 +198,7 @@
                                     <span class="menu-arrow"></span>
                                 </a>
                                 <ul class="list-unstyled">
-                                    <li><a href="ui-buttons.html">Buttons</a></li>
-                                    <li><a href="ui-cards.html">Cards</a></li>
+                                    <li><a href="ui-buttons.html">Para associação</a></li>
                                 </ul>
                             </li>
 
@@ -237,6 +213,7 @@
                                 </ul>
                             </li>
 
+<<<<<<< HEAD
                             <li class="has_sub">
                                 <a href="javascript:void(0);" class="waves-effect waves-primary">
                                     <i class="ti-light-bulb"></i><span> Configurações </span> 
@@ -249,6 +226,8 @@
                                 </ul>
                             </li>
 
+=======
+>>>>>>> 5b2771eaaa2d177c851174f7dbfe02663addf16e
                             <li class="menu-title">Mais</li>
 
                             <li class="has_sub">
@@ -259,11 +238,10 @@
                                 <ul class="list-unstyled">
                                     <li><a href="{{url('/admin/financas')}}">Finanças</a></li>
                                     <li><a href="{{url('/admin/despesas')}}">Despesas</a></li>
-                                    <li><a href="{{url('/admin/utilizadores')}}">Utilizadores</a></li>
-                                     <li><a href="{{url('/admin/eventos')}}">Eventos</a></li>
+                                    <li><a href="{{url('/admin/utilizadores')}}">Usuários</a></li>
                                     <li><a href="{{url('/admin/parceiros')}}">Parceiros</a></li>
+                                     <li><a href="{{url('/admin/eventos')}}">Eventos</a></li>
                                     <li><a href="{{url('/admin/quotas')}}">Quotas</a></li>
-                                     <li><a href="{{url('/admin/entrSaidas')}}">Entradas/ Saídas</a></li>
                                     <li><a href="{{url('/admin/contribuicoes')}}">Contribuíções</a></li>
                                     <li><a href="{{url('/admin/outros')}}">Outros</a></li>
                                 </ul>
