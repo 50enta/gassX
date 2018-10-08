@@ -12,4 +12,10 @@ class UserController extends Controller
         return view('admin.telaUtilizadores');
     }
 
+
+    public function telaPerfil(){
+
+    	return view('user.telaPerfil');
+    }
+
 }

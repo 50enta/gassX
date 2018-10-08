@@ -9,26 +9,17 @@
                             <div class="col-sm-12">
                                 <div class="page-title-box">
                                     <h4 class="page-title">Quotas</h4>
-                                    <ol class="breadcrumb float-right">
-
-                                    	<label>Mês e ano </label><span style="padding-right: 10px;"></span>
-									    <input type="text" class="col-sm-5 form-control form-control-1 input-sm from" placeholder="Mês e ano" >
-			
-                                    </ol>
-                                    <div class="clearfix"></div>
+                                    <form class="form-horizontal float-right" role="form" method="POST" action="{{ url('/admin/atualizarQuotas') }}">
+										{{csrf_field() }}
+										<div class="form-group row">
+										    <input name="mes_ano" type="text" class="col-sm-5 form-control form-control-1 input-sm from" placeholder="Mês e ano" >
+										    <button type="submit" class="btn btn-success waves-effect waves-light btn-sm m-b-5">Buscar</button>
+										</div>
+									</form>
+                                    <div style="padding-bottom: 18px;"class=""></div>
                                 </div>
                             </div>
                         </div>
-
-                        {{-- //////	 --}}
-                        
-                        <pre>
-                        {{
-                        	
-                        	print_r($dados['pagamentos'][1])
-                        	
-                        }}
-                        </pre>
 
 
                 <div class="row">
@@ -74,7 +65,7 @@
                                         <tr>
                                             <th class="font-weight-medium">Código</th>
                                             <th class="font-weight-medium">Membro</th>
-                                            <th class="font-weight-medium">Número de  prestações</th>
+                                            <th class="font-weight-medium">Nr. de  prestações</th>
                                             <th class="font-weight-medium">Valor da multa (Mt)</th>
                                             <th class="font-weight-medium">Estado</th>
                                             <th class="font-weight-medium">Data do pagamento</th>
