@@ -99,7 +99,7 @@
                                                     60,00
                                                 </td>
                                                 <td>
-                                                    <span class="badge badge-success">Open</span>
+                                                    <span class="badge badge-success">Pagp</span>
                                                 </td>
 
                                                 <td>
@@ -129,13 +129,13 @@
                                                     </a>
                                                 </td>
                                                 <td>
-                                                    <span class="badge badge-warning">3</span>
+                                                    <span class="badge badge-secondary">3</span>
                                                 </td>
                                                  <td>
                                                     0,00
                                                 </td>
                                                 <td>
-                                                    <span class="badge badge-secondary">Closed</span>
+                                                    <span class="badge badge-warning">Pendente</span>
                                                 </td>
 
                                                 <td>
@@ -170,7 +170,7 @@
                                                     0,00
                                                 </td>
                                                 <td>
-                                                    <span class="badge badge-success">Open</span>
+                                                    <span class="badge badge-success">Pago</span>
                                                 </td>
 
                                                 <td>
@@ -206,7 +206,7 @@
                                                     0,00
                                                 </td>
                                                 <td>
-                                                    <span class="badge badge-secondary">Closed</span>
+                                                    <span class="badge badge-danger">Não pago</span>
                                                 </td>
 
                                                 <td>
@@ -277,7 +277,8 @@
                                     	<br>
                                     	 <form action="#" class="form-horizontal">
                                       <div class="form-group row">
-                                                        <label class="control-label col-sm-4">Data limite de pagamento</label>
+                                                        <label class="control-label col-sm-3">Data limite de pagamento
+                                                        </label>
                                                         <div class="col-sm-3">
                                                             <div class="input-group">
                                                               <input type="text" class="form-control" placeholder="mm/dd/yyyy" id="datepicker-autoclose">
@@ -293,24 +294,24 @@
                                     <p class="text-muted m-b-15 font-14">
                                        Tabela de multas
                                     </p>
-                                     <div class="col-7">
+                                     <div class="col-6">
                                 <div class="card-box">
                                   
                                     <div class="table-responsive">
                                         <table class="table table-centered mb-0">
                                             <thead class="font-13 bg-light text-muted">
                                                 <tr>
-                                                    <th class="font-weight-medium">Descrição</th>
+                                                    <th class="font-weight-medium">Até (dias)</th>
                                                    
                                                     <th class="font-weight-medium">Percentagem</th>
                                                     <th class="font-weight-medium">Status</th>
-                                                    <th class="font-weight-medium text-center" style="width: 110px;">Action</th>
+                                                    <th class="font-weight-medium text-center" style="width: 110px;">Acção</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
                                                     <td>
-                                                       multa01
+                                                       8
                                                     </td>
                                                   
                                                     <td>2.31%</td>
@@ -329,7 +330,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        multa02
+                                                        5
                                                     </td>
                                                   
                                                     <td>3.89 %</td>
