@@ -243,8 +243,8 @@
                                     <span class="menu-arrow"></span> 
                                 </a>
                                 <ul class="list-unstyled">
-                                    <li><a href="components-grid.html">Conta</a></li>
-                                    <li><a href="components-carousel.html">Perfil</a></li>
+                                    <li><a href="{{url('config/perfil')}}">Conta</a></li>
+                                    <li><a href="{{url('config/conta')}}">Perfil</a></li>
                                     <li><a href="components-widgets.html">Outros</a></li>
                                 </ul>
                             </li>

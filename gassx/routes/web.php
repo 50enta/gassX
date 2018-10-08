@@ -30,9 +30,13 @@ Route::get('/eventos/todosEventos', function () {
 Route::get('/eventos/meusEventos', function () {
     return view('user.telaMeusEventos');
 });
-Route::get('/contas', function () {
-    return view('user.TelaContas');
+Route::get('/contas/recargas', function () {
+    return view('user.telaRecargas');
 });
+Route::get('/contas/gastos', function () {
+    return view('user.telaGastos');
+});
+
 
 
 
