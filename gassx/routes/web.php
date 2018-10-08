@@ -30,17 +30,13 @@ Route::get('/eventos/todosEventos', function () {
 Route::get('/eventos/meusEventos', function () {
     return view('user.telaMeusEventos');
 });
-<<<<<<< HEAD
-Route::get('/contas/recargas', function () {
-    return view('user.telaRecargas');
-});
+
 Route::get('/contas/gastos', function () {
     return view('user.telaGastos');
 });
-
-=======
->>>>>>> 5b2771eaaa2d177c851174f7dbfe02663addf16e
-
+Route::get('/contas/recargas', function () {
+    return view('user.telaRecargas');
+});
 
 //algumas rotas do user
 Route::group(['prefix' => 'user'], function () {
@@ -59,8 +55,7 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/outros', 'Controller@telaOutros');  
     Route::get('/parceiros', 'ParceiroController@telaParceiros'); 
     Route::get('/quotas/{ma?}', 'QuotaController@telaQuotas'); 
-    Route::post('/atualizarQuotas', 'QuotaController@store');
-    Route::get('/utilizadores', 'UserController@telaUtilizadores'); 
+    Route::post('/atualizarQuotas', 'QuotaController@store');    Route::get('/utilizadores', 'UserController@telaUtilizadores'); 
 });
 
 Route::get('/a', function () {

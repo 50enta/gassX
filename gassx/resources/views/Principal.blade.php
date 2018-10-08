@@ -35,7 +35,9 @@
         <link href="{{asset('minton/css/style.css')}}" rel="stylesheet" type="text/css">
 
         <script src="{{asset('minton/js/modernizr.min.js')}}"></script>
-
+        <link href="{{asset('minton/plugins/fullcalendar/css/fullcalendar.min.css')}}" rel="stylesheet">
+        
+        
         
     </head>
 
@@ -213,21 +215,18 @@
                                 </ul>
                             </li>
 
-<<<<<<< HEAD
                             <li class="has_sub">
                                 <a href="javascript:void(0);" class="waves-effect waves-primary">
-                                    <i class="ti-light-bulb"></i><span> Configurações </span> 
+                                    <i class="ti-light-bulb"></i><span> Perfil </span> 
                                     <span class="menu-arrow"></span> 
                                 </a>
                                 <ul class="list-unstyled">
-                                    <li><a href="{{url('config/perfil')}}">Conta</a></li>
-                                    <li><a href="{{url('config/conta')}}">Perfil</a></li>
-                                    <li><a href="components-widgets.html">Outros</a></li>
+                                    <li><a href="{{url('perfil/sobre')}}">Sobre mim</a></li>
+                                    <li><a href="{{url('perfil/conta')}}">Minha Conta</a></li>
+                                    <li><a href="{{url('perfil/configuracoes')}}">configurações</a></li>
                                 </ul>
                             </li>
 
-=======
->>>>>>> 5b2771eaaa2d177c851174f7dbfe02663addf16e
                             <li class="menu-title">Mais</li>
 
                             <li class="has_sub">
@@ -392,6 +391,7 @@
         <script src="{{asset('minton/js/jquery.nicescroll.js')}}"></script>
         <script src="{{asset('minton/js/jquery.scrollTo.min.js')}}"></script>
         <script src="{{asset('minton/plugins/switchery/switchery.min.js')}}"></script>
+        <script src="{{asset('minton/plugins/fullcalendar/js/fullcalendar.min.js')}}"></script>
         
         <!-- Counter Up  -->
         <script src="{{asset('minton/plugins/waypoints/lib/jquery.waypoints.min.js')}}"></script>
