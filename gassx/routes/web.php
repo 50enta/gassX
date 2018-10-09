@@ -35,7 +35,7 @@ Route::get('/eventos/meusEventos', function () {
 //algumas rotas do user
 Route::group(['prefix' => 'user'], function () {
     Route::get('/perfil', 'UserController@telaPerfil');
-    
+    Route::post('/atualizarPerfil', 'UserController@store');
 });
 
 // rotas do admin

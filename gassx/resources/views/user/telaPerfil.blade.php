@@ -33,8 +33,8 @@
                                             <p class="text-muted">@5enta</p>
                                         </div>
 
-                                        <button type="button" class="btn btn-success btn-sm w-sm waves-effect m-t-10 waves-light">seguir</button>
-                                        <button type="button" class="btn btn-danger btn-sm w-sm waves-effect m-t-10 waves-light">mensagem</button>
+                                        <button type="button" class="btn btn-success btn-sm w-sm waves-effect m-t-10 waves-light">Ativo</button>
+                                        {{-- Opção para inativo (btn-danger) --}}
 
 
                                         <div class="text-left m-t-40">
@@ -96,14 +96,15 @@
                                 <div class="">
                                     <div class="card-box">
                                         <ul class="nav nav-tabs tabs-bordered">
-                                            <li class="nav-item">
-                                                <a href="#home" data-toggle="tab" aria-expanded="false" class="nav-link">
-                                                    SOBRE MIM
-                                                </a>
-                                            </li>
+                                            
                                             <li class="nav-item">
                                                 <a href="#conta" data-toggle="tab" aria-expanded="true" class="nav-link active">
                                                     MINHA CONTA
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#home" data-toggle="tab" aria-expanded="false" class="nav-link">
+                                                    SOBRE MIM
                                                 </a>
                                             </li>
                                             <li class="nav-item">
@@ -156,11 +157,129 @@
                                                 </div>
                                             </div>
                                             <div class="tab-pane active" id="conta">
-                                                //
-                                                // Recargas e gasto tudo aqui
-                                                //
-                                                //
-                                                //
+                                        <div class="col-md-12">
+                                        <div class="card-box">
+                                            <div class="row">
+                                                
+                            <div class="col-lg-6 col-md-6">
+                                            <div class="col-lg-6 col-xl-12">
+                                <div class="widget-bg-color-icon card-box fadeInDown animated">
+                                    <div class="bg-icon bg-icon-primary pull-left">
+                                        <i class=" ti-money text-info"></i>
+                                    </div>
+                                    <div class="text-right">
+                                        <h3 class="text-dark m-t-10">
+                                            <b class="counter">31,570</b>
+                                        </h3>
+                                        <p class="text-muted mb-0">Total Revenue</p>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                            </div>
+
+                             <div class="col-lg-6 col-md-6">
+                                <div class=" text-right ">
+                                    <form class="form-horizontal float-right" role="form" method="POST" action="{{ url('/admin/atualizarPerfil') }}">
+                                        {{csrf_field() }}
+                                          <div style="padding-bottom: 30px;"class=""></div>
+                                        <div class="form-group row">
+                                            <input name="mes_ano" type="text" class="col-sm-5 form-control form-control-1 input-sm from" placeholder="Mês e ano" >
+                                            <button type="submit" class="btn btn-success waves-effect waves-light btn-sm m-b-5">Buscar</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                                            </div>
+
+                                            <div class="tabs-vertical-env">
+                                                <ul class="nav tabs-vertical">
+                                                    <li class="nav-item">
+                                                        <a href="#v-profile" class="nav-link active" data-toggle="tab" aria-expanded="true">Gastos</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a href="#v-messages" class="nav-link" data-toggle="tab" aria-expanded="false">Recargas</a>
+                                                    </li>
+                                                </ul>
+
+                                                <div class="tab-content">
+                                                    <div class="tab-pane active" id="v-profile">
+                                                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="card-box">
+                                    <div class="table-responsive">
+                                        <table class="table mb-0">
+                                            <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Project Name</th>
+                                                <th>Start Date</th>
+                                                <th>Due Date</th>
+                                                <th>Status</th>
+                                                <th>Assign</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Minton Admin v1</td>
+                                                <td>01/01/2017</td>
+                                                <td>26/04/2017</td>
+                                                <td><span class="badge badge-info">Released</span></td>
+                                                <td>Coderthemes</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Minton Frontend v1</td>
+                                                <td>01/01/2017</td>
+                                                <td>26/04/2017</td>
+                                                <td><span class="badge badge-success">Released</span></td>
+                                                <td>Minton admin</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Minton Admin v1.1</td>
+                                                <td>01/05/2017</td>
+                                                <td>10/05/2017</td>
+                                                <td><span class="badge badge-pink">Pending</span></td>
+                                                <td>Coderthemes</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>Minton Frontend v1.1</td>
+                                                <td>01/01/2017</td>
+                                                <td>31/05/2017</td>
+                                                <td><span class="badge badge-purple">Work in Progress</span>
+                                                </td>
+                                                <td>Minton admin</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td>Minton Admin v1.3</td>
+                                                <td>01/01/2017</td>
+                                                <td>31/05/2017</td>
+                                                <td><span class="badge badge-warning">Coming soon</span></td>
+                                                <td>Coderthemes</td>
+                                            </tr>
+            
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end col -8 -->
+                        </div>
+                                                    </div>
+                                                    <div class="tab-pane" id="v-messages">
+                                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+                                                        <p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                </div>
+                            </div> <!-- end col -->
                                             </div>
                                             <div class="tab-pane" id="settings">
                                                 <form role="form">
