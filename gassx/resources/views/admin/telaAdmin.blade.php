@@ -1,24 +1,24 @@
 @extends('principal')
 @section('base')
 
-<div class="col-md-12">
-                                    <div class="card-box">
-                                        <ul class="nav nav-tabs">
-                                            <li class="nav-item">
-                                                <a href="#financas" data-toggle="tab" aria-expanded="false" class="nav-link">
-                                                    Finanças
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="#despesas" data-toggle="tab" aria-expanded="true" class="nav-link active">
-                                                    Despesas
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="#utilizadores" data-toggle="tab" aria-expanded="false" class="nav-link">
-                                                    Utilizadores
-                                                </a>
-                                            </li>
+    <div class="col-md-12">
+        <div class="card-box">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a href="#financas" data-toggle="tab" aria-expanded="false" class="nav-link">
+                        Finanças
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#despesas" data-toggle="tab" aria-expanded="true" class="nav-link active">
+                    Despesas
+                </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#utilizadores" data-toggle="tab" aria-expanded="false" class="nav-link">
+                    Utilizadores
+                    </a>
+                </li>
                                             <li class="nav-item">
                                                 <a href="#eventos" data-toggle="tab" aria-expanded="false" class="nav-link">
                                                     Eventos
