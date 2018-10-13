@@ -35,6 +35,7 @@
         <link href="{{asset('minton/css/style.css')}}" rel="stylesheet" type="text/css">
 
         <script src="{{asset('minton/js/modernizr.min.js')}}"></script>
+        <script src="{{asset('minton/js/fullcalendar.min.css')}}"></script>
         <link href="{{asset('minton/plugins/fullcalendar/css/fullcalendar.min.css')}}" rel="stylesheet">
         
         

@@ -3,13 +3,31 @@
 
 @section('base')
 
+ <!-- <div class="content"> -->
+	<div class="container-fluid">
+<br>
+<br>
+<br>
+<br>
+                        <!-- Page-Title -->
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="page-title-box">
+                                    <h4 class="page-title">Todos Eventos</h4>
+                                    <ol class="breadcrumb float-right">
+                                        <li class="breadcrumb-item"><a href="{{ url('principal')}}">GassX</a></li>
+                                        <li class="breadcrumb-item"><a href="{{url('eventos/todosEventos')}}">Todos Eventos</a></li>
+                                      
+                                    </ol>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </div>
 
-	<div class="tab-content">
-		<hr>
-		<h4 class="header-title m-t-0 m-b-30">Todos Eventos</h4>
 	    <div class="row">  
 	                   
-	        <div class="col-md-6 col-lg-3">
+	                    
+		<div class="col-md-6 col-lg-3">
 	                    <!-- Simple card -->
 	            <div class="card d-block">
 	                <img class="card-img-top" src="{{asset('minton/images/small/small-1.jpg')}}"alt="Card image cap">
@@ -17,7 +35,9 @@
 	                    <h5 class="card-title">Card title</h5>
 	                    <p class="card-text">Some quick example text to build on the card title and make
 	                    up the bulk of the card's content. Some quick example text to build on the card title and make up.</p>
-	                    <a href="javascript: void(0);" class="btn btn-primary">Button</a>
+	                    <a href="javascript: void(0);" class="btn btn-primary"><i class="mdi mdi-arrow-right-bold-hexagon-outline"></i> mais detalhes
+                         
+	                    </a>
 	                </div> <!-- end card-body-->
 	            </div> <!-- end card-->
 	        </div><!-- end col -->
@@ -27,12 +47,15 @@
 
 	       <div class="col-md-6 col-lg-3">
 	            <div class="card d-block">
-	               <img class="card-img-top" src="{{asset('minton/images/small/small-4.jpg')}}" alt="Card image cap">
+				<img class="card-img-top" src="{{asset('minton/images/small/small-4.jpg')}}" alt="Card image cap">
 	                <div class="card-body">
 	                	<h5 class="card-title">Card title</h5>
 	                 	<p class="card-text">Some quick example text to build on the card title and make
 	                    up the bulk of the card's content. Some quick example text to build on the card title and make up.</p>
-	                    <a href="javascript: void(0);" class="btn btn-primary">Button</a>
+	                    <a href="javascript: void(0);" class="btn btn-primary">
+						<i class="mdi mdi-arrow-right-bold-hexagon-outline"></i> mais detalhesss
+                         
+	                    </a>
 	                </div> <!-- end card-body-->
 	            </div> <!-- end card-->
 	        </div><!-- end col -->
@@ -48,8 +71,8 @@
 	                <div class="card-body">
 	                    <p class="card-text">Some quick example text to build on the card title and make
 	                            up the bulk of the card's content.</p>
-	                    <a href="javascript: void(0);" class="card-link text-custom">Card link</a>
-	                    <a href="javascript: void(0);" class="card-link text-custom">Another link</a>
+	                    
+	                    <a href="javascript: void(0);" class="card-link text-custom"><i class="mdi mdi-arrow-right-bold-hexagon-outline"></i> mais detalhes</a>
 	                </div> <!-- end card-body-->
 	            </div> <!-- end card-->
 	        </div><!-- end col -->
@@ -66,12 +89,13 @@
 	            <div class="card-body">
 	                    <p class="card-text">Some quick example text to build on the card title and make
 	                            up the bulk of the card's content.</p>
-	                <a href="javascript: void(0);" class="card-link text-custom">Card link</a>
-	                <a href="javascript: void(0);" class="card-link text-custom">Another link</a>
+	                <a href="javascript: void(0);" class="card-link text-custom"><i class="mdi mdi-arrow-right-bold-hexagon-outline"></i> mais detalhes</a>
 	            </div> <!-- end card-body-->
 	        </div> <!-- end card-->
 	    </div><!-- end col -->
 	            
 	</div>
+	</div>
+</div>
 
 @endsection

@@ -4,9 +4,25 @@
 @section('base')
 
 
-<div class="tab-content">
-	<hr>
-<h4 class="header-title m-t-0 m-b-30">Meus Eventos</h4>
+<div class="container-fluid">
+<br>
+<br>
+<br>
+<br>
+                        <!-- Page-Title -->
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="page-title-box">
+                                    <h4 class="page-title">Meus Eventos</h4>
+                                    <ol class="breadcrumb float-right">
+                                        <li class="breadcrumb-item"><a href="{{ url('principal')}}">GassX</a></li>
+                                        <li class="breadcrumb-item"><a href="{{url('eventos/meusEventos')}}">Meus Eventos</a></li>
+                                      
+                                    </ol>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </div>
 	    <div class="row">  
 	    	
 
@@ -19,7 +35,7 @@
 	                    <h5 class="card-title">Card title</h5>
 	                    <p class="card-text">Some quick example text to build on the card title and make
 	                    up the bulk of the card's content. Some quick example text to build on the card title and make up.</p>
-	                    <a href="javascript: void(0);" class="btn btn-primary">Button</a>
+						<a href="javascript: void(0);" class="card-link text-custom"><i class="mdi mdi-arrow-right-bold-hexagon-outline"></i> mais detalhes</a>
 	                </div> <!-- end card-body-->
 	            </div> <!-- end card-->
 	        </div><!-- end col -->
@@ -34,7 +50,7 @@
 	                	<h5 class="card-title">Card title</h5>
 	                 	<p class="card-text">Some quick example text to build on the card title and make
 	                    up the bulk of the card's content. Some quick example text to build on the card title and make up.</p>
-	                    <a href="javascript: void(0);" class="btn btn-primary">
+	                    <a href="javascript: void(0);" class="card-link text-custom>
 						<i class="mdi mdi-arrow-right-bold-hexagon-outline"></i> mais detalhes
                          
 	                    </a>
@@ -54,7 +70,7 @@
 	                    <p class="card-text">Some quick example text to build on the card title and make
 	                            up the bulk of the card's content.</p>
 	                    
-	                    <a href="javascript: void(0);" class="card-link text-custom"><i class="mdi mdi-arrow-right-bold-hexagon-outline"></i> mais detalhes</a>
+								<a href="javascript: void(0);" class="card-link text-custom"><i class="mdi mdi-arrow-right-bold-hexagon-outline"></i> mais detalhes</a>
 	                </div> <!-- end card-body-->
 	            </div> <!-- end card-->
 	        </div><!-- end col -->
