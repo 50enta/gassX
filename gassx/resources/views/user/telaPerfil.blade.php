@@ -104,7 +104,7 @@
                                             </li>
                                             <li class="nav-item">
                                                 <a href="#home" data-toggle="tab" aria-expanded="false" class="nav-link">
-                                                    SOBRE MIM
+                                                    BIOGRAFIA
                                                 </a>
                                             </li>
                                             <li class="nav-item">
@@ -115,46 +115,7 @@
                                         </ul>
                                         <div class="tab-content">
                                             <div class="tab-pane" id="home">
-                                                <p class="m-b-5">Hi I'm Johnathn Deo,has been the industry's standard dummy text ever
-                                                    since the 1500s, when an unknown printer took a galley of type.
-                                                    Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
-                                                    In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
-                                                    Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Cras
-                                                    dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
-                                                    tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend
-                                                    ac, enim.</p>
-
-                                                <div class="m-t-30">
-                                                    <h5>Experience</h5>
-
-                                                    <div class=" p-t-10">
-                                                        <h6 class="text-primary m-b-5">Lead designer / Developer</h6>
-                                                        <p class="">websitename.com</p>
-                                                        <p><b>2010-2015</b></p>
-
-                                                        <p class="text-muted font-13 m-b-0">Lorem Ipsum is simply dummy text
-                                                            of the printing and typesetting industry. Lorem Ipsum has
-                                                            been the industry's standard dummy text ever since the
-                                                            1500s, when an unknown printer took a galley of type and
-                                                            scrambled it to make a type specimen book.
-                                                        </p>
-                                                    </div>
-
-                                                    <hr>
-
-                                                    <div class="">
-                                                        <h6 class="text-primary m-b-5">Senior Graphic Designer</h6>
-                                                        <p class="">coderthemes.com</p>
-                                                        <p><b>2007-2009</b></p>
-
-                                                        <p class="text-muted font-13">Lorem Ipsum is simply dummy text
-                                                            of the printing and typesetting industry. Lorem Ipsum has
-                                                            been the industry's standard dummy text ever since the
-                                                            1500s, when an unknown printer took a galley of type and
-                                                            scrambled it to make a type specimen book.
-                                                        </p>
-                                                    </div>
-                                                </div>
+                                                <p class="m-b-5">Olá, eu sou Cinquenta, blá blá blá...</p>
                                             </div>
                                             <div class="tab-pane active" id="conta">
                                         <div class="col-md-12">
@@ -171,7 +132,7 @@
                                         <h3 class="text-dark m-t-10">
                                             <b class="counter">31,570</b>
                                         </h3>
-                                        <p class="text-muted mb-0">Total Revenue</p>
+                                        <p class="text-muted mb-0">Total entrada</p>
                                     </div>
                                     <div class="clearfix"></div>
                                 </div>
@@ -180,7 +141,7 @@
 
                              <div class="col-lg-6 col-md-6">
                                 <div class=" text-right ">
-                                    <form class="form-horizontal float-right" role="form" method="POST" action="{{ url('/admin/atualizarPerfil') }}">
+                                    <form class="form-horizontal float-right" role="form" method="POST" action="{{ url('/user/atualizarPerfil') }}">
                                         {{csrf_field() }}
                                           <div style="padding-bottom: 30px;"class=""></div>
                                         <div class="form-group row">
@@ -191,7 +152,7 @@
                                 </div>
                             </div>
 
-                                            </div>
+                                 </div>
 
                                             <div class="tabs-vertical-env">
                                                 <ul class="nav tabs-vertical">
@@ -199,68 +160,58 @@
                                                         <a href="#v-profile" class="nav-link active" data-toggle="tab" aria-expanded="true">Gastos</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a href="#v-messages" class="nav-link" data-toggle="tab" aria-expanded="false">Recargas</a>
+                                                        <a href="#v-messages" class="nav-link" data-toggle="tab" aria-expanded="false">Recargas
+                                                        </a>
                                                     </li>
                                                 </ul>
 
                                                 <div class="tab-content">
-                                                    <div class="tab-pane active" id="v-profile">
-                                                        <div class="row">
+                                 <div class="tab-pane active" id="v-profile">
+                         <div class="row">
                             <div class="col-lg-12">
-                                <div class="card-box">
+                                <div class="card-box col-lg-12">
                                     <div class="table-responsive">
-                                        <table class="table mb-0">
+                                        <table class="table mb-12 col-lg-12">
                                             <thead>
                                             <tr>
-                                                <th>#</th>
-                                                <th>Project Name</th>
-                                                <th>Start Date</th>
-                                                <th>Due Date</th>
-                                                <th>Status</th>
-                                                <th>Assign</th>
+                                                <th>Data</th>
+                                                <th>Valor</th>
+                                                <th>Tipo de gasto</th>
+                                                <th>Observações</th>
                                             </tr>
                                             </thead>
                                             <tbody>
                                             <tr>
-                                                <td>1</td>
-                                                <td>Minton Admin v1</td>
-                                                <td>01/01/2017</td>
-                                                <td>26/04/2017</td>
-                                                <td><span class="badge badge-info">Released</span></td>
-                                                <td>Coderthemes</td>
+                                                <td>12/09/2017</td>
+                                                <td>57.000,00</td>
+                                                <td><span class="badge badge-info">Pagamento de quota</span></td>
+                                               <td>--</td>
                                             </tr>
                                             <tr>
-                                                <td>2</td>
-                                                <td>Minton Frontend v1</td>
                                                 <td>01/01/2017</td>
-                                                <td>26/04/2017</td>
-                                                <td><span class="badge badge-success">Released</span></td>
-                                                <td>Minton admin</td>
+                                                <td>7.000,00</td>
+                                                <td><span class="badge badge-success">Contribuíção para evento</span></td>
+                                                <td>--</td>
                                             </tr>
                                             <tr>
-                                                <td>3</td>
-                                                <td>Minton Admin v1.1</td>
-                                                <td>01/05/2017</td>
-                                                <td>10/05/2017</td>
-                                                <td><span class="badge badge-pink">Pending</span></td>
-                                                <td>Coderthemes</td>
+                                                <td>01/01/2017</td>
+                                                <td>500,00</td>
+                                                <td><span class="badge badge-pink">Pagamento de multa</span></td>
+                                                <td>--</td>
                                             </tr>
                                             <tr>
-                                                <td>4</td>
-                                                <td>Minton Frontend v1.1</td>
                                                 <td>01/01/2017</td>
-                                                <td>31/05/2017</td>
-                                                <td><span class="badge badge-purple">Work in Progress</span>
+                                                <td>1.000,00</td>
+                                                <td><span class="badge badge-purple">Contribuíção para associação</span>
                                                 </td>
-                                                <td>Minton admin</td>
+                                                <td>--</td>
+                                                
                                             </tr>
                                             <tr>
-                                                <td>5</td>
-                                                <td>Minton Admin v1.3</td>
                                                 <td>01/01/2017</td>
-                                                <td>31/05/2017</td>
+                                                <td>57.000,07</td>
                                                 <td><span class="badge badge-warning">Coming soon</span></td>
-                                                <td>Coderthemes</td>
+                                                <td>--</td>
                                             </tr>
             
                                             </tbody>
@@ -270,10 +221,62 @@
                             </div>
                             <!-- end col -8 -->
                         </div>
-                                                    </div>
+                                    </div>
                                                     <div class="tab-pane" id="v-messages">
-                                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
-                                                        <p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
+                                                       <div class="row">
+                            <div class="col-lg-12">
+                                <div class="card-box col-lg-12">
+                                    <div class="table-responsive">
+                                        <table class="table mb-12 col-lg-12">
+                                            <thead>
+                                            <tr>
+                                                <th>Data</th>
+                                                <th>Valor</th>
+                                                <th>Tipo de gasto</th>
+                                                <th>Observações</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>12/09/2017</td>
+                                                <td>57.000,00</td>
+                                                <td><span class="badge badge-info">Pagamento de quota</span></td>
+                                               <td>--</td>
+                                            </tr>
+                                            <tr>
+                                                <td>01/01/2017</td>
+                                                <td>7.000,00</td>
+                                                <td><span class="badge badge-success">Contribuíção para evento</span></td>
+                                                <td>--</td>
+                                            </tr>
+                                            <tr>
+                                                <td>01/01/2017</td>
+                                                <td>500,00</td>
+                                                <td><span class="badge badge-pink">Pagamento de multa</span></td>
+                                                <td>--</td>
+                                            </tr>
+                                            <tr>
+                                                <td>01/01/2017</td>
+                                                <td>1.000,00</td>
+                                                <td><span class="badge badge-purple">Contribuíção para associação</span>
+                                                </td>
+                                                <td>--</td>
+                                                
+                                            </tr>
+                                            <tr>
+                                                <td>01/01/2017</td>
+                                                <td>57.000,07</td>
+                                                <td><span class="badge badge-warning">Coming soon</span></td>
+                                                <td>--</td>
+                                            </tr>
+            
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end col -8 -->
+                        </div>
                                                     </div>
                                                     
                                                 </div>
@@ -285,28 +288,28 @@
                                                 <form role="form">
                                                     <div class="form-group">
                                                         <label for="FullName">Nome completo</label>
-                                                        <input type="text" value="John Doe" id="FullName" class="form-control">
+                                                        <input type="text" placeholder="Valter Cinquenta" id="FullName" class="form-control">
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="Email">Email</label>
-                                                        <input type="email" value="first.last@example.com" id="Email" class="form-control">
+                                                        <input type="email" placeholder="cinquenta@gmail.com" id="Email" class="form-control">
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="Username">Username</label>
-                                                        <input type="text" value="john" id="Username" class="form-control">
+                                                        <input type="text" placeholder="cinquenta" id="Username" class="form-control">
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="Password">Senha</label>
-                                                        <input type="password" placeholder="6 - 15 Characters" id="Password" class="form-control">
+                                                        <input type="password" placeholder="8 - 15 carateres" id="Password" class="form-control">
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="RePassword">Redefinir senha</label>
-                                                        <input type="password" placeholder="6 - 15 Characters" id="RePassword" class="form-control">
+                                                        <input type="password" placeholder="8 - 15 Characters" id="RePassword" class="form-control">
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="AboutMe">Outros</label>
-                                                        <textarea style="height: 125px" id="AboutMe" class="form-control">
-                                                        	Loren gypsum dolor sit mate, consecrate disciplining lit, tied diam nonunion nib modernism.
+                                                        <textarea style="height: 125px" id="AboutMe" class="form-control ">
+                                                        	
                                                         </textarea>
                                                     </div>
                                                     <button class="btn btn-primary waves-effect waves-light w-md" type="submit">Salvar</button>

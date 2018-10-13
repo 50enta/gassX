@@ -24,6 +24,6 @@ class UserController extends Controller
 		$mes = (int) $data[0];
 		$ano =  (int) $data[1];
         
-        return view('admin.telaQuotas', compact('dados'));
+        return view('user.telaPerfil', compact('dados'));
 	}
 }

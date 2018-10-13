@@ -6,11 +6,6 @@ use Illuminate\Http\Request;
 
 class DinheiroController extends Controller
 {
-    //
-    public function telaEntrSaidas() {
-        return view('admin.telaEntrSaidas');
-    }
-
 
 
     public function store(Request $request){
@@ -21,4 +16,6 @@ class DinheiroController extends Controller
         
         return view('admin.telaFinancas', compact('dados'));
 	}
+
+   
 }
