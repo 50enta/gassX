@@ -15,6 +15,8 @@ class CreateParceirosTable extends Migration
     {
         Schema::create('parceiros', function (Blueprint $table) {
             $table->increments('id');
+            $table->increments('ativo')->default('1');
+            
             $table->timestamps();
         });
     }

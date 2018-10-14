@@ -15,7 +15,7 @@ class CreateEntradasTable extends Migration
     {
         Schema::create('entradas', function (Blueprint $table) {
             $table->increments('id');
-            $table->boolean('activo');
+            $table->boolean('activo')->default('1');
             $table->double('valor');
 
             $table->integer('dinheiro_id')->unsigned();

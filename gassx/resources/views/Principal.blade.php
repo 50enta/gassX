@@ -191,7 +191,7 @@
                                     <span class="menu-arrow"></span>
                                 </a>
                                 <ul class="list-unstyled">
-                                    <li><a href="mail-inbox.html">Quotas</a></li>
+                                    <li><a href="{{url('user/quotas')}}">Quotas</a></li>
                                 </ul>
                             </li>
 

@@ -15,7 +15,7 @@ class CreateParceiroContribuicaoEventosTable extends Migration
     {
         Schema::create('parceiro_contribuicao_eventos', function (Blueprint $table) {
             $table->increments('id');
-            $table->boolean('activo');
+            $table->boolean('activo')->default('1');
             $table->integer('parceito_id')->unsigned();
             $table->foreign('parceito_id')->references('id')->on('parceiros');
              $table->integer('contribuicao_evento_id')->unsigned();

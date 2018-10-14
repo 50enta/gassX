@@ -15,6 +15,8 @@ class CreateMesTable extends Migration
     {
         Schema::create('mes', function (Blueprint $table) {
             $table->increments('id');
+            $table->boolean('ativo')->default('1');
+            
             $table->string('mes');
             $table->timestamps();
         });

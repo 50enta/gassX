@@ -45,6 +45,8 @@ Route::get('user/perfil/sobre', function () {
 Route::group(['prefix' => 'user'], function () {
     Route::get('/perfil', 'UserController@telaPerfil');
     Route::post('/atualizarPerfil/', 'UserController@store');
+    Route::get('/quotas', 'QuotaController@telaQuotasUser');
+    Route::post('/atualizarQuotas/', 'QuotaController@store1');
 });
 
 // rotas do admin
@@ -63,6 +65,3 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/utilizadores', 'UserController@telaUtilizadores'); 
 });
 
-Route::get('/a', function () {
-    return view('admin.telaAdmin');
-});

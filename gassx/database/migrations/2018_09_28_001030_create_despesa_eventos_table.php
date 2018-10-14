@@ -15,7 +15,7 @@ class CreateDespesaEventosTable extends Migration
     {
         Schema::create('despesa_eventos', function (Blueprint $table) {
             $table->increments('id');
-            $table->boolean('activo');
+            $table->boolean('activo')->default('1');
 
             $table->integer('contribuicao_evento_id')->unsigned();
             $table->foreign('contribuicao_evento_id')->references('id')->on('contribuicao_eventos');
