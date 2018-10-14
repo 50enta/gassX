@@ -222,9 +222,9 @@
                                     <span class="menu-arrow"></span> 
                                 </a>
                                 <ul class="list-unstyled">
-                                    <li><a href="{{url('perfil/sobre')}}">Sobre mim</a></li>
-                                    <li><a href="{{url('perfil/conta')}}">Minha Conta</a></li>
-                                    <li><a href="{{url('perfil/configuracoes')}}">configurações</a></li>
+                                    <li ><a href="{{url('user/perfil')}}">Sobre mim</a></li>
+                                    <li><a href="{{url('user/perfil')}}">Bibliografia</a></li>
+                                    <li><a href="{{url('user/perfil/atualizarPerfil')}}">configurações</a></li>
                                 </ul>
                             </li>
 

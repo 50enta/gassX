@@ -37,6 +37,9 @@ Route::get('/contas/gastos', function () {
 Route::get('/contas/recargas', function () {
     return view('user.telaRecargas');
 });
+Route::get('user/perfil/sobre', function () {
+    return view('user.telaPerfil');
+});
 
 //algumas rotas do user
 Route::group(['prefix' => 'user'], function () {

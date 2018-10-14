@@ -108,7 +108,7 @@
                                                 </a>
                                             </li>
                                             <li class="nav-item">
-                                                <a href="#settings" data-toggle="tab" aria-expanded="false" class="nav-link">
+                                                <a href="{{url('user/perfil/atualizarPerfil')}}" data-toggle="tab" aria-expanded="false" class="nav-link">
                                                     CONFIGURAÇÕES
                                                 </a>
                                             </li>
@@ -117,7 +117,7 @@
                                             <div class="tab-pane" id="home">
                                                 <p class="m-b-5">Olá, eu sou Cinquenta, blá blá blá...</p>
                                             </div>
-                                            <div class="tab-pane active" id="conta">
+                                            <div class="tab-pane active" id="atualizarPerfil">
                                         <div class="col-md-12">
                                         <div class="card-box">
                                             <div class="row">
@@ -284,7 +284,7 @@
                                 </div>
                             </div> <!-- end col -->
                                             </div>
-                                            <div class="tab-pane" id="settings">
+                                            <div class="tab-pane" id="{{url('user/perfil/sobre')}}">
                                                 <form role="form">
                                                     <div class="form-group">
                                                         <label for="FullName">Nome completo</label>
