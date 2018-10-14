@@ -15,7 +15,7 @@ class CreatePrivilegioUsersTable extends Migration
     {
         Schema::create('privilegio_users', function (Blueprint $table) {
             $table->increments('id');
-            $table->boolean('activo');
+            $table->boolean('activo')->default('1');
 
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');

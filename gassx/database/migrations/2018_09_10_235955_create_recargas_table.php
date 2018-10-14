@@ -15,7 +15,7 @@ class CreateRecargasTable extends Migration
     {
         Schema::create('recargas', function (Blueprint $table) {
             $table->increments('id');
-            $table->boolean('activo');
+            $table->boolean('activo')->default('1');
             $table->double('valor');
             
             $table->integer('user_id')->unsigned();

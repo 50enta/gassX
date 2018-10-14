@@ -16,9 +16,9 @@ class CreateEventosTable extends Migration
         
         Schema::create('eventos', function (Blueprint $table) {
             $table->increments('id');
-            $table->boolean('activo');
+            $table->boolean('activo')->default('1');
             $table->string('descricao');
-            $table->string('objectivo');
+            $table->string('objectivo')->nullable();
             $table->double('valorAContribuir');
             $table->date('dataInicio');
             $table->date('dataFim');

@@ -15,9 +15,9 @@ class CreateComentariosTable extends Migration
     {
         Schema::create('comentarios', function (Blueprint $table) {
             $table->increments('id');
-            $table->boolean('activo');
+            $table->boolean('activo')->default('1');
             $table->string('mensagem');
-            $table->integer('likes');
+            $table->integer('likes')->default('0');
 
             $table->integer('evento_id')->unsigned();
             $table->foreign('evento_id')->references('id')->on('eventos');

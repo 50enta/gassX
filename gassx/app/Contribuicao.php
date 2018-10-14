@@ -13,7 +13,7 @@ class Contribuicao extends Model
      * @var array
      */
     protected $fillable = [
-        'activo', 'apagado','dataRegisto', 'valor',
+        'ativo'
     ];
 
 

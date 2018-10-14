@@ -15,9 +15,9 @@ class CreateAcessosTable extends Migration
     {
         Schema::create('acessos', function (Blueprint $table) {
             $table->increments('id');
-            $table->boolean('activo');
-            $table->date('dataEntrada');
-            $table->date('dataSaida');
+            $table->boolean('activo')->default('1');
+            $table->date('dataEntrada')->default('CURRENT_TIMESTAMP');
+            $table->date('dataSaida')->nullable();
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();

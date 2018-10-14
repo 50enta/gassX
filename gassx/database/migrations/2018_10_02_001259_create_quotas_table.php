@@ -15,7 +15,7 @@ class CreateQuotasTable extends Migration
     {
         Schema::create('quotas', function (Blueprint $table) {
             $table->increments('id');
-            $table->boolean('activo');
+            $table->boolean('activo')->default('1');
             
             $table->integer('mes_id')->unsigned();
             $table->foreign('mes_id')->references('id')->on('mes');

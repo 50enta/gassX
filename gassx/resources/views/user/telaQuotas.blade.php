@@ -75,7 +75,14 @@
                           <div class="row">
                           	
                           		[INFORMAÇÃO SOBRE MESES EM DÍVIDA E OPÇÃO DE PROSSEGUIR COM O PAGAMENTO]
+                          		//
+                          //
+                          //
+                          //
+                          //
+                          
                           </div>
+
 
                     </div>
                             <!-- end col -8 -->
