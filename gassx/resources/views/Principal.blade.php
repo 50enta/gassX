@@ -215,7 +215,19 @@
                                 </ul>
                             </li>
 
-                            
+
+                            <li class="has_sub">
+                                <a href="javascript:void(0);" class="waves-effect waves-primary">
+                                    <i class="ti-light-bulb"></i><span> Perfil </span> 
+                                    <span class="menu-arrow"></span> 
+                                </a>
+                                <ul class="list-unstyled">
+                                    <li ><a href="{{url('user/perfil')}}">Sobre mim</a></li>
+                                    <li><a href="{{url('user/perfil')}}">Bibliografia</a></li>
+                                    <li><a href="{{url('user/perfil/atualizarPerfil')}}">configurações</a></li>
+                                </ul>
+                            </li>
+
 
                             <li class="menu-title">Mais</li>
 
