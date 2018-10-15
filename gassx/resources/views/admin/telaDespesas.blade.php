@@ -25,12 +25,7 @@
 
                 <div class="row">
                     <div class="col-lg-9">
-                               
-
-
                           <div class="row">
-                          
-
                             <div class="col-md-12">
                                 <div class="card-box">
                                     <ul class="nav nav-tabs tabs-bordered nav-justified">

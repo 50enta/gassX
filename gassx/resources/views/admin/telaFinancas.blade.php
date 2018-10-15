@@ -59,7 +59,7 @@
                                 <div class="widget-bg-color-icon card-box">
                                     <div class="bg-icon bg-icon-danger pull-left">
                                         <i class="ti-shopping-cart text-pink"></i>
-                                    </div
+                                    </div>
                                     <div class="text-right">
                                         <h3 class="text-dark m-t-10"><b>280</b></h3>
                                         <p class="text-muted mb-0">Today's Sales</p>
@@ -85,10 +85,138 @@
 
 
                   <div class="row">
-                  		
+                        {{-- Entrances --}}
+                  		 <div class="col-lg-6">
+                            <div class="col-12">
+                                <div class="card-box table-responsive">
+                                    <h4 class="m-t-0 header-title">Entradas</h4>
+                                     <p class="text-muted font-14 m-b-30">
+                                        Registo de todas as entradas de valores no sistema.
+                                        São todas entradas focando-se na data, o valor em causa e o autor.
+                                    </p>
+                                    <table id="datatable-button" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                                        <thead>
+                                        <tr>
+                                            <th>Data</th>
+                                            <th>valor</th>
+                                            <th>autor</th>
+                                        </tr>
+                                        </thead>
 
-                  		{{-- listagem de entradas e saidas --}}
 
+                                        <tbody>
+                                        <tr>
+                                            <td>14/10/2017</td>
+                                            <td>13,098</td>
+                                            <td>Lucília Manjate</td>
+                                        </tr>
+                                        <tr>
+                                            <td>14/10/2017</td>
+                                            <td>13,098</td>
+                                            <td>Lucília Manjate</td>
+                                        </tr>
+                                        <tr>
+                                            <td>14/10/2017</td>
+                                            <td>13,098</td>
+                                            <td>Lucília Manjate</td>
+                                        </tr>
+                                        <tr>
+                                            <td>14/10/2017</td>
+                                            <td>13,098</td>
+                                            <td>Lucília Manjate</td>
+                                        </tr>
+                                        <tr>
+                                            <td>14/10/2017</td>
+                                            <td>13,098</td>
+                                            <td>Lucília Manjate</td>
+                                        </tr>
+                                        <tr>
+                                            <td>14/10/2017</td>
+                                            <td>13,098</td>
+                                            <td>Lucília Manjate</td>
+                                        </tr>
+                                        <tr>
+                                            <td>14/10/2017</td>
+                                            <td>13,098</td>
+                                            <td>Lucília Manjate</td>
+                                        </tr>
+                                        <tr>
+                                            <td>14/10/2017</td>
+                                            <td>13,098</td>
+                                            <td>Lucília Manjate</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div> 
+                            <!-- termina aqui -->
+                         </div>
+                         {{-- Exites --}}
+                         <div class="col-lg-6">
+                            <div class="col-12">
+                                <div class="card-box table-responsive">
+                                    <h4 class="m-t-0 header-title">Saídas</h4>
+                                    <p class="text-muted font-14 m-b-30">
+                                        Registo de todas as saídas de valores no sistema.
+                                        São todas saídas focando-se na data, o valor em causa e o autor.
+                                    </p>
+                                    <table id="datatable-button" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                                        <thead>
+                                        <tr>
+                                            <th>Data</th>
+                                            <th>valor</th>
+                                            <th>autor</th>
+                                        </tr>
+                                        </thead>
+
+
+                                        <tbody>
+                                        <tr>
+                                            <td>14/10/2017</td>
+                                            <td>13,098</td>
+                                            <td>Lucília Manjate</td>
+                                        </tr>
+                                        <tr>
+                                            <td>14/10/2017</td>
+                                            <td>13,098</td>
+                                            <td>Lucília Manjate</td>
+                                        </tr>
+                                        <tr>
+                                            <td>14/10/2017</td>
+                                            <td>13,098</td>
+                                            <td>Lucília Manjate</td>
+                                        </tr>
+                                        <tr>
+                                            <td>14/10/2017</td>
+                                            <td>13,098</td>
+                                            <td>Lucília Manjate</td>
+                                        </tr>
+                                        <tr>
+                                            <td>14/10/2017</td>
+                                            <td>13,098</td>
+                                            <td>Lucília Manjate</td>
+                                        </tr>
+                                        <tr>
+                                            <td>14/10/2017</td>
+                                            <td>13,098</td>
+                                            <td>Lucília Manjate</td>
+                                        </tr>
+                                        <tr>
+                                            <td>14/10/2017</td>
+                                            <td>13,098</td>
+                                            <td>Lucília Manjate</td>
+                                        </tr>
+                                        <tr>
+                                            <td>14/10/2017</td>
+                                            <td>13,098</td>
+                                            <td>Lucília Manjate</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div> 
+                            <!-- termina aqui -->
+                         </div>
                   </div>
 
         </div>

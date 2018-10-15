@@ -173,7 +173,6 @@
                                     <i class="ti-home"></i><span> Início </span>
                                 </a>
                             </li>
-
                              <li class="has_sub">
                                 <a href="javascript:void(0);" class="waves-effect waves-primary">
                                     <i class=" mdi mdi-calendar"></i><span> Eventos </span> 
@@ -201,7 +200,7 @@
                                     <span class="menu-arrow"></span>
                                 </a>
                                 <ul class="list-unstyled">
-                                    <li><a href="ui-buttons.html">Para associação</a></li>
+                                    <li><a href="{{url('user/contribuicoes')}}">Minhas contribuíções</a></li>
                                 </ul>
                             </li>
 
@@ -216,17 +215,7 @@
                                 </ul>
                             </li>
 
-                            <li class="has_sub">
-                                <a href="javascript:void(0);" class="waves-effect waves-primary">
-                                    <i class="ti-light-bulb"></i><span> Perfil </span> 
-                                    <span class="menu-arrow"></span> 
-                                </a>
-                                <ul class="list-unstyled">
-                                    <li><a href="{{url('perfil/sobre')}}">Sobre mim</a></li>
-                                    <li><a href="{{url('perfil/conta')}}">Minha Conta</a></li>
-                                    <li><a href="{{url('perfil/configuracoes')}}">configurações</a></li>
-                                </ul>
-                            </li>
+                            
 
                             <li class="menu-title">Mais</li>
 

@@ -232,7 +232,7 @@
                                             <tr>
                                                 <th>Data</th>
                                                 <th>Valor</th>
-                                                <th>Tipo de gasto</th>
+                                              
                                                 <th>Observações</th>
                                             </tr>
                                             </thead>
@@ -240,33 +240,32 @@
                                             <tr>
                                                 <td>12/09/2017</td>
                                                 <td>57.000,00</td>
-                                                <td><span class="badge badge-info">Pagamento de quota</span></td>
+                                                
                                                <td>--</td>
                                             </tr>
                                             <tr>
                                                 <td>01/01/2017</td>
                                                 <td>7.000,00</td>
-                                                <td><span class="badge badge-success">Contribuíção para evento</span></td>
+                                                
                                                 <td>--</td>
                                             </tr>
                                             <tr>
                                                 <td>01/01/2017</td>
                                                 <td>500,00</td>
-                                                <td><span class="badge badge-pink">Pagamento de multa</span></td>
+                                                
                                                 <td>--</td>
                                             </tr>
                                             <tr>
                                                 <td>01/01/2017</td>
                                                 <td>1.000,00</td>
-                                                <td><span class="badge badge-purple">Contribuíção para associação</span>
-                                                </td>
+                                               
                                                 <td>--</td>
                                                 
                                             </tr>
                                             <tr>
                                                 <td>01/01/2017</td>
                                                 <td>57.000,07</td>
-                                                <td><span class="badge badge-warning">Coming soon</span></td>
+                                                
                                                 <td>--</td>
                                             </tr>
             

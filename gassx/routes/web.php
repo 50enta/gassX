@@ -44,6 +44,8 @@ Route::group(['prefix' => 'user'], function () {
     Route::post('/atualizarPerfil/', 'UserController@store');
     Route::get('/quotas', 'QuotaController@telaQuotasUser');
     Route::post('/atualizarQuotas/', 'QuotaController@store1');
+    Route::get('/contribuicoes', 'ContribuicaoController@telaContribuicoesUser');
+    Route::post('/atualizarContribuicoes/', 'ContribuicaoController@store1');
 });
 
 // rotas do admin
@@ -53,6 +55,7 @@ Route::group(['prefix' => 'admin'], function () {
     Route::post('/atualizarFinancas', 'DinheiroController@store');
     Route::get('/eventos', 'EventoController@telaEventos'); 
     Route::get('/contribuicoes', 'ContribuicaoController@telaContribuicoes'); 
+    Route::post('/atualizarContribuicoes', 'ContribuicaoController@store'); 
     Route::get('/despesas', 'DespesaController@telaDespesas'); 
     Route::post('/atualizarDespesas', 'DespesaController@store');
     Route::get('/outros', 'Controller@telaOutros');  
