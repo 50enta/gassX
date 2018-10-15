@@ -237,13 +237,13 @@
                                     <span class="menu-arrow"></span>
                                 </a>
                                 <ul class="list-unstyled">
-                                    <li><a href="{{url('/admin/financas')}}">Finanças</a></li>
-                                    <li><a href="{{url('/admin/despesas')}}">Despesas</a></li>
-                                    <li><a href="{{url('/admin/utilizadores')}}">Usuários</a></li>
-                                    <li><a href="{{url('/admin/parceiros')}}">Parceiros</a></li>
-                                     <li><a href="{{url('/admin/eventos')}}">Eventos</a></li>
                                     <li><a href="{{url('/admin/quotas')}}">Quotas</a></li>
                                     <li><a href="{{url('/admin/contribuicoes')}}">Contribuíções</a></li>
+                                    <li><a href="{{url('/admin/despesas')}}">Despesas</a></li>
+                                    <li><a href="{{url('/admin/financas')}}">Finanças</a></li>
+                                    <li><a href="{{url('/admin/utilizadores')}}">Membros</a></li>
+                                    <li><a href="{{url('/admin/parceiros')}}">Parceiros</a></li>
+                                     <li><a href="{{url('/admin/eventos')}}">Eventos</a></li>
                                     <li><a href="{{url('/admin/outros')}}">Outros</a></li>
                                 </ul>
                             </li>
