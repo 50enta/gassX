@@ -20,8 +20,8 @@ class CreateEventosTable extends Migration
             $table->string('descricao');
             $table->string('objectivo')->nullable();
             $table->double('valorAContribuir');
-            $table->date('dataInicio');
-            $table->date('dataFim');
+            $table->date('dataInicio')->useCurrent();
+            $table->date('dataFim')->useCurrent();
 
             $table->integer('categoria_id')->unsigned();
             $table->foreign('categoria_id')->references('id')->on('categorias');
