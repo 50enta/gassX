@@ -40,12 +40,6 @@
                                                 Membros
                                             </a>
                                         </li>
-                                         <li class="nav-item">
-                                            <a href="#settings-b1" data-toggle="tab" aria-expanded="false" class="nav-link">
-                                                Parceiros
-                                            </a>
-                                        </li>
-                                       
                                     </ul>
                                     <div class="tab-content">
                                 <div class="tab-pane active table-responsive" id="profile-b2">
@@ -298,144 +292,12 @@
                                     </table>
                               
                             </div>
-                    </div>
-                                <div class="tab-pane" id="settings-b1">
-                         <div class="col-12">
+                         </div>
 
-                                      <!-- Custom Modals -->
-                        <div class="row">
-                            <div class="col-12">
-                                <div id="con-close-modal3" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                                    <h4 class="modal-title">
-                                                        Registar despesa
-                                                    </h4>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <div class="row">
-                                                        <div class="col-md-6">
-                                                            <div class="form-group">
-                                                                <label for="field-1" class="control-label">Descrição</label>
-                                                                <input type="text" class="form-control" id="field-1" placeholder="Compra de cerveja">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <div class="form-group">
-                                                                <label for="field-2" class="control-label">valor</label>
-                                                                <input type="text" class="form-control" id="field-2" placeholder="3000,00">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-md-12">
-                                                            <div class="form-group">
-                                                                <label for="field-1" class="control-label">Parceiro</label>
-                                                                <select class="form-control select2">
-                                                                <option>Selecione o Parceiro</option>
-                                                               
-                                                                    <option value="1">Valter Cinquenta</option>
-                                                                    <option value="2">Maria Lurdes</option>
-                                                                    <option value="4">José Alfeu</option>
-                                                                    <option value="3">Washington</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-md-12">
-                                                            <div class="form-group no-margin">
-                                                                <label for="field-7" class="control-label">Observações</label>
-                                                                <textarea class="form-control" id="field-7" placeholder="Qualquer coisa sobre a despesa"></textarea>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">Cancelar</button>
-                                                    <button type="submit" class="btn btn-info waves-effect waves-light">Salvar</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div><!-- /.modal -->
-
-                                <div class="button-list">
-                                        <!-- Responsive modal -->
-                                    <button type="button" class="col-lg-3 btn btn-success waves-effect waves-light" data-toggle="modal" data-target=" #con-close-modal3">Nova despesa
-                                    </button> 
-                                    <div style="padding-bottom: 15px;"></div>  
-                                </div>
-                           
-                    </div><!-- end col -->
-            </div>
-                        <!-- End row -->
-                                 <table id="datatable-buttons" class="table table-striped table-bordered" cellspacing="0" width="100%">
-                                        <thead>
-                                        <tr>
-                                            <th>Descrição</th>
-                                            <th>Parceiro beneficiante</th>
-                                        
-                                            <th>Data </th>
-                                            <th>Valor</th>
-                                        </tr>
-                                        </thead>
-
-
-                                        <tbody>
-                                        <tr>
-                                            <td>Tiger Nixon</td>
-                                            <td>System Architect</td>
-                                   
-                                            <td>2011/04/25</td>
-                                            <td>$320,800</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Garrett Winters</td>
-                                            <td>Accountant</td>
-                                         
-                                            <td>2011/07/25</td>
-                                            <td>$170,750</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Ashton Cox</td>
-                                            <td>Junior Technical Author</td>
-                                           
-                                            <td>2009/01/12</td>
-                                            <td>$86,000</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Cedric Kelly</td>
-                                            <td>Senior Javascript Developer</td>
-                                      
-                                            <td>2012/03/29</td>
-                                            <td>$433,060</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Airi Satou</td>
-                                            <td>Accountant</td>
-                                      
-                                            <td>2008/11/28</td>
-                                            <td>$162,700</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Brielle Williamson</td>
-                                            <td>Integration Specialist</td>
-                                       
-                                            <td>2012/12/02</td>
-                                            <td>$372,000</td>
-                                        </tr>
-                                        
-                                        </tbody>
-                                    </table>
-                              
-                            </div>
-                                        </div>
                                     </div>
                                 </div>
                             </div> <!-- end col -->
-        </div>
+                        </div>
                         <!-- end row -->
 
 
