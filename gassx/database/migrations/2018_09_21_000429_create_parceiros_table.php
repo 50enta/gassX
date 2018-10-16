@@ -11,8 +11,7 @@ class CreateParceirosTable extends Migration
      *
      * @return void
      */
-    public function up()
-    {
+    public function up(){
         Schema::create('parceiros', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('ativo')->default('1');
