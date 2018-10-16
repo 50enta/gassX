@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-Route::get('/home', 'HomeController@index')->name('/princi');
+Route::get('/home', 'HomeController@index')->name('principal');
 
 // Rotas do utilizador
 Route::get('/principal', function () {

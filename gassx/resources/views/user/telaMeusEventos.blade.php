@@ -36,6 +36,7 @@
 	                    <p class="card-text">Some quick example text to build on the card title and make
 	                    up the bulk of the card's content. Some quick example text to build on the card title and make up.</p>
 						<a href="javascript: void(0);" class="card-link text-custom"><i class="mdi mdi-arrow-right-bold-hexagon-outline"></i> mais detalhes</a>
+						<button class="btn btn-primary">Aderir</button>
 	                </div> <!-- end card-body-->
 	            </div> <!-- end card-->
 	        </div><!-- end col -->
