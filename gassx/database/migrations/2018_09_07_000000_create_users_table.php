@@ -28,9 +28,9 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->rememberToken();
             
-            $table->integer('contacto_id')->unsigned();
-            $table->integer('genero_id')->unsigned();
-            $table->integer('endereco_id')->unsigned();
+            $table->integer('contacto_id')->nullable();
+            $table->integer('genero_id')->nullable();    //unsigned();
+            $table->integer('endereco_id')->nullable();
             $table->timestamps();
             $table->foreign('contacto_id')->references('id')->on('contactos')->onDelete('cascade');
             $table->foreign('genero_id')->references('id')->on('generos')->onDelete('cascade');
