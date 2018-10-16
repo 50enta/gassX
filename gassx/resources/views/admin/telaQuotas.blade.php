@@ -216,7 +216,6 @@
                                                     </div>
                                                 </td>
                                             </tr>
-                                            @foreach(dados['pagamentos'] as a)
                                             <tr>
                                                 <td><b>#1020</b></td>
                                                 <td>
