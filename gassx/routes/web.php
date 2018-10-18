@@ -28,7 +28,14 @@ Route::get('/eventos/todosEventos', function () {
 });
 Route::get('/eventos/meusEventos', function () {
     return view('user.telaMeusEventos');
+
 });
+Route::get('/eventos/todosEventos/telaDetalhes', function () {
+    return view('user.telaDetalhes');
+
+});
+
+
 
 Route::get('/contas/gastos', function () {
     return view('user.telaGastos');
