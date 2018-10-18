@@ -40,6 +40,11 @@
         
         
         
+
+        
+
+       
+        
     </head>
 
 
@@ -429,11 +434,11 @@
         <script src="{{asset('minton/plugins/bootstrap-daterangepicker/daterangepicker.js')}}"></script>
 
         <script src="{{asset('minton/pages/jquery.form-advanced.init.js')}}"></script>
-        <script src="{{asset('minton/pages/jquery.sweet-alert.init.js')}}"></script>
+       
 
         <!-- sweet alerts js -->
-        
-        <!-- <script src="{{asset('minton/plugins/sweet-alert/sweetalert2.min.js)}}"></script> -->
+         <script src="{{asset('minton/pages/jquery.sweet-alert.init.js')}}"></script>
+        <script src="{{asset('minton/plugins/sweet-alert/sweetalert2.min.js)}}"></script>
         
 
      
