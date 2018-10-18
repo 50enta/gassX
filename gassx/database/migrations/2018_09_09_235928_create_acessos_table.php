@@ -11,7 +11,8 @@ class CreateAcessosTable extends Migration
      *
      * @return void
      */
-    public function up(){
+    public function up()
+    {
         Schema::create('acessos', function (Blueprint $table) {
             $table->increments('id');
             $table->boolean('activo')->default('1');
