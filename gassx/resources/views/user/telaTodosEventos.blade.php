@@ -45,9 +45,9 @@
 			                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 			                            
 			                    
-			                     <a href="#" data-toggle="#con-close-modal" class="btn btn-primary sweet-1" onclick="_gaq.push(['_trackEvent', 'example', 'try', 'sweet-1']);">Participar</a>
+			                    <!--  <a href="#" data-toggle="#con-close-modal" class="btn btn-primary sweet-1" onclick="_gaq.push(['_trackEvent', 'example', 'try', 'sweet-1']);">Participar</a> -->
 
-			                    
+			                    <button class="btn btn-primary sweet-1" onclick="_gaq.push(['_trackEvent', 'example', 'try', 'sweet-43']);">Try It</button>
 
 			                    <a href="{{url('/eventos/todosEventos/telaDetalhes')}}"  class="card-link text-custom"><i class="mdi mdi-arrow-right-bold-hexagon-outline" data-target=""></i> mais detalhes</a>
 			                    
@@ -66,7 +66,8 @@
 			            <div class="card-body">
 			                <p class="card-text">Some quick example text to build on the card title and make
 			                 up the bulk of the card's content.</p>
-			                <a href="#" data-toggle="#con-close-modal" class="btn btn-primary sweet-4" onclick="_gaq.push(['_trackEvent', 'example', 'try', 'sweet-4']);">Participar</a>
+			                <!-- <a href="javascript: void(0)" data-toggle="#con-close-modal" class="btn btn-primary sweet-4" onclick="_gaq.push(['_trackEvent', 'example', 'try', 'sweet-4']);">Participar</a> -->
+			                <button class="btn btn-primary sweet-4" onclick="_gaq.push(['_trackEvent', 'example', 'try', 'sweet-4']);">Try It</button>
 			                <a href="{{url('/eventos/todosEventos/telaDetalhes')}}" class="card-link text-custom"><i class="mdi mdi-arrow-right-bold-hexagon-outline"></i> mais detalhes</a>
 			            </div> <!-- end card-body-->
 			        </div> <!-- end card-->
@@ -83,7 +84,7 @@
 			                <div class="card-body">
 			                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 			                    
-								<a href="#" data-toggle="#con-close-modal" class="btn btn-primary sweet-4" onclick="_gaq.push(['_trackEvent', 'example', 'try', 'sweet-4']);">Participar</a>
+								<a href="#" data-toggle="#con-close-modal" class="btn btn-primary sweet-4" onclick="_gaq.push(['_trackEvent', 'example', 'try', 'sweet-42']);">Participar</a>
 			                    <a href="{{url('/eventos/todosEventos/telaDetalhes')}}" class="card-link text-custom"><i class="mdi mdi-arrow-right-bold-hexagon-outline"></i> mais detalhes</a>
 			                    
 			                </div> <!-- end card-body-->
