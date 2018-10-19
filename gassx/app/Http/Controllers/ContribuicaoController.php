@@ -4,16 +4,21 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Pagamento;
+use App\User;
 
 class ContribuicaoController extends Controller
 {
     //
-    public function telaContribuicoes() {
-        return view('admin.telaContribuicoes');
+    public function telaContribuicoes($user_id, $ma = '0/0') {
+    	$dados['usuario'] = User::find($user_id);
+        
+        return view('admin.telaContribuicoes', compact('dados'));
     }
 
-    public function store(Request $request){
-		
+
+    public function store(Request $request, $user_id){
+    	$dados['usuario'] = User::find($user_id);
+    	
 		$data = explode('/', $request['mes_ano']);
 		$mes = (int) $data[0];
 		$ano =  (int) $data[1];
@@ -25,8 +30,8 @@ class ContribuicaoController extends Controller
 
 
     // about gastoUsers
-	public function telaContribuicoesUser($ma = '0/0'){
-		$dados = [];
+	public function telaContribuicoesUser($user_id, $ma = '0/0'){
+		$dados['usuario'] = User::find($user_id);
 
 		$data = explode('/', $ma);
 		$mes = (int) $data[0];
@@ -41,8 +46,8 @@ class ContribuicaoController extends Controller
 		return view("user.telaContribuicoes", compact('dados'));
 	}
 
-	public function store1(Request $request){
-		
+	public function store1(Request $request, $user_id){
+		$dados['usuario'] = User::find($user_id);
 		$data = explode('/', $request['mes_ano']);
 		$mes = (int) $data[0];
 		$ano =  (int) $data[1];
@@ -51,3 +56,4 @@ class ContribuicaoController extends Controller
 	}
 
 }
+

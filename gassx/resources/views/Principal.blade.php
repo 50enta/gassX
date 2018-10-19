@@ -55,7 +55,7 @@
                 <!-- LOGO -->
                 <div class="topbar-left">
                     <div class="text-center">
-                        <a href="{{ url('principal')}}" class="logo"><i class="mdi mdi-radar"></i> <span>GassX</span></a>
+                        <a href="{{ url('principal'.$dados['usuario']->id)}}" class="logo"><i class="mdi mdi-radar"></i> <span>GassX</span></a>
                     </div>
                 </div>
 
@@ -122,11 +122,11 @@
                             <div class="dropdown-menu dropdown-menu-right profile-dropdown " aria-labelledby="Preview">
                                 <!-- item-->
                                 <div class="dropdown-item noti-title">
-                                    <h5 class="text-overflow"><small> Cinquenta </small> </h5>
+                                    <h5 class="text-overflow"><small> {{ $dados['usuario']->username }} </small> </h5>
                                 </div>
 
                                 <!-- item-->
-                                <a href="{{url('/user/perfil')}}" class="dropdown-item notify-item">
+                                <a href="{{url('/user/perfil/'.$dados['usuario']->id)}}" class="dropdown-item notify-item">
                                     <i class="mdi mdi-account"></i> <span>Perfil</span>
                                 </a>
 
@@ -170,7 +170,7 @@
                             <li class="menu-title">Principal</li>
 
                             <li>
-                                <a href="{{ url('principal')}}" class="waves-effect waves-primary">
+                                <a href="{{ url('principal/'.$dados['usuario']->id)}}" class="waves-effect waves-primary">
                                     <i class="ti-home"></i><span> Início </span>
                                 </a>
                             </li>
@@ -180,8 +180,8 @@
                                     <span class="menu-arrow"></span>
                                 </a>
                                 <ul class="list-unstyled">
-                                    <li><a href="{{url('eventos/todosEventos')}}">Todos eventos</a></li>
-                                    <li><a href="{{url('eventos/meusEventos')}}">Meus eventos</a></li>
+                                    <li><a href="{{url('user/todosEventos/'.$dados['usuario']->id)}}">Todos eventos</a></li>
+                                    <li><a href="{{url('user/meusEventos/'.$dados['usuario']->id)}}">Meus eventos</a></li>
                                 </ul>
                             </li>
 
@@ -191,7 +191,7 @@
                                     <span class="menu-arrow"></span>
                                 </a>
                                 <ul class="list-unstyled">
-                                    <li><a href="{{url('user/quotas')}}">Quotas</a></li>
+                                    <li><a href="{{url('user/quotas/'.$dados['usuario']->id)}}">Quotas</a></li>
                                 </ul>
                             </li>
 
@@ -201,7 +201,7 @@
                                     <span class="menu-arrow"></span>
                                 </a>
                                 <ul class="list-unstyled">
-                                    <li><a href="{{url('user/contribuicoes')}}">Minhas contribuíções</a></li>
+                                    <li><a href="{{url('user/contribuicoes/'.$dados['usuario']->id)}}">Minhas contribuíções</a></li>
                                 </ul>
                             </li>
 
@@ -224,14 +224,14 @@
                                     <span class="menu-arrow"></span>
                                 </a>
                                 <ul class="list-unstyled">
-                                    <li><a href="{{url('/admin/quotas')}}">Quotas</a></li>
-                                    <li><a href="{{url('/admin/contribuicoes')}}">Contribuíções</a></li>
-                                    <li><a href="{{url('/admin/despesas')}}">Despesas</a></li>
-                                    <li><a href="{{url('/admin/financas')}}">Finanças</a></li>
-                                    <li><a href="{{url('/admin/utilizadores')}}">Membros</a></li>
-                                    <li><a href="{{url('/admin/parceiros')}}">Parceiros</a></li>
-                                     <li><a href="{{url('/admin/eventos')}}">Eventos</a></li>
-                                    <li><a href="{{url('/admin/outros')}}">Outros</a></li>
+                                    <li><a href="{{url('/admin/quotas/'.$dados['usuario']->id)}}">Quotas</a></li>
+                                    <li><a href="{{url('/admin/contribuicoes/'.$dados['usuario']->id)}}">Contribuíções</a></li>
+                                    <li><a href="{{url('/admin/despesas/'.$dados['usuario']->id)}}">Despesas</a></li>
+                                    <li><a href="{{url('/admin/financas/'.$dados['usuario']->id)}}">Finanças</a></li>
+                                    <li><a href="{{url('/admin/utilizadores/'.$dados['usuario']->id)}}">Membros</a></li>
+                                    <li><a href="{{url('/admin/parceiros/'.$dados['usuario']->id)}}">Parceiros</a></li>
+                                    <li><a href="{{url('/admin/eventos/'.$dados['usuario']->id)}}">Eventos</a></li>
+                                    <li><a href="{{url('/admin/outros/'.$dados['usuario']->id)}}">Outros</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -251,11 +251,16 @@
             <!-- Start right Content here -->
             <!-- ============================================================== -->                      
             <div class="content-page">
+
+       {{
+        var_dump($dados['usuario'])
+       }}  
                 <!-- Start content -->
-                    @yield('base')
+                     {{-- @yield('base') --}}
+                     @yield('base', new Illuminate\Support\HtmlString(view('minton.inicio1')))
                 <footer class="footer">
                         2018 © GassX <br/>
-                       by: Válter Cinquenta & Lucília Mandlate
+                       
                 </footer>
             </div>
             <!-- ============================================================== -->

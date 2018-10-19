@@ -9,7 +9,7 @@
                             <div class="col-sm-12">
                                 <div class="page-title-box">
                                     <h4 class="page-title">Finanças</h4>
-                                    <form class="form-horizontal float-right" role="form" method="POST" action="{{ url('/admin/atualizarFinancas') }}">
+                                    <form class="form-horizontal float-right" role="form" method="POST" action="{{ url('/admin/atualizarFinancas/'.$dados['usuario']->id) }}">
 										{{csrf_field() }}
 										<div class="form-group row">
 										    <input name="mes_ano" type="text" class="col-sm-5   form-control form-control-1 input-sm from" placeholder="Mês e ano" >

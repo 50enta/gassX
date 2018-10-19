@@ -1,6 +1,4 @@
-@extends('principal')
 
-@section('base') 
 <!-- Start content -->
           <div class="content">
             <div class="container">
@@ -59,4 +57,4 @@
                 <!-- end content -->
 
 
- @endsection
+ 
