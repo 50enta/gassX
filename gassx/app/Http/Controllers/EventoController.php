@@ -63,4 +63,28 @@ class EventoController extends Controller
         
         return view('user.telaMeusEventos', compact('dados'));
 	}
+
+
+//detalhes evento
+	public function telaDetalhesEvento($user_id, $ma = '0/0'){
+		$dados['usuario'] = User::find($user_id);
+
+		$data = explode('/', $ma);
+		$mes = (int) $data[0];
+		$ano =  (int) $data[1];
+		
+		return view("user.telaDetalhesEvento", compact('dados'));
+	}
+
+
+
+	public function store2(Request $request, $user_id){
+		$dados['usuario'] = User::find($user_id);
+		
+		$data = explode('/', $request['mes_ano']);
+		$mes = (int) $data[0];
+		$ano =  (int) $data[1];
+        
+        return view('user.telaDetalhesEvento', compact('dados'));
+	}
 }

@@ -32,6 +32,10 @@ Route::group(['prefix' => 'user'], function () {
     Route::post('/atualizarTodosEventos/{user_id}',  'EventoController@store'); 
     Route::get('/meusEventos/{user_id}/{ma?}',  'EventoController@telaMeusEventos');
     Route::post('/atualizarMeusEventos/{user_id}',  'EventoController@store1'); 
+    Route::get('detalhesEvento/{user_id}/{ma?}', 'EventoController@telaDetalhesEvento');
+    Route::post('/atualizarDetalhesEvento/{user_id}',  'EventoController@store2');
+
+    
 });
 
 
