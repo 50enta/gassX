@@ -89,7 +89,7 @@
 			                    <p class="card-text">Some quick example text to build on the card title and make
 			                            up the bulk of the card's content.</p>
 			                    
-			                    <a href="javascript: void(0);" class="btn btn-primary">Participar</a>
+										<a href="#" data-toggle="#con-close-modal" class="btn btn-primary sweet-4" onclick="_gaq.push(['_trackEvent', 'example', 'try', 'sweet-1']);">Participar</a>
 			                    <a href="{{url('/eventos/todosEventos/telaDetalhes')}}" class="card-link text-custom"><i class="mdi mdi-arrow-right-bold-hexagon-outline"></i> mais detalhes</a>
 			                    
 			                </div> <!-- end card-body-->
@@ -108,7 +108,7 @@
 			            <div class="card-body">
 			                    <p class="card-text">Some quick example text to build on the card title and make
 			                            up the bulk of the card's content.</p>
-			                 <a href="javascript: void(0);" class="btn btn-primary">Participar</a>
+										<a href="#" data-toggle="#con-close-modal" class="btn btn-primary sweet-4" onclick="_gaq.push(['_trackEvent', 'example', 'try', 'sweet-1']);">Participar</a>
 			                    <a href="{{url('/eventos/todosEventos/telaDetalhes')}}" class="card-link text-custom "><i class="mdi mdi-arrow-right-bold-hexagon-outline"></i> mais detalhes</a>
 			            </div> <!-- end card-body-->
 			        </div> <!-- end card-->
@@ -210,21 +210,30 @@
         swal("Here's a message!");
       };
 
-      document.querySelector('.sweet-4').onclick = function(){
-        swal({
-          title: "Are you sure?",
-          text: "You will not be able to recover this imaginary file!",
-          type: "warning",
-          showCancelButton: true,
-          confirmButtonClass: 'btn-danger',
-          confirmButtonText: 'Yes, delete it!',
-          closeOnConfirm: false,
-          //closeOnCancel: false
-        },
-        function(){
-          swal("Deleted!", "Your imaginary file has been deleted!", "success");
-        });
-      };
+     document.querySelector('.sweet-4').onclick = function(){
+		swal({
+			 	title: "Are you sure?",
+			  text: "You will not be able to recover !",
+			  type: "warning",
+			  showCancelButton: true,
+			  confirmButtonClass: "btn-danger",
+			  confirmButtonText: "Sim!",
+			  cancelButtonText: "Nao, cancel!",
+			  closeOnConfirm: false,
+			  closeOnCancel: false
+		},
+		function(isConfirm) {
+		  if (isConfirm) {
+		    swal({
+			  title: "Sweet!",
+			  text: "Here's a custom image.",
+			  imageUrl: 'thumbs-up.jpg'
+			});
+		  } else {
+		    swal("Cancelled", "Your imaginary file is safe :)", "error");
+		  }
+		});
+     };
 
 </script>
 
