@@ -2,7 +2,7 @@
 @section('base')
 <div class="content">
 	<div class="container-fluid">
-
+//Não esquece que existe o /user/atualizarDetalhesEvento
 
 <button class="btn btn-primary sweet-1" onclick="_gaq.push(['_trackEvent', 'example', 'try', 'sweet-1']);">Try It</button>
 <script >

@@ -30,18 +30,18 @@
 
                          
 
-	 	<div class="row">  
-		    <div class="row">  
+		    <div class="row card-body">  
 		                   
 		                    
 				<div class="col-md-6 col-lg-3">
 			            <div class="card d-block">
 			              	<div class="card-body">
-			                    <h5 class="card-title">Card title</h5>
-			                  	<h6 class="card-subtitle text-muted">Support card subtitle</h6>
+			                    <h5 class="card-title">Churrasco no Sitoe</h5>
+			                  	
 			              	</div>
-			                    <img class="img-fluid" src="{{asset('minton/images/small/img1.jpg')}}" alt="Card image cap">
+			                    <img class="img-fluid" src="{{asset('minton/images/padrao/evento-padrao1.png')}}" alt="Card image cap">
 			                <div class="card-body">
+<<<<<<< HEAD
 			                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 			                            
 			                    
@@ -50,6 +50,13 @@
 			                    <button class="btn btn-primary sweet-1" onclick="_gaq.push(['_trackEvent', 'example', 'try', 'sweet-1']);">Try It</button>
 
 			                    <a href="{{url('/eventos/todosEventos/telaDetalhes')}}"  class="card-link text-custom"><i class="mdi mdi-arrow-right-bold-hexagon-outline" data-target=""></i> mais detalhes</a>
+=======
+			                    <p class="card-text">Só mais um feriado que decidimos curtir e esquecer de tudo.</p>
+			                    
+			                     <a href="#" data-toggle="#con-close-modal" class="btn btn-primary sweet-4" onclick="_gaq.push(['_trackEvent', 'example', 'try', 'sweet-4']);">Participar</a>
+ 									
+			                    <a href="{{url('user/detalhesEvento/'.$dados['usuario']->id)}}"  class="card-link text-custom"><i class="mdi mdi-arrow-right-bold-hexagon-outline" data-target=""></i>  detalhes</a>
+>>>>>>> 1fce7121506826f291d522088308ea2a9a299f75
 			                    
 			                </div> <!-- end card-body-->
 			            </div> <!-- end card-->
@@ -59,21 +66,28 @@
 			         <div class="col-md-6 col-lg-3">
 			        <div class="card d-block">
 			            <div class="card-body">
-			                <h5 class="card-title">Card title</h5>
-			                <h6 class="card-subtitle text-muted">Support card subtitle</h6>
+			                <h5 class="card-title">Futebol 03</h5>
+			                
 			            </div>
-			                    <img class="img-fluid" src="{{asset('minton/images/small/img2.jpg')}}" alt="Card image cap">
+			                    <img class="img-fluid" src="{{asset('minton/images/padrao/evento-padrao1.png')}}" alt="Card image cap">
 			            <div class="card-body">
+<<<<<<< HEAD
 			                <p class="card-text">Some quick example text to build on the card title and make
 			                 up the bulk of the card's content.</p>
 			                <!-- <a href="javascript: void(0)" data-toggle="#con-close-modal" class="btn btn-primary sweet-4" onclick="_gaq.push(['_trackEvent', 'example', 'try', 'sweet-4']);">Participar</a> -->
 			                <button class="btn btn-primary sweet-2" onclick="_gaq.push(['_trackEvent', 'example', 'try', 'sweet-2']);">Try It</button>
 			                <a href="{{url('/eventos/todosEventos/telaDetalhes')}}" class="card-link text-custom"><i class="mdi mdi-arrow-right-bold-hexagon-outline"></i> mais detalhes</a>
+=======
+			                    <p class="card-text">Some quick example text to build on the card title and make.</p>
+			                <a href="#" data-toggle="#con-close-modal" class="btn btn-primary sweet-4" onclick="_gaq.push(['_trackEvent', 'example', 'try', 'sweet-4']);">Participar</a>
+			                    <a href="{{url('/eventos/todosEventos/telaDetalhes')}}" class="card-link text-custom"><i class="mdi mdi-arrow-right-bold-hexagon-outline"></i>detalhes</a>
+>>>>>>> 1fce7121506826f291d522088308ea2a9a299f75
 			            </div> <!-- end card-body-->
 			        </div> <!-- end card-->
 			    </div><!-- end col -->
 
 
+<<<<<<< HEAD
 			        <div class="col-md-6 col-lg-3">
 			            <div class="card d-block">
 			              	<div class="card-body">
@@ -90,31 +104,19 @@
 			                </div> <!-- end card-body-->
 			            </div> <!-- end card-->
 			        </div><!-- end col -->
+=======
+			       
+>>>>>>> 1fce7121506826f291d522088308ea2a9a299f75
 
 
 
-			    <div class="col-md-6 col-lg-3">
-			        <div class="card d-block">
-			            <div class="card-body">
-			                <h5 class="card-title">Card title</h5>
-			                <h6 class="card-subtitle text-muted">Support card subtitle</h6>
-			            </div>
-			                    <img class="img-fluid" src="{{asset('minton/images/small/img3.jpg')}}" alt="Card image cap">
-			            <div class="card-body">
-			                    <p class="card-text">Some quick example text to build on the card title and make
-			                            up the bulk of the card's content.</p>
-										<a href="#" data-toggle="#con-close-modal" class="btn btn-primary sweet-4" onclick="_gaq.push(['_trackEvent', 'example', 'try', 'sweet-1']);">Participar</a>
-			                    <a href="{{url('/eventos/todosEventos/telaDetalhes')}}" class="card-link text-custom "><i class="mdi mdi-arrow-right-bold-hexagon-outline"></i> mais detalhes</a>
-			            </div> <!-- end card-body-->
-			        </div> <!-- end card-->
-			    </div><!-- end col -->
 
 
 
 		    </div>
 		
 
-			<div class="row">  
+			<div class="row card-body">  
 		                   
 		                    
 				<div class="col-md-6 col-lg-3">
@@ -123,7 +125,7 @@
 			                    <h5 class="card-title">Card title</h5>
 			                  	<h6 class="card-subtitle text-muted">Support card subtitle</h6>
 			              	</div>
-			                    <img class="img-fluid" src="{{asset('minton/images/gallery/4.jpg')}}" alt="Card image cap">
+			                    <img class="img-fluid" src="{{asset('minton/images/padrao/evento-padrao1.png')}}" alt="Card image cap">
 			                <div class="card-body">
 			                    <p class="card-text">Some quick example text to build on the card title and make
 			                            up the bulk of the card's content.</p>
@@ -194,7 +196,6 @@
 		    </div>
 			<button class="btn btn-primary sweet-1" onclick="_gaq.push(['_trackEvent', 'example', 'try', 'sweet-1']);">Try It</button>
 
-		</div>
 
 
 	</div>

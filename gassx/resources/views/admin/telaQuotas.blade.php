@@ -77,7 +77,7 @@
                                                 <td><b>#1256</b></td>
                                                 <td>
                                                     <a href="javascript: void(0);" class="text-dark">
-                                                        <img src="{{asset('minton/images/users/avatar-2.jpg')}}" alt="contact-img" title="contact-img" class="thumb-sm rounded-circle" />
+                                                        <img src="{{asset('minton/images/padrao/perfil-padrao1-m.png')}}" alt="contact-img" title="contact-img" class="thumb-sm rounded-circle" />
                                                         <span class="ml-2">George A. Lianes</span>
                                                     </a>
                                                 </td>
@@ -114,7 +114,7 @@
                                                 <td><b>#2542</b></td>
                                                 <td>
                                                     <a href="javascript: void(0);" class="text-dark">
-                                                        <img src="assets/images/users/avatar-3.jpg" alt="contact-img" title="contact-img" class="thumb-sm rounded-circle" />
+                                                        <img src="{{asset('minton/images/padrao/perfil-padrao1-f.png')}}" alt="contact-img" title="contact-img" class="thumb-sm rounded-circle" />
                                                         <span class="ml-2">Jose D. Delacruz</span>
                                                     </a>
                                                 </td>
@@ -149,7 +149,7 @@
                                                 <td><b>#320</b></td>
                                                 <td>
                                                     <a href="javascript: void(0);" class="text-dark">
-                                                        <img src="assets/images/users/avatar-5.jpg" alt="contact-img" title="contact-img" class="thumb-sm rounded-circle" />
+                                                        <img src="{{asset('minton/images/padrao/perfil-padrao1-m.png')}}" alt="contact-img" title="contact-img" class="thumb-sm rounded-circle" />
                                                         <span class="ml-2">Phyllis K. Maciel</span>
                                                     </a>
                                                 </td>
@@ -184,7 +184,7 @@
                                                 <td><b>#1254</b></td>
                                                 <td>
                                                     <a href="javascript: void(0);" class="text-dark">
-                                                        <img src="assets/images/users/avatar-8.jpg" alt="contact-img" title="contact-img" class="thumb-sm rounded-circle" />
+                                                        <img src="{{asset('minton/images/padrao/perfil-padrao1-m.png')}}" alt="contact-img" title="contact-img" class="thumb-sm rounded-circle" />
                                                         <span class="ml-2">Margeret V. Ligon</span>
                                                     </a>
                                                 </td>

@@ -55,7 +55,7 @@
                 <!-- LOGO -->
                 <div class="topbar-left">
                     <div class="text-center">
-                        <a href="{{ url('principal'.$dados['usuario']->id)}}" class="logo"><i class="mdi mdi-radar"></i> <span>GassX</span></a>
+                        <a href="{{ url('principal/'.$dados['usuario']->id)}}" class="logo"><i class="mdi mdi-radar"></i> <span>GassX</span></a>
                     </div>
                 </div>
 
@@ -117,7 +117,7 @@
                         <li class="list-inline-item dropdown notification-list">
                             <a class="nav-link dropdown-toggle waves-effect waves-light nav-user" data-toggle="dropdown" href="#" role="button"
                                aria-haspopup="false" aria-expanded="false">
-                                <img src="{{asset('minton/images/users/avatar-1.jpg')}}" alt="user" class="rounded-circle">
+                                <img src="{{asset('minton/images/padrao/perfil-padrao1-m.png')}}" alt="user" class="rounded-circle">
                             </a>
                             <div class="dropdown-menu dropdown-menu-right profile-dropdown " aria-labelledby="Preview">
                                 <!-- item-->
