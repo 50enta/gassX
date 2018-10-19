@@ -66,39 +66,10 @@
 			    </div><!-- end col -->
 
 
-			        <div class="col-md-6 col-lg-3">
-			            <div class="card d-block">
-			              	<div class="card-body">
-			                    <h5 class="card-title">Soupa no bairro</h5>
-			                  
-			              	</div>
-			                    <img class="img-fluid" src="{{asset('minton/images/padrao/evento-padrao1.png')}}" alt="Card image cap">
-			                <div class="card-body">
-			                    <p class="card-text">Some quick example text to build on the card title and make.</p>
-			                    
-			                    <a href="javascript: void(0);" class="btn btn-primary">Participar</a>
-			                    <a href="{{url('/eventos/todosEventos/telaDetalhes')}}" class="card-link text-custom"><i class="mdi mdi-arrow-right-bold-hexagon-outline"></i>detalhes</a>
-			                    
-			                </div> <!-- end card-body-->
-			            </div> <!-- end card-->
-			        </div><!-- end col -->
+			       
 
 
 
-			    <div class="col-md-6 col-lg-3">
-			        <div class="card d-block">
-			            <div class="card-body">
-			                <h5 class="card-title">Card title</h5>
-			                
-			            </div>
-			                    <img class="img-fluid" src="{{asset('minton/images/padrao/evento-padrao1.png')}}" alt="Card image cap">
-			            <div class="card-body">
-			                    <p class="card-text">Some quick example text to build on the card title and make.</p>
-			                  <a href="javascript: void(0);" class="btn btn-primary">Participar</a>
-			                    <a href="{{url('/eventos/todosEventos/telaDetalhes')}}" class="card-link text-custom "><i class="mdi mdi-arrow-right-bold-hexagon-outline"></i>detalhes</a>
-			            </div> <!-- end card-body-->
-			        </div> <!-- end card-->
-			    </div><!-- end col -->
 
 
 
@@ -195,21 +166,30 @@
         swal("Here's a message!");
       };
 
-      document.querySelector('.sweet-4').onclick = function(){
-        swal({
-          title: "Are you sure?",
-          text: "You will not be able to recover this imaginary file!",
-          type: "warning",
-          showCancelButton: true,
-          confirmButtonClass: 'btn-danger',
-          confirmButtonText: 'Yes, delete it!',
-          closeOnConfirm: false,
-          //closeOnCancel: false
-        },
-        function(){
-          swal("Deleted!", "Your imaginary file has been deleted!", "success");
-        });
-      };
+     document.querySelector('.sweet-4').onclick = function(){
+		swal({
+			 	title: "Are you sure?",
+			  text: "You will not be able to recover !",
+			  type: "warning",
+			  showCancelButton: true,
+			  confirmButtonClass: "btn-danger",
+			  confirmButtonText: "Sim!",
+			  cancelButtonText: "Nao, cancel!",
+			  closeOnConfirm: false,
+			  closeOnCancel: false
+		},
+		function(isConfirm) {
+		  if (isConfirm) {
+		    swal({
+			  title: "Sweet!",
+			  text: "Here's a custom image.",
+			  imageUrl: 'thumbs-up.jpg'
+			});
+		  } else {
+		    swal("Cancelled", "Your imaginary file is safe :)", "error");
+		  }
+		});
+     };
 
 </script>
 
