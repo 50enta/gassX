@@ -3,9 +3,9 @@
 
 @section('base')
 
-
+<div class="content">
 <div class="container-fluid">
-	
+
                         <!-- Page-Title -->
                         <div class="row">
                             <div class="col-sm-12">
@@ -37,7 +37,7 @@
 	                    <p class="card-text">Some quick example text to build on the card title and make
 	                            up the bulk of the card's content.</p>
 	                    
-	                    <a href="javascript: void(0);" class="btn btn-primary"><!-- <i class="mdi mdi-arrow-right-bold-hexagon-outline"></i> --> Participar</a>
+	                    <a href="javascript: void(0);" class="card-link text-custom"><i class="mdi mdi-arrow-right-bold-hexagon-outline"></i> mais detalhes</a>
 	                    
 	                </div> <!-- end card-body-->
 	            </div> <!-- end card-->
@@ -71,7 +71,7 @@
 	                    <p class="card-text">Some quick example text to build on the card title and make
 	                            up the bulk of the card's content.</p>
 	                    
-	                    <a href="javascript: void(0);" class="btn btn-primary"><!-- <i class="mdi mdi-arrow-right-bold-hexagon-outline"></i> --> Participar</a>
+	                    <a href="javascript: void(0);" class="card-link text-custom"><i class="mdi mdi-arrow-right-bold-hexagon-outline"></i> mais detalhes</a>
 	                    
 	                </div> <!-- end card-body-->
 	            </div> <!-- end card-->

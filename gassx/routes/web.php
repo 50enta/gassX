@@ -20,6 +20,32 @@ Route::get('/principal/{user_id}', 'Controller@telaInicio');
 
 
 
+
+Route::get('/eventos/todosEventos', function () {
+    return view('user.telaTodosEventos');
+});
+Route::get('/eventos/meusEventos', function () {
+    return view('user.telaMeusEventos');
+
+});
+Route::get('/eventos/todosEventos/telaDetalhes', function () {
+    return view('user.telaDetalhes');
+
+});
+
+
+
+Route::get('/contas/gastos', function () {
+    return view('user.telaGastos');
+});
+Route::get('/contas/recargas', function () {
+    return view('user.telaRecargas');
+});
+Route::get('user/perfil/sobre', function () {
+    return view('user.telaPerfil');
+});
+
+
 //algumas rotas do user
 Route::group(['prefix' => 'user'], function () {
     Route::get('/perfil/{user_id}/{ma?}', 'UserController@telaPerfil');

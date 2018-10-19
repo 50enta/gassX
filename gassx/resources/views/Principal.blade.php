@@ -23,7 +23,8 @@
         <link href="{{asset('minton/plugins/mjolnic-bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css')}}" rel="stylesheet">
         <link href="{{asset('minton/plugins/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css')}}" rel="stylesheet">
         <link href="{{asset('minton/plugins/bootstrap-daterangepicker/daterangepicker.css')}}" rel="stylesheet">
-
+        <link href="{{asset('minton/plugins/sweet-alert/sweetalert2.min.css')}}" rel="stylesheet">
+        
         <link rel="stylesheet" href="{{asset('minton/plugins/magnific-popup/dist/magnific-popup.css')}}" />
         <link rel="stylesheet" href="{{asset('minton/plugins/jquery-datatables-editable/dataTables.bootstrap4.min.css')}}" />
 
@@ -434,7 +435,9 @@
         <script src="{{asset('minton/plugins/bootstrap-daterangepicker/daterangepicker.js')}}"></script>
 
         <script src="{{asset('minton/pages/jquery.form-advanced.init.js')}}"></script>
-
+        <script src="{{asset('minton/plugins/sweet-alert/sweetalert2.min.js')}}" type="text/javascript"></script>
+      
+     
      
         <!-- Custom main Js -->
         <script src="{{asset('minton/js/jquery.core.js')}}"></script>

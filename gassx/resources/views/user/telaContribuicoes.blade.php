@@ -75,7 +75,9 @@
                                     <button type="button" class="col-lg-3 btn btn-success waves-effect waves-light" data-toggle="modal" data-target=" #con-close-modal">Contribuir
                                     </button> 
                                     <div style="padding-bottom: 15px;"></div>  
+
                                 </div>
+                                
                            
                     </div><!-- end col -->
             </div>
@@ -84,7 +86,6 @@
                         </div>
 
                         {{-- end row --}}
-
 
 
 
