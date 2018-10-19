@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\User;
 
-class GastoUserController extends Controller
+class UtilController extends Controller
 {
     //
 }

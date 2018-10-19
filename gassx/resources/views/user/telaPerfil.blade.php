@@ -108,7 +108,7 @@
                                                 </a>
                                             </li>
                                             <li class="nav-item">
-                                                <a href="{{url('user/perfil/atualizarPerfil')}}" data-toggle="tab" aria-expanded="false" class="nav-link">
+                                                <a href="#atualizarPerfil" data-toggle="tab" aria-expanded="false" class="nav-link">
                                                     CONFIGURAÇÕES
                                                 </a>
                                             </li>
@@ -141,7 +141,7 @@
 
                              <div class="col-lg-6 col-md-6">
                                 <div class=" text-right ">
-                                    <form class="form-horizontal float-right" role="form" method="POST" action="{{ url('/user/atualizarPerfil') }}">
+                                    <form class="form-horizontal float-right" role="form" method="POST" action="{{ url('/user/atualizarPerfil'.$dados['usuario']->id) }}">
                                         {{csrf_field() }}
                                           <div style="padding-bottom: 30px;"class=""></div>
                                         <div class="form-group row">

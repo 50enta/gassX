@@ -17,15 +17,16 @@
                             <div class="card-body p-4">
                                 
                                 <div class="text-center w-75 m-auto">
-                                    <h4 class="text-dark-50 text-center mt-0 font-weight-bold">Sign In</h4>
-                                    <p class="text-muted mb-4">Enter your email address and password to access admin panel.</p>
+                                    <h4 class="text-dark-50 text-center mt-0 font-weight-bold">Registo
+                                    </h4>
+                                    {{-- <p class="text-muted mb-4">Preencha os campos e faça parte desta família.</p> --}}
                                 </div>
 
                                 <form method="POST" action="{{ route('register') }}">
-                        @csrf
+                                @csrf
 
                                     <div class="form-group">
-                                        <label for="emailaddress">{{ __('E-Mail Address') }}</label>
+                                        <label for="emailaddress">{{ __('E-Mail') }}</label>
                                         <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
 
                                 @if ($errors->has('email'))
@@ -57,7 +58,7 @@
                                     </div>
                                     
                                     <div class="form-group">
-                                        <label for="password-confirm">{{ __('Confirm Password') }}</label>
+                                        <label for="password-confirm">{{ __('Confirmar Password') }}</label>
                                         <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
 
                                         @if ($errors->has('password'))
@@ -78,7 +79,7 @@
                                     </div>
 
                                     <div class="form-group mb-0 text-center">
-                                        <button class="btn btn-primary" type="submit"> Register </button>
+                                        <button class="btn btn-primary" type="submit"> Registar </button>
                                     </div>
 
                                 </form>
@@ -88,7 +89,7 @@
 
                         <div class="row mt-3">
                     <div class="col-12 text-center">
-                        <p class="text-muted">Already have account? <a href="{{ route('login') }}" class="text-dark ml-1"><b>Sign Up</b></a></p>
+                        <p class="text-muted">Já tem uma conta? <a href="{{ route('login') }}" class="text-dark ml-1"><b>Entrar</b></a></p>
                    
                     </div>  
                 </div>

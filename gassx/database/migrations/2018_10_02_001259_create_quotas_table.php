@@ -21,6 +21,10 @@ class CreateQuotasTable extends Migration
             $table->foreign('mes_id')->references('id')->on('mes');
             $table->integer('ano_id')->unsigned();
             $table->foreign('ano_id')->references('id')->on('anos');
+            $table->integer('multa_id')->unsigned();
+            $table->foreign('multa_id')->references('id')->on('multas');
+            $table->integer('valor_quota_id')->unsigned();
+            $table->foreign('valor_quota_id')->references('id')->on('valor_quotas');
             $table->timestamps();
         });
     }

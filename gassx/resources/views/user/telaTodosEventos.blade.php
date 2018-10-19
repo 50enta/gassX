@@ -5,23 +5,15 @@
 
  <!-- <div class="content"> -->
 	<div class="container-fluid">
-<br>
-<br>
-<br>
-<br>
-                        <!-- Page-Title -->
+
+                          <!-- Page-Title -->
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="page-title-box">
-                                    <h4 class="page-title">Todos Eventos</h4>
-                                    <form class="form-horizontal float-right" role="form" method="POST" action="{{ url('') }}">
+                                    <h4 class="page-title">Todos eventos</h4>
+                                    <form class="form-horizontal float-right" role="form" method="POST" action="{{ url('/user/atualizarTodosEventos/'.$dados['usuario']->id) }}">
 										{{csrf_field() }}
-                                    <!-- <ol class="breadcrumb float-right">
-                                        <li class="breadcrumb-item"><a href="{{ url('principal')}}">GassX</a></li>
-                                        <li class="breadcrumb-item"><a href="{{url('eventos/todosEventos')}}">Todos Eventos</a></li>
-                                      
-                                    </ol> -->
-                                    <div class="form-group row">
+										<div class="form-group row">
 										    <input name="mes_ano" type="text" class="col-sm-5 form-control form-control-1 input-sm from" placeholder="Mês e ano" >
 										    <button type="submit" class="btn btn-success waves-effect waves-light btn-sm m-b-5">Buscar</button>
 										</div>

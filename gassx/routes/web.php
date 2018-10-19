@@ -11,59 +11,46 @@
 |
 */
 
+// Rotas gerais
 Route::get('/', function () {
     return view('auth.login');
 });
-
 Auth::routes();
-Route::get('/home', 'HomeController@index')->name('principal');
+Route::get('/principal/{user_id}', 'Controller@telaInicio');
 
-// Rotas do utilizador
-Route::get('/principal', function () {
-    return view('minton.inicio');
-});
 
-Route::get('/eventos/todosEventos', function () {
-    return view('user.telaTodosEventos');
-});
-Route::get('/eventos/meusEventos', function () {
-    return view('user.telaMeusEventos');
-});
-
-Route::get('/contas/gastos', function () {
-    return view('user.telaGastos');
-});
-Route::get('/contas/recargas', function () {
-    return view('user.telaRecargas');
-});
-Route::get('user/perfil/sobre', function () {
-    return view('user.telaPerfil');
-});
 
 //algumas rotas do user
 Route::group(['prefix' => 'user'], function () {
-    Route::get('/perfil', 'UserController@telaPerfil');
-    Route::post('/atualizarPerfil/', 'UserController@store');
-    Route::get('/quotas', 'QuotaController@telaQuotasUser');
-    Route::post('/atualizarQuotas/', 'QuotaController@store1');
-    Route::get('/contribuicoes', 'ContribuicaoController@telaContribuicoesUser');
-    Route::post('/atualizarContribuicoes/', 'ContribuicaoController@store1');
+    Route::get('/perfil/{user_id}/{ma?}', 'UserController@telaPerfil');
+    Route::post('/atualizarPerfil/{user_id}', 'UserController@store');
+    Route::get('/quotas/{user_id}/{ma?}', 'QuotaController@telaQuotasUser');
+    Route::post('/atualizarQuotas/{user_id}', 'QuotaController@store1');
+    Route::get('/contribuicoes/{user_id}/{ma?}', 'ContribuicaoController@telaContribuicoesUser');
+    Route::post('/atualizarContribuicoes/{user_id}', 'ContribuicaoController@store1');
+    Route::get('/todosEventos/{user_id}/{ma?}', 'EventoController@telaTodosEventos');
+    Route::post('/atualizarTodosEventos/{user_id}',  'EventoController@store'); 
+    Route::get('/meusEventos/{user_id}/{ma?}',  'EventoController@telaMeusEventos');
+    Route::post('/atualizarMeusEventos/{user_id}',  'EventoController@store1'); 
 });
+
 
 // rotas do admin
 Route::group(['prefix' => 'admin'], function () {
-	Route::get('/', 'AdminController@telaAdmin');
-    Route::get('/financas', 'QuotaController@telaFinancas');
-    Route::post('/atualizarFinancas', 'DinheiroController@store');
-    Route::get('/eventos', 'EventoController@telaEventos'); 
-    Route::get('/contribuicoes', 'ContribuicaoController@telaContribuicoes'); 
-    Route::post('/atualizarContribuicoes', 'ContribuicaoController@store'); 
-    Route::get('/despesas', 'DespesaController@telaDespesas'); 
-    Route::post('/atualizarDespesas', 'DespesaController@store');
-    Route::get('/outros', 'Controller@telaOutros');  
-    Route::get('/parceiros', 'ParceiroController@telaParceiros'); 
-    Route::get('/quotas/{ma?}', 'QuotaController@telaQuotas'); 
-    Route::post('/atualizarQuotas', 'QuotaController@store');    
-    Route::get('/utilizadores', 'UserController@telaUtilizadores'); 
+    Route::get('/financas/{user_id}/{ma?}', 'QuotaController@telaFinancas'); //
+    Route::post('/atualizarFinancas/{user_id}', 'DinheiroController@store');
+    Route::get('/contribuicoes/{user_id}/{ma?}', 'ContribuicaoController@telaContribuicoes'); 
+    Route::post('/atualizarContribuicoes/{user_id}', 'ContribuicaoController@store'); 
+    Route::get('/despesas/{user_id}/{ma?}', 'DespesaController@telaDespesas'); 
+    Route::post('/atualizarDespesas/{user_id}', 'DespesaController@store');
+    Route::get('/quotas/{user_id}/{ma?}', 'QuotaController@telaQuotas'); 
+    Route::post('/atualizarQuotas/{user_id}', 'QuotaController@store');    
+    Route::get('/utilizadores/{user_id}/{ma?}', 'UserController@telaUtilizadores'); 
+    Route::get('/parceiros/{user_id}/{ma?}', 'ParceiroController@telaParceiros'); 
+    Route::get('/eventos/{user_id}/{ma?}', 'EventoController@telaEventos'); 
+    Route::get('/outros/{user_id}/{ma?}', 'Controller@telaOutros');  
+
+
 });
+
 
