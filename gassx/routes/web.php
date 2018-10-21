@@ -55,6 +55,7 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/outros/{user_id}/{ma?}', 'Controller@telaOutros');  
 
 
+    Route::post('/salvarMulta/{user_id}/{ma?}', 'MultaController@salvarMulta'); 
 });
 
 

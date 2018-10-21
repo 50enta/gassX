@@ -47,15 +47,6 @@
                                                 </div>
                                             </div>
                                             <div class="col-xs-6 col-sm-3">
-                                                <div class="card-box bg-success text-white">
-                                                    <i class="fi-help"></i>
-                                                    <h3 class="m-b-10">
-                                                         {{$dados['est_pagamentos_admin']['em_falta']}}
-                                                    </h3>
-                                                    <p class="text-uppercase m-b-5 font-13 font-weight-medium">Em falta</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-6 col-sm-3">
                                                 <div class="card-box bg-danger text-white">
                                                     <i class="fi-delete"></i>
                                                     <h3 class="m-b-10">
@@ -64,6 +55,16 @@
                                                     <p class="text-uppercase m-b-5 font-13 font-weight-medium">Pagos com multa</p>
                                                 </div>
                                             </div>
+                                            <div class="col-xs-6 col-sm-3">
+                                                <div class="card-box bg-success text-white">
+                                                    <i class="fi-help"></i>
+                                                    <h3 class="m-b-10">
+                                                         {{$dados['valor_quota']}} Mt
+                                                    </h3>
+                                                    <p class="text-uppercase m-b-5 font-13 font-weight-medium">Valor da quota</p>
+                                                </div>
+                                            </div>
+                                            
                                         </div>
                                     </div>
 
@@ -165,54 +166,41 @@
                                             <thead class="font-13 bg-light text-muted">
                                                 <tr>
                                                     <th class="font-weight-medium">Até (dias)</th>
-                                                   
                                                     <th class="font-weight-medium">Percentagem</th>
                                                     <th class="font-weight-medium">Status</th>
                                                     <th class="font-weight-medium text-center" style="width: 110px;">Acção</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                                @foreach($dados['tab_multas_admin'] as $val)
                                                 <tr>
                                                     <td>
-                                                       8
+                                                       {{$val['dias']}}
                                                     </td>
                                                   
-                                                    <td>2.31%</td>
                                                     <td>
-                                                        
-                                                        <input type="checkbox"  data-plugin="switchery" data-color="#3bafda" data-size="small"/> 
+                                                        {{$val['percentagem']}}
                                                     </td>
                                                     <td>
-                                                        <a href="javascript:void(0);" class="btn btn-link font-18 text-muted btn-sm">
-                                                            <i class="mdi mdi-close"></i>
-                                                        </a>
+                                                        @if($val['status'] == true)
+                                                        <input type="checkbox" checked data-plugin="switchery" data-color="#3bafda" data-size="small"/> 
+                                                        @else
+                                                           <input type="checkbox" data-plugin="switchery" data-color="#3bafda" data-size="small"/> 
+                                                        @endif
+                                                    </td>
+                                                    <td>
                                                         <a href="javascript:void(0);" class="btn btn-link font-18 text-muted btn-sm">
                                                             <i class="mdi mdi-pencil"></i>
                                                         </a>
                                                     </td>
                                                 </tr>
-                                                <tr>
-                                                    <td>
-                                                        5
-                                                    </td>
-                                                  
-                                                    <td>3.89 %</td>
-                                                    <td>
-				                                        <input type="checkbox" checked data-plugin="switchery" data-color="#3bafda" data-size="small"/> 
-                                                    </td>
-                                                    <td>
-                                                        <a href="javascript:void(0);" class="btn btn-link font-18 text-muted btn-sm">
-                                                            <i class="mdi mdi-close"></i>
-                                                        </a>
-                                                        <a href="javascript:void(0);" class="btn btn-link font-18 text-muted btn-sm">
-                                                            <i class="mdi mdi-pencil"></i>
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                              
+                                                @endforeach
                                             </tbody>
                                         </table>
                                     </div>
+
+
+                                    
                                 </div>
                             </div> <!-- end col -->
 
@@ -225,18 +213,21 @@
                                                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                                                     <h4 class="modal-title">Nova multa</h4>
                                                 </div>
+                                        <form class="form-horizontal float-right" role="form" method="POST" action="{{ url('/admin/salvarMulta/'.$dados['usuario']->id) }}">
+                                        {{csrf_field() }}
+
                                                 <div class="modal-body">
                                                     <div class="row">
                                                         <div class="col-md-6">
                                                             <div class="form-group">
                                                                 <label for="field-1" class="control-label">Até (dias)</label>
-                                                                 <input id="demo0" type="text" value="3" name="demo0" data-bts-min="0" data-bts-max="30" data-bts-init-val="" data-bts-step="1" data-bts-decimal="0" data-bts-step-interval="100" data-bts-force-step-divisibility="round" data-bts-step-interval-delay="500" data-bts-prefix="" data-bts-postfix="" data-bts-prefix-extra-class="" data-bts-postfix-extra-class="" data-bts-booster="true" data-bts-boostat="10" data-bts-max-boosted-step="false" data-bts-mousewheel="true" data-bts-button-down-class="btn btn-default" data-bts-button-up-class="btn btn-default"/>
+                                                                 <input id="demo0" type="text" value="3" name="dias" data-bts-min="0" data-bts-max="30" data-bts-init-val="" data-bts-step="1" data-bts-decimal="0" data-bts-step-interval="100" data-bts-force-step-divisibility="round" data-bts-step-interval-delay="500" data-bts-prefix="" data-bts-postfix="" data-bts-prefix-extra-class="" data-bts-postfix-extra-class="" data-bts-booster="true" data-bts-boostat="10" data-bts-max-boosted-step="false" data-bts-mousewheel="true" data-bts-button-down-class="btn btn-default" data-bts-button-up-class="btn btn-default"/>
                                                             </div>
                                                         </div>
                                                         <div class="col-md-6">
                                                             <div class="form-group">
                                                                 <label for="field-2" class="control-label">Percentagem</label>
-                                                                <input id="demo1" type="text" value="55" name="demo1">
+                                                                <input id="demo1" type="text" value="55" name="percentagem">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -246,22 +237,24 @@
 			                                        <label for="checkbox">
 			                                             Habilitar .
 			                                        </label>
-			                                        <input type="checkbox" checked data-plugin="switchery" data-color="#3bafda" data-size="small"/>
+			                                        <input type="checkbox" name="ativo" checked data-plugin="switchery" data-color="#3bafda" value="1" data-size="small"/>
 			                                    
                                                   </div>
                                                     <div class="row">
                                                         <div class="col-md-12">
                                                             <div class="form-group no-margin">
                                                                 <label for="field-7" class="control-label">Descrição</label>
-                                                                <textarea class="form-control" id="field-7" placeholder="Escreva algo sobre a multa"></textarea>
+                                                                <textarea class="form-control" name="descricao" id="field-7" placeholder="Escreva algo sobre a multa"></textarea>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
+                                           
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">cancelar</button>
-                                                    <button type="button" class="btn btn-info waves-effect waves-light">Salvar</button>
+                                                    <button type="submit" class="btn btn-info waves-effect waves-light">Salvar</button>
                                                 </div>
+                                                 </form>
                                             </div>
                                         </div>
                                     </div><!-- /.modal -->
