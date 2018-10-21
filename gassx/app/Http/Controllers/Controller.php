@@ -22,8 +22,11 @@ class Controller extends BaseController
  		$usuario = User::find($user_id);
         
  		$dados['usuario'] =  $usuario;
-
+ 		
         return view('principal', compact('dados'));
     }
+
+  
+
 
 }

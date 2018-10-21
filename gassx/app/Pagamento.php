@@ -42,4 +42,8 @@ class Pagamento extends Model
     public function gastoUser(){
         return $this->belongsTo('App\GastoUser');
     }
+
+
+
+    
 }

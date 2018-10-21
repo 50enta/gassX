@@ -45,7 +45,7 @@ class GastoUser extends Model
      *
      * @var array
      */
-    public function users(){
+    public function user(){
         return $this->belongsTo('App\User');
     }
 
