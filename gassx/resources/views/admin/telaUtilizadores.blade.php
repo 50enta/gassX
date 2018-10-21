@@ -109,13 +109,21 @@
                                                             <div class="form-group">
                                                                 <label for="field-2" class="control-label">Sexo</label> 
                                                                <div class="radio radio-single">
-                                        <input type="radio" id="singleRadio1" value="option1.1" name="radioSingle1" aria-label="Single radio One">
-                                        <label>M</label>
-                                    </div>
+                                                                <input type="radio" id="singleRadio1" value="option1.1" name="radioSingle1" aria-label="Single radio One">
+                                                                <label>M</label>
+                                                            </div>
                                                                <div class="radio radio-success radio-single">
-                                        <input type="radio" id="singleRadio2" value="option2.1" name="radioSingle1" checked="" aria-label="Single radio Two">
-                                        <label>F</label>
-                                    </div>
+                                                                <input type="radio" id="singleRadio2" value="option2.1" name="radioSingle1" checked="" aria-label="Single radio Two">
+                                                                <label>F</label>
+                                                            </div>
+
+
+                                                            <div class="col-md-12">
+                                                            <div class="form-group">
+                                                                <label for="field-1" class="control-label">Email</label>
+                                                                <input id="email" type="email" class="form-control"  placeholder="John">
+                                                            </div>
+                                                        </div>
                                                             </div>
                                                         </div>
                                                     </div>
