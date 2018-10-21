@@ -88,56 +88,92 @@
                             <div class="card-box">
                             	   <!-- Custom Modals -->
                         <div class="row">
-                            <div class="col-12">
-                                <div id="con-close-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+                            <div class="col col-12">
+                               
+                               <div id="con-close-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
                                         <div class="modal-dialog">
                                             <div class="modal-content">
                                                 <div class="modal-header">
                                                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                                    <h4 class="modal-title">
-                                                        Registar 
-                                                    </h4>
+                                                    <h4 class="modal-title">Adicionar novo Membro</h4>
                                                 </div>
                                                 <div class="modal-body">
                                                     <div class="row">
-                                                        <div class="col-md-6">
+                                                        <div class="col-md-12">
                                                             <div class="form-group">
-                                                                <label for="field-1" class="control-label">Descrição</label>
-                                                                <input type="text" class="form-control" id="field-1" placeholder="Compra de cerveja">
+                                                                <label for="field-1" class="control-label">Name Completo</label>
+                                                                <input type="text" class="form-control" id="field-1" placeholder="John">
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-6">
+                                                        <div class="col-md-12">
                                                             <div class="form-group">
-                                                                <label for="field-2" class="control-label">valor</label>
-                                                                <input type="text" class="form-control" id="field-2" placeholder="3000,00">
+                                                                <label for="field-2" class="control-label">Sexo</label> 
+                                                               <div class="radio radio-single">
+                                        <input type="radio" id="singleRadio1" value="option1.1" name="radioSingle1" aria-label="Single radio One">
+                                        <label>M</label>
+                                    </div>
+                                                               <div class="radio radio-success radio-single">
+                                        <input type="radio" id="singleRadio2" value="option2.1" name="radioSingle1" checked="" aria-label="Single radio Two">
+                                        <label>F</label>
+                                    </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="form-group">
+                                                                <label for="field-3" class="control-label">Address</label>
+                                                                <input type="text" class="form-control" id="field-3" placeholder="Address">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="field-4" class="control-label">City</label>
+                                                                <input type="text" class="form-control" id="field-4" placeholder="Boston">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="field-5" class="control-label">Country</label>
+                                                                <input type="text" class="form-control" id="field-5" placeholder="United States">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="field-6" class="control-label">Zip</label>
+                                                                <input type="text" class="form-control" id="field-6" placeholder="123456">
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-md-12">
                                                             <div class="form-group no-margin">
-                                                                <label for="field-7" class="control-label">Observações</label>
-                                                                <textarea class="form-control" id="field-7" placeholder="Qualquer coisa sobre a despesa"></textarea>
+                                                                <label for="field-7" class="control-label">Personal Info</label>
+                                                                <textarea class="form-control" id="field-7" placeholder="Write something about yourself"></textarea>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">Cancelar</button>
-                                                    <button type="submit" class="btn btn-info waves-effect waves-light">Salvar</button>
+                                                    <button type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn btn-info waves-effect waves-light">Save changes</button>
                                                 </div>
                                             </div>
                                         </div>
                                     </div><!-- /.modal -->
 
+
+
                                 <div class="button-list">
                                         <!-- Responsive modal -->
-                                    <button type="button" class="col-lg-3 btn btn-success waves-effect waves-light" data-toggle="modal" data-target=" #con-close-modal">Novo membro
+                                    <button type="button" class="col-lg-4 btn btn-success waves-effect waves-light" data-toggle="modal" data-target=" #con-close-modal">Novo membro
                                     </button>  
                                 </div>
                            
-                    </div><!-- end col -->
-            </div>
+                            </div><!-- end col -->
+                        </div>
                             </div>
                            <div class="row"> 
                            	{{-- Coluna 1 --}}
