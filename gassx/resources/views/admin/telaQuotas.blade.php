@@ -3,7 +3,7 @@
 	 <!-- Start content -->
                 <div class="content">
                     <div class="container-fluid">
-
+                        
                         <!-- Page-Title -->
                         <div class="row">
                             <div class="col-sm-12">
@@ -12,7 +12,8 @@
                                     <form class="form-horizontal float-right" role="form" method="POST" action="{{ url('/admin/atualizarQuotas/'.$dados['usuario']->id) }}">
 										{{csrf_field() }}
 										<div class="form-group row">
-										    <input name="mes_ano" type="text" class="col-sm-5 form-control form-control-1 input-sm from" placeholder="Mês e ano" >
+										    <input name="mes_ano" type="text" class="col-sm-5 form-control form-control-1 input-sm from" 
+                                            placeholder="{{$dados['data']['mes_int'].'/'.$dados['data']['ano']}}" >
 										    <button type="submit" class="btn btn-success waves-effect waves-light btn-sm m-b-5">Buscar</button>
 										</div>
 									</form>
@@ -20,7 +21,7 @@
                                 </div>
                             </div>
                         </div>
-
+                       
                 <div class="row">
                             <div class="col-12">
                                 <div class="card-box">
@@ -30,28 +31,36 @@
                                             <div class="col-xs-6 col-sm-3">
                                                 <div class="card-box bg-secondary text-white">
                                                     <i class="fi-tag"></i>
-                                                    <h3 class="m-b-10">34</h3>
+                                                    <h3 class="m-b-10">
+                                                         {{$dados['est_pagamentos_admin']['quotas_pagas']}}
+                                                    </h3>
                                                     <p class="text-uppercase m-b-5 font-13 font-weight-medium">Quotas pagas</p>
                                                 </div>
                                             </div>
                                             <div class="col-xs-6 col-sm-3">
                                                 <div class="card-box bg-primary text-white">
                                                     <i class="fi-archive"></i>
-                                                    <h3 class="m-b-10">62</h3>
+                                                    <h3 class="m-b-10">
+                                                    {{$dados['est_pagamentos_admin']['pendentes']}}
+                                                    </h3>
                                                     <p class="text-uppercase m-b-5 font-13 font-weight-medium">Pendentes</p>
                                                 </div>
                                             </div>
                                             <div class="col-xs-6 col-sm-3">
                                                 <div class="card-box bg-success text-white">
                                                     <i class="fi-help"></i>
-                                                    <h3 class="m-b-10">183</h3>
+                                                    <h3 class="m-b-10">
+                                                         {{$dados['est_pagamentos_admin']['em_falta']}}
+                                                    </h3>
                                                     <p class="text-uppercase m-b-5 font-13 font-weight-medium">Em falta</p>
                                                 </div>
                                             </div>
                                             <div class="col-xs-6 col-sm-3">
                                                 <div class="card-box bg-danger text-white">
                                                     <i class="fi-delete"></i>
-                                                    <h3 class="m-b-10">250</h3>
+                                                    <h3 class="m-b-10">
+                                                         {{$dados['est_pagamentos_admin']['pagos_com_multa']}}
+                                                    </h3>
                                                     <p class="text-uppercase m-b-5 font-13 font-weight-medium">Pagos com multa</p>
                                                 </div>
                                             </div>
@@ -71,29 +80,35 @@
                                             <th class="font-weight-medium">Dar acção</th>
                                         </tr>
                                         </thead>
-
+{{-- //codigo, membro, n_prestacoes, valor_multa, estado, data_pagamento || genero  --}}
                                         <tbody class="font-14">
+                                            @foreach($dados['tab_pagamentos_admin'] as $key)
                                             <tr>
-                                                <td><b>#1256</b></td>
+                                                <td><b>#{{$key['codigo']}}</b></td>
                                                 <td>
                                                     <a href="javascript: void(0);" class="text-dark">
-                                                        <img src="{{asset('minton/images/padrao/perfil-padrao1-m.png')}}" alt="contact-img" title="contact-img" class="thumb-sm rounded-circle" />
-                                                        <span class="ml-2">George A. Lianes</span>
+                                                        @if($key['genero'] == 'Masculino')
+                                                            <img src="{{asset('minton/images/padrao/perfil-padrao1-m.png')}}" alt="contact-img" title="contact-img" class="thumb-sm rounded-circle" />
+                                                        @elseif($key['genero'] == 'Feminino')
+                                                            <img src="{{asset('minton/images/padrao/perfil-padrao1-f.png')}}" alt="contact-img" title="contact-img" class="thumb-sm rounded-circle" />
+                                                        @endif
+                                                        <span class="ml-2">{{$key['membro']}}</span>
                                                     </a>
                                                 </td>
 
                                                 <td>
-                                                    <span class="badge badge-secondary">4</span>
+                                                    <span class="badge badge-secondary">{{$key['n_prestacoes']}}</span>
                                                 </td>
                                                 <td>
-                                                    60,00
+                                                    {{$key['valor_multa']*100}}%
                                                 </td>
                                                 <td>
-                                                    <span class="badge badge-success">Pagp</span>
+                                                    <span class="badge badge-success">{{$key['estado']}}</span>
+                                                    {{-- <span class="badge badge-warning">Pendente</span> --}}
                                                 </td>
 
                                                 <td>
-                                                    2017/04/28
+                                                    {{$key['data_pagamento']}}
                                                 </td>
 
 
@@ -101,155 +116,13 @@
                                                     <div class="btn-group dropdown">
                                                         <a href="javascript: void(0);" class="dropdown-toggle arrow-none btn btn-light btn-sm" data-toggle="dropdown" aria-expanded="false"><i class="mdi mdi-dots-horizontal"></i></a>
                                                         <div class="dropdown-menu dropdown-menu-right">
-                                                            <a class="dropdown-item" href="#"><i class="mdi mdi-pencil mr-2 text-muted font-18 vertical-middle"></i>Edit Ticket</a>
-                                                            <a class="dropdown-item" href="#"><i class="mdi mdi-check-all mr-2 text-muted font-18 vertical-middle"></i>Close</a>
-                                                            <a class="dropdown-item" href="#"><i class="mdi mdi-delete mr-2 text-muted font-18 vertical-middle"></i>Remove</a>
-                                                            <a class="dropdown-item" href="#"><i class="mdi mdi-star mr-2 font-18 text-muted vertical-middle"></i>Mark as Unread</a>
+                                                            <a class="dropdown-item" href="#"><i class="mdi mdi-pencil mr-2 text-muted font-18 vertical-middle"></i>Cancelar</a>
                                                         </div>
                                                     </div>
                                                 </td>
                                             </tr>
-
-                                            <tr>
-                                                <td><b>#2542</b></td>
-                                                <td>
-                                                    <a href="javascript: void(0);" class="text-dark">
-                                                        <img src="{{asset('minton/images/padrao/perfil-padrao1-f.png')}}" alt="contact-img" title="contact-img" class="thumb-sm rounded-circle" />
-                                                        <span class="ml-2">Jose D. Delacruz</span>
-                                                    </a>
-                                                </td>
-                                                <td>
-                                                    <span class="badge badge-secondary">3</span>
-                                                </td>
-                                                 <td>
-                                                    0,00
-                                                </td>
-                                                <td>
-                                                    <span class="badge badge-warning">Pendente</span>
-                                                </td>
-
-                                                <td>
-                                                    2008/04/25
-                                                </td>
-
-                                                <td>
-                                                    <div class="btn-group dropdown">
-                                                        <a href="javascript: void(0);" class="dropdown-toggle arrow-none btn btn-light btn-sm" data-toggle="dropdown" aria-expanded="false"><i class="mdi mdi-dots-horizontal"></i></a>
-                                                        <div class="dropdown-menu dropdown-menu-right">
-                                                            <a class="dropdown-item" href="#"><i class="mdi mdi-pencil mr-2 text-muted font-18 vertical-middle"></i>Edit Ticket</a>
-                                                            <a class="dropdown-item" href="#"><i class="mdi mdi-check-all mr-2 text-muted font-18 vertical-middle"></i>Close</a>
-                                                            <a class="dropdown-item" href="#"><i class="mdi mdi-delete mr-2 text-muted font-18 vertical-middle"></i>Remove</a>
-                                                            <a class="dropdown-item" href="#"><i class="mdi mdi-star mr-2 font-18 text-muted vertical-middle"></i>Mark as Unread</a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td><b>#320</b></td>
-                                                <td>
-                                                    <a href="javascript: void(0);" class="text-dark">
-                                                        <img src="{{asset('minton/images/padrao/perfil-padrao1-m.png')}}" alt="contact-img" title="contact-img" class="thumb-sm rounded-circle" />
-                                                        <span class="ml-2">Phyllis K. Maciel</span>
-                                                    </a>
-                                                </td>
-                                                <td>
-                                                    <span class="badge badge-danger">0</span>
-                                                </td>
-                                                 <td>
-                                                    0,00
-                                                </td>
-                                                <td>
-                                                    <span class="badge badge-success">Pago</span>
-                                                </td>
-
-                                                <td>
-                                                    2017/04/20
-                                                </td>
-
-                                                <td>
-                                                    <div class="btn-group dropdown">
-                                                        <a href="javascript: void(0);" class="dropdown-toggle arrow-none btn btn-light btn-sm" data-toggle="dropdown" aria-expanded="false"><i class="mdi mdi-dots-horizontal"></i></a>
-                                                        <div class="dropdown-menu dropdown-menu-right">
-                                                            <a class="dropdown-item" href="#"><i class="mdi mdi-pencil mr-2 text-muted font-18 vertical-middle"></i>Edit Ticket</a>
-                                                            <a class="dropdown-item" href="#"><i class="mdi mdi-check-all mr-2 text-muted font-18 vertical-middle"></i>Close</a>
-                                                            <a class="dropdown-item" href="#"><i class="mdi mdi-delete mr-2 text-muted font-18 vertical-middle"></i>Remove</a>
-                                                            <a class="dropdown-item" href="#"><i class="mdi mdi-star mr-2 font-18 text-muted vertical-middle"></i>Mark as Unread</a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td><b>#1254</b></td>
-                                                <td>
-                                                    <a href="javascript: void(0);" class="text-dark">
-                                                        <img src="{{asset('minton/images/padrao/perfil-padrao1-m.png')}}" alt="contact-img" title="contact-img" class="thumb-sm rounded-circle" />
-                                                        <span class="ml-2">Margeret V. Ligon</span>
-                                                    </a>
-                                                </td>
-                 
-                                                <td>
-                                                    <span class="badge badge-danger">0</span>
-                                                </td>
-                                                 <td>
-                                                    0,00
-                                                </td>
-                                                <td>
-                                                    <span class="badge badge-danger">Não pago</span>
-                                                </td>
-
-                                                <td>
-                                                    01/04/2017
-                                                </td>
-
-                                                <td>
-                                                    <div class="btn-group dropdown">
-                                                        <a href="javascript: void(0);" class="dropdown-toggle arrow-none btn btn-light btn-sm" data-toggle="dropdown" aria-expanded="false"><i class="mdi mdi-dots-horizontal"></i></a>
-                                                        <div class="dropdown-menu dropdown-menu-right">
-                                                            <a class="dropdown-item" href="#"><i class="mdi mdi-pencil mr-2 text-muted font-18 vertical-middle"></i>Edit Ticket</a>
-                                                            <a class="dropdown-item" href="#"><i class="mdi mdi-check-all mr-2 text-muted font-18 vertical-middle"></i>Close</a>
-                                                            <a class="dropdown-item" href="#"><i class="mdi mdi-delete mr-2 text-muted font-18 vertical-middle"></i>Remove</a>
-                                                            <a class="dropdown-item" href="#"><i class="mdi mdi-star mr-2 font-18 text-muted vertical-middle"></i>Mark as Unread</a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td><b>#1020</b></td>
-                                                <td>
-                                                    <a href="javascript: void(0);" class="text-dark">
-                                                        <img src="{{asset('minton/images/users/avatar-9.jpg')}}" alt="contact-img" title="contact-img" class="thumb-sm rounded-circle" />
-                                                        <span class="ml-2">Erwin E. Brown</span>
-                                                    </a>
-                                                </td>
-
-                                                <td>
-                                                    <span class="badge badge-warning">5</span>
-                                                </td>
-                                                 <td>
-                                                    50,00
-                                                </td>
-                                                <td>
-                                                    <span class="badge badge-secondary">Closed</span>
-                                                </td>
-
-                                                <td>
-                                                    2013/08/11
-                                                </td>
-                                                <td>
-                                                    <div class="btn-group dropdown">
-                                                        <a href="javascript: void(0);" class="dropdown-toggle arrow-none btn btn-light btn-sm" data-toggle="dropdown" aria-expanded="false"><i class="mdi mdi-dots-horizontal"></i></a>
-                                                        <div class="dropdown-menu dropdown-menu-right">
-                                                            <a class="dropdown-item" href="#"><i class="mdi mdi-pencil mr-2 text-muted font-18 vertical-middle"></i>Edit Ticket</a>
-                                                            <a class="dropdown-item" href="#"><i class="mdi mdi-check-all mr-2 text-muted font-18 vertical-middle"></i>Close</a>
-                                                            <a class="dropdown-item" href="#"><i class="mdi mdi-delete mr-2 text-muted font-18 vertical-middle"></i>Remove</a>
-                                                            <a class="dropdown-item" href="#"><i class="mdi mdi-star mr-2 font-18 text-muted vertical-middle"></i>Mark as Unread</a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>  
+                                            @endforeach
+                                           
                                         </tbody>
                                     </table>
                                 </div>

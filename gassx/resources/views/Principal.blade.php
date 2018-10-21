@@ -117,7 +117,11 @@
                         <li class="list-inline-item dropdown notification-list">
                             <a class="nav-link dropdown-toggle waves-effect waves-light nav-user" data-toggle="dropdown" href="#" role="button"
                                aria-haspopup="false" aria-expanded="false">
+                               @if($dados['usuario']->genero()->first()->descricao == 'Feminino')
                                 <img src="{{asset('minton/images/padrao/perfil-padrao1-m.png')}}" alt="user" class="rounded-circle">
+                                @elseif($dados['usuario']->genero()->first()->descricao == 'Masculino')
+                                <img src="{{asset('minton/images/padrao/perfil-padrao1-f.png')}}" alt="user" class="rounded-circle">
+                                @endif
                             </a>
                             <div class="dropdown-menu dropdown-menu-right profile-dropdown " aria-labelledby="Preview">
                                 <!-- item-->
@@ -215,9 +219,8 @@
                                     <li><a href="form-advanced.html">Não lidas</a></li>
                                 </ul>
                             </li>
-
+                        @if($dados['usuario']->isAdmin() == true)
                             <li class="menu-title">Mais</li>
-
                             <li class="has_sub">
                                 <a href="javascript:void(0);" class="waves-effect waves-primary">
                                     <i class="ti-menu-alt"></i><span> Administração </span> 
@@ -234,6 +237,7 @@
                                     <li><a href="{{url('/admin/outros/'.$dados['usuario']->id)}}">Outros</a></li>
                                 </ul>
                             </li>
+                        @endif
                         </ul>
 
 
@@ -252,9 +256,19 @@
             <!-- ============================================================== -->                      
             <div class="content-page">
 
-       {{
-        var_dump($dados['usuario'])
-       }}  
+
+
+<br><br><br><br><br>
+    @foreach($dados['tab_pagamentos_admin'] as $k)
+            {{
+                $k['n_prestacoes']
+        }}<br>
+    @endforeach
+    {{-- {{
+        {{-- {{-- $dados['tab_pagamentos_admin']['genero'] --}} --}}
+
+    }} --}}
+      
                 <!-- Start content -->
                      {{-- @yield('base') --}}
                      @yield('base', new Illuminate\Support\HtmlString(view('minton.inicio1')))
@@ -262,6 +276,7 @@
                         2018 © GassX <br/>
                        
                 </footer>
+   
             </div>
             <!-- ============================================================== -->
             <!-- End Right content here -->

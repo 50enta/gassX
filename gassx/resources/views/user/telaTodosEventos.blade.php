@@ -29,20 +29,16 @@
                          
 
 		    <div class="row card-body">  
-		                   
-		                    
 				<div class="col-md-6 col-lg-3">
 			            <div class="card d-block">
 			              	<div class="card-body">
 			                    <h5 class="card-title">Churrasco no Sitoe</h5>
-			                  	
 			              	</div>
 			                    <img class="img-fluid" src="{{asset('minton/images/padrao/evento-padrao1.png')}}" alt="Card image cap">
 			                <div class="card-body">
 			                    <p class="card-text">Só mais um feriado que decidimos curtir e esquecer de tudo.</p>
 			                    
 			                     <a href="#" data-toggle="#con-close-modal" class="btn btn-primary sweet-4" onclick="_gaq.push(['_trackEvent', 'example', 'try', 'sweet-4']);">Participar</a>
- 									
 			                    <a href="{{url('user/detalhesEvento/'.$dados['usuario']->id)}}"  class="card-link text-custom"><i class="mdi mdi-arrow-right-bold-hexagon-outline" data-target=""></i>  detalhes</a>
 			                    
 			                </div> <!-- end card-body-->

@@ -113,4 +113,22 @@ class User extends Authenticatable
     public function contacto(){
         return $this->belongsTo('App\Contacto');
     }
+
+
+
+    public function isAdmin(){
+        
+       $res =  $this->privilegioUsers()->get();
+       foreach ($res as $key) {
+            $b = $key->privilegio()->first()->where('descricao', 'admin')->get()->first();
+            if($b !== null){
+                     return true;
+              } else{
+                     return false;
+           }
+       }
+  
+       return false;
+        // return $res->first()->privilegio()->first()->where('descricao','admin')->first()->descricao;
+    }
 }

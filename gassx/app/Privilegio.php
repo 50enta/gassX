@@ -14,7 +14,7 @@ class Privilegio extends Model
      */
     protected $fillable = [
         'activo','descricao',
-    ]
+    ];
 
     /**
      * Retorna o 

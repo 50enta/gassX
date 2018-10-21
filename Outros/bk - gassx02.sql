@@ -142,10 +142,11 @@ INSERT INTO `privilegios` (`id`, `activo`, `descricao`, `created_at`, `updated_a
 -- Extraindo dados da tabela `privilegio_users`
 --
 
-INSERT INTO `privilegio_users` (`id`, `activo`, `user_id`, `privilegio_id`, `created_at`, `updated_at`) VALUES
+INSERT INTO `privilegio_users` 
+(`id`, `activo`, `user_id`, `privilegio_id`, `created_at`, `updated_at`) VALUES
 (1, 1, 3, 1, '2018-10-17 17:04:04', NULL),
-(2, 1, 1, 2, '2018-10-17 17:04:04', NULL);
-
+(2, 1, 1, 2, '2018-10-17 17:04:04', NULL),
+(default, 1, 1, 1, '2018-10-17 17:04:04', NULL);
 
 --
 -- Extraindo dados da tabela `gasto_users`
@@ -355,6 +356,7 @@ INSERT INTO `mes` (`id`, `ativo`, `mes`, `created_at`, `updated_at`) VALUES
 
 INSERT INTO `multas` (`id`, `ativo`, `dias`, `percentagem`, `created_at`, `updated_at`) VALUES
 (1, 1, 4, 0.1, '2018-10-17 12:00:00', NULL),
+(default, 1, 0, 0, '2018-10-17 12:00:00', NULL),
 (2, 1, 10, 0.2, '2018-10-17 17:04:04', NULL);
 
 
