@@ -13,7 +13,7 @@ class Multa extends Model
      * @var array
      */
     protected $fillable = [
-        'activo', 'percentagem', 'dias' ,
+        'ativo', 'percentagem', 'dias' ,
     ];
 
 
