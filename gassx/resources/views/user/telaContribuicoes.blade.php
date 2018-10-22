@@ -26,8 +26,61 @@
                       {{-- Visão geral dos mesmes --}}
                       <div class="row">
                             <div class="col-12">
-                                <div class="card-box">
-                                      <!-- Custom Modals -->
+                                
+                            </div>
+                        </div>
+
+                        {{-- end row --}}
+
+
+
+                      {{-- histórico de pagamento --}}
+                          <div class="row">
+                          	<div class="card-box table-responsive">
+                          		
+                             
+                            
+                                <h4 class="m-t-0 header-title">Histórico de contribuições</h4>
+                          		<table id="datatable-buttons" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                                        <thead>
+                                        <tr>
+                                            <th>Descrição</th>
+                                            <th>Tipo contribuíção</th>
+                                            <th>Data do pagamento </th>
+                                            <th>Valor</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>Tiger Nixon</td>
+                                            <td>Evento</td>
+                                            <td>2011/04/25</td>
+                                            <td>$320,800</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cedric Kelly</td>
+                                            <td>Associação</td>
+                                            <td>2012/03/29</td>
+                                            <td>Fevereiro</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Airi Satou</td>
+                                            <td>Dezembro</td>
+                                            <td>2008/11/28</td>
+                                            <td>$162,700</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Brielle Williamson</td>
+                                            <td>Associação</td>
+                                            <td>2012/12/02</td>
+                                            <td>$372,000</td>
+                                        </tr>
+                                        
+                                        </tbody>
+                                    </table>
+                                    <br>
+                                       {{-- ////////// --}}
+                                                     <!-- Custom Modals -->
                         <div class="row">
                             <div class="col-12">
                                 <div id="con-close-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
@@ -81,58 +134,11 @@
                            
                     </div><!-- end col -->
             </div>
+
+
+                                {{-- /////// --}}
                                 </div>
-                            </div>
-                        </div>
 
-                        {{-- end row --}}
-
-
-
-                      {{-- histórico de pagamento --}}
-                          <div class="row">
-                          	<div class="card-box table-responsive">
-                          		<h4 class="m-t-0 header-title">Histórico de contribuições</h4>
-                          		<table id="datatable-buttons" class="table table-striped table-bordered" cellspacing="0" width="100%">
-                                        <thead>
-                                        <tr>
-                                            <th>Descrição</th>
-                                            <th>Tipo contribuíção</th>
-                                            <th>Data do pagamento </th>
-                                            <th>Valor</th>
-                                        </tr>
-                                        </thead>
-
-
-                                        <tbody>
-                                        <tr>
-                                            <td>Tiger Nixon</td>
-                                            <td>Evento</td>
-                                            <td>2011/04/25</td>
-                                            <td>$320,800</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Cedric Kelly</td>
-                                            <td>Associação</td>
-                                            <td>2012/03/29</td>
-                                            <td>Fevereiro</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Airi Satou</td>
-                                            <td>Dezembro</td>
-                                            <td>2008/11/28</td>
-                                            <td>$162,700</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Brielle Williamson</td>
-                                            <td>Associação</td>
-                                            <td>2012/12/02</td>
-                                            <td>$372,000</td>
-                                        </tr>
-                                        
-                                        </tbody>
-                                    </table>
-                                </div>
                           </div>
                            
 
