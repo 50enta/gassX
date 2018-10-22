@@ -99,75 +99,110 @@
                                                 </div>
                                                 <div class="modal-body">
                                                     <div class="row">
-                                                        <div class="col-md-12">
-                                                            <div class="form-group">
-                                                                <label for="field-1" class="control-label">Name Completo</label>
-                                                                <input type="text" class="form-control" id="field-1" placeholder="John">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-12">
-                                                            <div class="form-group">
-                                                                <label for="field-2" class="control-label">Sexo</label> 
-                                                               <div class="radio radio-single">
-                                                                <input type="radio" id="singleRadio1" value="option1.1" name="radioSingle1" aria-label="Single radio One">
-                                                                <label>M</label>
-                                                            </div>
-                                                               <div class="radio radio-success radio-single">
-                                                                <input type="radio" id="singleRadio2" value="option2.1" name="radioSingle1" checked="" aria-label="Single radio Two">
-                                                                <label>F</label>
-                                                            </div>
+                                                      
 
 
-                                                            <div class="col-md-12">
-                                                            <div class="form-group">
-                                                                <label for="field-1" class="control-label">Email</label>
-                                                                <input id="email" type="email" class="form-control"  placeholder="John">
-                                                            </div>
-                                                        </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
+                                                      <div class="row">
                                                         <div class="col-md-12">
-                                                            <div class="form-group">
-                                                                <label for="field-3" class="control-label">Address</label>
-                                                                <input type="text" class="form-control" id="field-3" placeholder="Address">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-md-4">
-                                                            <div class="form-group">
-                                                                <label for="field-4" class="control-label">City</label>
-                                                                <input type="text" class="form-control" id="field-4" placeholder="Boston">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <div class="form-group">
-                                                                <label for="field-5" class="control-label">Country</label>
-                                                                <input type="text" class="form-control" id="field-5" placeholder="United States">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <div class="form-group">
-                                                                <label for="field-6" class="control-label">Zip</label>
-                                                                <input type="text" class="form-control" id="field-6" placeholder="123456">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-md-12">
-                                                            <div class="form-group no-margin">
-                                                                <label for="field-7" class="control-label">Personal Info</label>
-                                                                <textarea class="form-control" id="field-7" placeholder="Write something about yourself"></textarea>
-                                                            </div>
-                                                        </div>
+                                                            <div class="card-box">
+                                                               
+                                                                
+<form id="wizard-vertical" role="application" class="wizard clearfix vertical"><div class="steps clearfix"><ul role="tablist"><li role="tab" class="first current" aria-disabled="false" aria-selected="true"><a id="wizard-vertical-t-0" href="#wizard-vertical-h-0" aria-controls="wizard-vertical-p-0"><span class="current-info audible">current step: </span><span class="number">1.</span> Account</a></li><li role="tab" class="done" aria-disabled="false" aria-selected="false"><a id="wizard-vertical-t-1" href="#wizard-vertical-h-1" aria-controls="wizard-vertical-p-1"><span class="number">2.</span> Profile</a></li><li role="tab" class="done" aria-disabled="false" aria-selected="false"><a id="wizard-vertical-t-2" href="#wizard-vertical-h-2" aria-controls="wizard-vertical-p-2"><span class="number">3.</span> Hints</a></li><li role="tab" class="disabled last" aria-disabled="true"><a id="wizard-vertical-t-3" href="#wizard-vertical-h-3" aria-controls="wizard-vertical-p-3"><span class="number">4.</span> Finish</a></li></ul></div><div class="content clearfix">
+                                        <h3 id="wizard-vertical-h-0" tabindex="-1" class="title current">Account</h3>
+                                        <section id="wizard-vertical-p-0" role="tabpanel" aria-labelledby="wizard-vertical-h-0" class="body current" aria-hidden="false" style="">
+                                            <div class="form-group clearfix">
+                                                <label class="control-label " for="userName1">User name *</label>
+                                                <div class="">
+                                                    <input class="form-control required" id="userName1" name="userName" type="text">
+                                                </div>
+                                            </div>
+                                            <div class="form-group clearfix">
+                                                <label class="control-label " for="password1"> Password *</label>
+                                                <div class="">
+                                                    <input id="password1" name="password" type="text" class="required form-control">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group clearfix">
+                                                <label class="control-label " for="confirm1">Confirm Password *</label>
+                                                <div class="">
+                                                    <input id="confirm1" name="confirm" type="text" class="required form-control">
+                                                </div>
+                                            </div>
+                                            <div class="form-group clearfix">
+                                                <label class="col-lg-12 control-label ">(*) Mandatory</label>
+                                            </div>
+                                        </section>
+                                        <h3 id="wizard-vertical-h-1" tabindex="-1" class="title">Profile</h3>
+                                        <section id="wizard-vertical-p-1" role="tabpanel" aria-labelledby="wizard-vertical-h-1" class="body" aria-hidden="true" style="display: none;">
+                                            <div class="form-group clearfix">
+
+                                                <label class="control-label" for="name1"> First name *</label>
+                                                <div class="">
+                                                    <input id="name1" name="name" type="text" class="required form-control">
+                                                </div>
+                                            </div>
+                                            <div class="form-group clearfix">
+                                                <label class="control-label " for="surname1"> Last name *</label>
+                                                <div class="">
+                                                    <input id="surname1" name="surname" type="text" class="required form-control">
+
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group clearfix">
+                                                <label class="control-label " for="email1">Email *</label>
+                                                <div class="">
+                                                    <input id="email1" name="email" type="text" class="required email form-control">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group clearfix">
+                                                <label class="control-label " for="address1">Address *</label>
+                                                <div class="">
+                                                    <input id="address1" name="address" type="text" class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group clearfix">
+                                                <label class="col-lg-12 control-label ">(*) Mandatory</label>
+                                            </div>
+
+                                        </section>
+                                        <h3 id="wizard-vertical-h-2" tabindex="-1" class="title">Hints</h3>
+                                        <section id="wizard-vertical-p-2" role="tabpanel" aria-labelledby="wizard-vertical-h-2" class="body" aria-hidden="true" style="display: none;">
+                                            <div class="form-group clearfix">
+                                                <div class="col-lg-12">
+                                                    <ul class="list-unstyled w-list">
+                                                        <li><b>First Name :</b> Jonathan </li>
+                                                        <li><b>Last Name :</b> Smith </li>
+                                                        <li><b>Emial:</b> jonathan@smith.com</li>
+                                                        <li><b>Address:</b> 123 Your City, Cityname. </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </section>
+                                        <h3 id="wizard-vertical-h-3" tabindex="-1" class="title">Finish</h3>
+                                        <section id="wizard-vertical-p-3" role="tabpanel" aria-labelledby="wizard-vertical-h-3" class="body" aria-hidden="true" style="display: none;">
+                                            <div class="form-group clearfix">
+                                                <div class="col-lg-12">
+                                                    <div class="checkbox checkbox-primary">
+                                                        <input id="checkbox-v" type="checkbox">
+                                                        <label for="checkbox-v"> I agree with the Terms and Conditions. </label>
                                                     </div>
                                                 </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">Close</button>
-                                                    <button type="button" class="btn btn-info waves-effect waves-light">Save changes</button>
-                                                </div>
+                                            </div>
+                                        </section>
+                                    </div><div class="actions clearfix"><ul role="menu" aria-label="Pagination"><li class="disabled" aria-disabled="true"><a href="#previous" role="menuitem">Previous</a></li><li aria-hidden="false" aria-disabled="false"><a href="#next" role="menuitem">Next</a></li><li aria-hidden="true" style="display: none;"><a href="#finish" role="menuitem">Finish</a></li></ul></div></form>
+
+                                                             </div>
+                                                        </div>
+                                                     </div>  
+
+                                                 </div>
+                                                    
+                                            </div>
+                                              
                                             </div>
                                         </div>
                                     </div><!-- /.modal -->
