@@ -20,6 +20,9 @@ class DespesaController extends Controller
 
         $dados['tab_despesas_associacao'] = $this->tab_despesas_associacao($mes, $ano);
         $dados['tab_despesas_membro'] = $this->tab_despesas_membro($mes, $ano);
+        $dados['tab_despesas_associacao'] = $this->tab_despesas_associacao($mes, $ano);
+        $dados['total_com_associacao']  = $this->getTotais($mes, $ano)['associacao'];
+        $dados['total_com_membros'] = $this->getTotais($mes, $ano)['membros'];
         $dados['data']['mes_int'] = $mes;
         $u = new Util();
         $dados['data']['mes_str'] = $u->getMes($mes);
@@ -36,6 +39,17 @@ class DespesaController extends Controller
         $data = explode('/', $request->all()['mes_ano']);
         $mes = (int) $data[0];
         $ano =  (int) $data[1];
+
+        
+        $dados['tab_despesas_associacao'] = $this->tab_despesas_associacao($mes, $ano);
+        $dados['tab_despesas_membro'] = $this->tab_despesas_membro($mes, $ano);
+        $dados['tab_despesas_associacao'] = $this->tab_despesas_associacao($mes, $ano);
+        $dados['total_com_associacao']  = $this->getTotais($mes, $ano)['associacao'];
+        $dados['total_com_membros'] = $this->getTotais($mes, $ano)['membros'];
+        $dados['data']['mes_int'] = $mes;
+        $u = new Util();
+        $dados['data']['mes_str'] = $u->getMes($mes);
+        $dados['data']['ano'] = $ano;
         
         return view('admin.telaDespesas', compact('dados'));
     }
@@ -48,8 +62,18 @@ class DespesaController extends Controller
     */
         //descrição, autor, data, valor
     public function tab_despesas_associacao($mes, $ano){
-    
+        $tabela = [];
 
+        $despe = $this->getDespesasAssoc($mes, $ano);
+        foreach ($despe as $key) {
+            $linha['descricao'] = $key->descricao;
+            $linha['autor'] = 'Indefinido';
+            $linha['data'] = $key->created_at;
+            $linha['valor'] = $key->saida()->first()->valor;
+
+            $tabela[] = $linha;
+        }
+        return $tabela;
     }
 
      /**
@@ -72,4 +96,51 @@ class DespesaController extends Controller
 
         return $tabela;
     }
+
+/**
+    Retorna as depesas que pertencem à associação
+*/
+    public function getDespesasAssoc($mes, $ano){
+        $ids = [];
+         $desp_memb = DespesaUser::where('created_at', 'like', $ano.'-'.$mes.'%')->get();
+         $desp_assoc = Despesa::where('created_at', 'like', $ano.'-'.$mes.'%')->get();
+        foreach ($desp_memb as $key) {
+            $ids[] = $key->despesa_id;
+        }
+        
+        $retorno = [];
+        foreach ($desp_assoc as $ke) {
+            $falso = false;
+            foreach ($ids as $k) {
+                if($ke->id == $k){
+                    $falso = true;
+                }
+            }
+            if($falso == false){
+                $retorno[] = $ke;
+            }
+        }
+        return $retorno;
+    }
+
+/**
+    Retornas um aaray dos totais das despesas pelos membros e pela associação prórpia
+**/
+    public function getTotais($mes, $ano){
+        $total['membros'] = 0;
+        $total['associacao'] = 0;
+
+        $desp_memb = DespesaUser::where('created_at', 'like', $ano.'-'.$mes.'%')->get();
+
+        foreach ($desp_memb as $key) {
+            $total['membros'] += $key->despesa()->first()->saida()->first()->valor;
+        }
+        $desp_assoc = Despesa::where('created_at', 'like', $ano.'-'.$mes.'%')->get();
+        foreach ($desp_assoc as $key) {
+            $total['associacao'] += $key->saida()->first()->valor;
+        }
+        return $total;
+    }
+
+
 }
