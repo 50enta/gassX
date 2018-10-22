@@ -312,7 +312,7 @@
                                         	<i class=" ti-stats-up text-success"></i>
                                     	</div>
                                     	<div class="text-right">
-                                       		 <h3 class="text-dark m-t-10"><b >64,570</b></h3>
+                                       		 <h3 class="text-dark m-t-10"><b >{{$dados['total_com_associacao']}},00</b></h3>
                                         	<p class="text-muted mb-0">Total com Associação</p>
                                     	</div>
                                   	  	<div class="clearfix"></div>
@@ -325,7 +325,7 @@
                                         <i class="ti-eye text-pink"></i>
                                     </div>
                                     <div class="text-right">
-                                        <h3 class="text-dark m-t-10"><b>31,570</b></h3>
+                                        <h3 class="text-dark m-t-10"><b>{{$dados['total_com_membros']}},00</b></h3>
                                         <p class="text-muted mb-0">Total com membros</p>
                                     </div>
                                     <div class="clearfix"></div>
@@ -338,8 +338,8 @@
                                         <i class=" ti-money text-info"></i>
                                     </div>
                                     <div class="text-right">
-                                        <h3 class="text-dark m-t-10"><b>31,570</b></h3>
-                                        <p class="text-muted mb-0">Total com parceiros</p>
+                                        <h3 class="text-dark m-t-10"><b>{{$dados['total_com_membros'] + $dados['total_com_associacao']}},00</b></h3>
+                                        <p class="text-muted mb-0">Total com despesas</p>
                                     </div>
                                     <div class="clearfix"></div>
                                 </div>
