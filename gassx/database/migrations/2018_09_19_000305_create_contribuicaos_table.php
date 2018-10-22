@@ -16,6 +16,7 @@ class CreateContribuicaosTable extends Migration
         Schema::create('contribuicaos', function (Blueprint $table) {
             $table->increments('id');
             $table->boolean('ativo')->default('1');
+            $table->string('descricao')->nullable();
 
             $table->integer('entrada_id')->unsigned();
             $table->foreign('entrada_id')->references('id')->on('entradas');

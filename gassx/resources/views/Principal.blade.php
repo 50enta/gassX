@@ -257,18 +257,14 @@
             <!-- ============================================================== -->                      
             <div class="content-page">
 
-
-
-<br><br><br><br><br>
-    {{-- @foreach($dados['tab_despesas_membro'] as $k)
-            {{
-                $k['valor']
-        }}<br>
-    @endforeach --}}
-    {{
-       $dados['usuario']->name
-
-    }}
+            <br><br><br><br><br>
+               {{--  @foreach($dados['tab_contribuicoes_membros_admin'] as $k)
+                        {{
+                            $k['data'].'  ......  '.$k['valor']
+                    }}<br>
+                @endforeach --}}
+                
+                
       
                 <!-- Start content -->
                      {{-- @yield('base') --}}
