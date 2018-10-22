@@ -26,7 +26,7 @@ class UserContribuicao extends Model
      *
      * @var array
      */
-    public function contribuicoes(){
+    public function contribuicao(){
         return $this->belongsTo('App\Contribuicao');
     }
 }

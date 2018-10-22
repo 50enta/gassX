@@ -30,7 +30,7 @@ class ParceiroContribuicao extends Model
      *
      * @var array
      */
-    public function perceiro(){
+    public function parceiro(){
         return $this->belongsTo('App\Parceiro');
     }
 }
