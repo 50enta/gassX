@@ -259,15 +259,15 @@
 
 
 <br><br><br><br><br>
-    @foreach($dados['tab_pagamentos_admin'] as $k)
+    {{-- @foreach($dados['tab_despesas_membro'] as $k)
             {{
-                $k['n_prestacoes']
+                $k['valor']
         }}<br>
-    @endforeach
-    {{-- {{
-        {{-- {{-- $dados['tab_pagamentos_admin']['genero'] --}} --}}
+    @endforeach --}}
+    {{
+       $dados['usuario']->name
 
-    }} --}}
+    }}
       
                 <!-- Start content -->
                      {{-- @yield('base') --}}
