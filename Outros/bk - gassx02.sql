@@ -194,11 +194,15 @@ INSERT INTO `entradas` (`id`, `activo`, `valor`, `dinheiro_id`, `created_at`, `u
 -- Extraindo dados da tabela `despesas`
 --
 
-INSERT INTO `despesas` (`id`, `activo`, `descricao`, `saida_id`, `created_at`, `updated_at`) VALUES
+INSERT INTO `despesas` 
+(`id`, `activo`, `descricao`, `saida_id`, `created_at`, `updated_at`) 
+VALUES
 (1, 1, 'xtique - recebimento', 3, '2018-10-23 12:00:00', NULL),
-(2, 0, 'despesa02', 4, '2018-10-30 12:00:00', NULL),
+(2, 1, 'despesa02', 4, '2018-10-30 12:00:00', NULL),
 (3, 1, 'despesa01', 3, '2018-10-17 17:04:04', '2018-10-17 17:04:04'),
-(4, 1, 'despesa02', 4, '2018-10-17 17:04:04', NULL);
+(4, 1, 'evento assoc', '3', '2018-10-09 00:00:00', NULL), 
+(5, 1, 'evento assoc2', '4', '2018-10-21 00:00:00', '2018-10-16 00:00:00'),
+(6, 1, 'despesa02', 4, '2018-10-17 17:04:04', NULL);
 
 
 --
@@ -216,10 +220,11 @@ INSERT INTO `despesa_users` (`id`, `activo`, `user_id`, `despesa_id`, `created_a
 --
 
 INSERT INTO `contribuicaos` 
-(`id`, `ativo`, `entrada_id`, `created_at`, `updated_at`)
+(`id`, `ativo`, `descricao`,`entrada_id`, `created_at`, `updated_at`)
  VALUES
-(1, 1, 2, '2018-10-17 17:04:04', '2018-10-17 17:04:04'),
-(2, 1, 3, '2018-10-17 17:04:04', NULL);
+(1, 1,'contribuição para x', 2, '2018-10-17 17:04:04', '2018-10-17 17:04:04'),
+(2, 1,'contribuição para yzx', 2, '2018-10-17 17:04:04', '2018-10-17 17:04:04'),
+(3, 1,'contribuição para abc', 3, '2018-10-17 17:04:04', NULL);
 
 
 
