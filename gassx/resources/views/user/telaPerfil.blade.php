@@ -107,7 +107,7 @@
                                                 </a>
                                             </li>
                                             <li class="nav-item">
-                                                <a href="#home" data-toggle="tab" aria-expanded="false" class="nav-link">
+                                                <a href="#home1" data-toggle="tab" aria-expanded="false" class="nav-link">
                                                     BIOGRAFIA
                                                 </a>
                                             </li>
@@ -117,11 +117,11 @@
                                                 </a>
                                             </li>
                                         </ul>
-                                        <div class="tab-content">
-                                            <div class="tab-pane" id="home">
+                <div class="tab-content">
+                                            <div class="tab-pane" id="home1">
                                                 <p class="m-b-5">Olá, eu sou Cinquenta, blá blá blá...</p>
                                             </div>
-                                            <div class="tab-pane active" id="atualizarPerfil">
+                     <div class="tab-pane active" id="conta">
                                         <div class="col-md-12">
                                         <div class="card-box">
                                             <div class="row">
@@ -161,16 +161,16 @@
                                             <div class="tabs-vertical-env">
                                                 <ul class="nav tabs-vertical">
                                                     <li class="nav-item">
-                                                        <a href="#v-profile" class="nav-link active" data-toggle="tab" aria-expanded="true">Gastos</a>
+                                                        <a href="#v-gastos" class="nav-link active" data-toggle="tab" aria-expanded="true">Gastos</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a href="#v-messages" class="nav-link" data-toggle="tab" aria-expanded="false">Recargas
+                                                        <a href="#v-recargas" class="nav-link" data-toggle="tab" aria-expanded="false">Recargas
                                                         </a>
                                                     </li>
                                                 </ul>
 
                                                 <div class="tab-content">
-                                 <div class="tab-pane active" id="v-profile">
+                     <div class="tab-pane active" id="v-gastos">
                          <div class="row">
                             <div class="col-lg-12">
                                 <div class="card-box col-lg-12">
@@ -225,9 +225,9 @@
                             </div>
                             <!-- end col -8 -->
                         </div>
-                                    </div>
-                                                    <div class="tab-pane" id="v-messages">
-                                                       <div class="row">
+                    </div>
+                 <div class="tab-pane" id="v-recargas">
+                        <div class="row">
                             <div class="col-lg-12">
                                 <div class="card-box col-lg-12">
                                     <div class="table-responsive">
@@ -286,7 +286,7 @@
                                             </div>
                                 </div>
                             </div> <!-- end col -->
-                                            </div>
+                    </div>
                                             <div class="tab-pane" id="atualizarPerfi">
                                                 <form role="form">
                                                     <div class="form-group">

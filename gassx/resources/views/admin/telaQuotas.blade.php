@@ -139,28 +139,30 @@
 
                                     <h4 class="header-title m-t-0 m-b-30">Definições</h4>
                                     	<br>
-                                    	 <form action="#" class="form-horizontal">
+                                    	 
                                       <div class="form-group row">
                                                         <label class="control-label col-sm-3">Data limite de pagamento
                                                         </label>
-                                                        <div class="col-sm-3">
-                                                            <div class="input-group">
-                                                              <input type="text" class="form-control" placeholder="mm/dd/yyyy" id="datepicker-autoclose">
-                                                                <div class="input-group-append">
-                                                          		<span class="input-group-text"><i class="ion-calendar"></i></span>
-                                                                </div>
-                                                            </div><!-- input-group -->
-                                                        </div>
+                                    <form class="form-horizontal float-right" role="form" method="POST" action="{{ url('/admin/atualizarQuotas/'.$dados['usuario']->id) }}">
+                                        {{csrf_field() }}
+                                        <div class="form-group row">
+                                            <input name="diaLimite" type="text" class="col-sm-5  input-sm from" 
+                                            placeholder="5" >
+                                            <button type="submit" class="btn btn-success waves-effect waves-light btn-sm m-b-5">atualicar</button>
                                         </div>
                                     </form>
+                                        </div>
+                                
                                     <br>
                                   
-                                    <p class="text-muted m-b-15 font-14">
+                                    
+                <div class="row">
+                    <div class="col-lg-6">
+                    <div class="col-12">
+                                <div class="card-box">
+                                  <p class="text-muted m-b-15 font-14">
                                        Tabela de multas
                                     </p>
-                                     <div class="col-6">
-                                <div class="card-box">
-                                  
                                     <div class="table-responsive">
                                         <table class="table table-centered mb-0">
                                             <thead class="font-13 bg-light text-muted">
@@ -199,9 +201,8 @@
                                         </table>
                                     </div>
 
-
-                                    
                                 </div>
+
                             </div> <!-- end col -->
 
                                     <!-- sample modal content -->
@@ -267,6 +268,111 @@
                                         </button>
                                      
                                     </div>
+
+</div>
+{{-- /// TABELA DE QUOTA-VALOR --}}
+ <div class="col-lg-6">
+                    <div class="col-12">
+                                <div class="card-box">
+                                  <p class="text-muted m-b-15 font-14">
+                                       Valor de quotas
+                                    </p>
+                                    <div class="table-responsive">
+                                        <table class="table table-centered mb-0">
+                                            <thead class="font-13 bg-light text-muted">
+                                                <tr>
+                                                    <th class="font-weight-medium">De (data)</th>
+                                                    <th class="font-weight-medium">Até (data)</th>
+                                                    <th class="font-weight-medium">valor</th>
+                                                    
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach($dados['tab_quota_valor_admin'] as $val)
+                                                <tr>
+                                                    <td>
+                                                       {{$val['de']}}
+                                                    </td>
+                                                  
+                                                    <td>
+                                                        {{$val['ate']}}
+                                                    </td>
+                                                    <td>
+                                                        {{$val['valor']}}
+                                                    </td>
+                                                   
+                                                </tr>
+                                                @endforeach
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div>
+
+                            </div> <!-- end col -->
+
+                                    <!-- sample modal content -->
+
+                                    <div id="con-close-moda" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                                    <h4 class="modal-title">Novo valor</h4>
+                                                </div>
+                                        <form class="form-horizontal float-right" role="form" method="POST" action="{{ url('/admin/salvarValorQuota/'.$dados['usuario']->id) }}">
+                                        {{csrf_field() }}
+
+                                                <div class="modal-body">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="form-group">
+                                                                <label for="field-2" class="control-label">Valor</label>
+                                                                <input id="demo1" type="text" value="55" name="valor">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                  <div class="row">
+                                                    
+                                        
+                                                    <label for="checkbox">
+                                                         Habilitar .
+                                                    </label>
+                                                    <input type="checkbox" name="ativo" checked data-plugin="switchery" data-color="#3bafda" value="1" data-size="small"/>
+                                                
+                                                  </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="form-group no-margin">
+                                                                <label for="field-7" class="control-label">Descrição</label>
+                                                                <textarea class="form-control" name="descricao" id="field-7" placeholder="Escreva algo sobre o valor"></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                           
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">cancelar</button>
+                                                    <button type="submit" class="btn btn-info waves-effect waves-light">Salvar</button>
+                                                </div>
+                                                 </form>
+                                            </div>
+                                        </div>
+                                    </div><!-- /.modal -->
+                                    
+
+                                    <div class="button-list">
+                                      
+                                        <!-- Responsive modal -->
+                                        <button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target="#con-close-moda">
+                                            Novo valor
+                                        </button>
+                                     
+                                    </div>
+
+</div>
+
+</div>
 
                                 </div>
                             </div><!-- end col -->

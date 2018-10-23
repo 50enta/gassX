@@ -15,7 +15,7 @@ class CreateUtilsTable extends Migration
     {
         Schema::create('utils', function (Blueprint $table) {
             $table->increments('id');
-            $table->date('dataLimitePagamento')->nullable();
+            $table->integer('diaLimitePagamento')->default('5');
 
             $table->timestamps();
         });
