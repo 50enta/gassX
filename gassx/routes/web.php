@@ -41,7 +41,7 @@ Route::group(['prefix' => 'user'], function () {
 
 // rotas do admin
 Route::group(['prefix' => 'admin'], function () {
-    Route::get('/financas/{user_id}/{ma?}', 'QuotaController@telaFinancas'); //
+    Route::get('/financas/{user_id}/{ma?}', 'DinheiroController@telaFinancas'); //
     Route::post('/atualizarFinancas/{user_id}', 'DinheiroController@store');
     Route::get('/contribuicoes/{user_id}/{ma?}', 'ContribuicaoController@telaContribuicoes'); 
     Route::post('/atualizarContribuicoes/{user_id}', 'ContribuicaoController@store'); 

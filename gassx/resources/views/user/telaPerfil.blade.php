@@ -25,7 +25,11 @@
                                 <div class="text-center card-box">
                                     <div class="member-card">
                                         <div class="thumb-xl member-thumb m-b-10 center-block">
-                                            <img src="{{url('minton/images/users/avatar-1.jpg')}}" class="rounded-circle img-thumbnail" alt="profile-image">
+                                             @if($dados['usuario']->genero()->first()->descricao == 'Feminino')
+                                            <img src="{{asset('minton/images/padrao/perfil-padrao1-m.png')}}" class="rounded-circle img-thumbnail" alt="profile-image">
+                                             @elseif($dados['usuario']->genero()->first()->descricao == 'Masculino')
+                                              <img src="{{asset('minton/images/padrao/perfil-padrao1-f.png')}}" class="rounded-circle img-thumbnail" alt="profile-image">
+                                             @endif
                                         </div>
 
                                         <div class="">

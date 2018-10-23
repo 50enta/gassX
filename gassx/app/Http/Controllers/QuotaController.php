@@ -9,14 +9,8 @@ use App\ValorQuota;
 use App\Multa;
 use App\Util;
 
-class QuotaController extends Controller
-{
-    //
-	function telaFinancas($user_id, $ma = '0/0'){
-		$dados['usuario'] = User::find($user_id);
-		
-		return view("admin.telaFinancas", compact('dados'));
-	}
+class QuotaController extends Controller{
+    
 
 	
 
@@ -99,7 +93,7 @@ class QuotaController extends Controller
 		$tabela = [];
 		$pags = Pagamento::where('created_at', 'like', $ano.'-'.$mes.'%')->get(); //pagamentos dado uma dada
 		foreach ($pags as $key) {
-			$linha['codigo'] = $key->gastoUser()->get()->first()->user()->get()->first()->codigo;
+			$linha['codigo'] = $key->gastoUser()->first()->user()->first()->codigo;
 			$linha['membro'] = $key->gastoUser()->first()->user()->first()->name;
 			$linha['data_pagamento'] = $key->created_at;
 			$linha['valor_multa'] = $key->quotaPagamentos()->first()->quota()->first()->multa()->first()->percentagem;
@@ -170,51 +164,7 @@ function valorQuota(){
 	 return $ultimo->valor;
 }
 	
-/**
-	retorna o mês correspondente ao 
-	valor passado por parâmento
-*/
-public function getMes($mes_int){
-	switch ($mes_int) {
-		case '1':
-			return 'Janeiro';
-			break;
-		case '2':
-			return 'Fevereiro';
-			break;
-		case '3':
-			return 'Março';
-			break;
-		case '4':
-			return 'Abril';
-			break;
-		case '5':
-			return 'Maio';
-			break;
-		case '6':
-			return 'Junho';
-			break;
-		case '7':
-			return 'Julho';
-			break;
-		case '8':
-			return 'Agosto';
-			break;
-		case '9':
-			return 'Setembro';
-			break;
-		case '10':
-			return 'Outubro';
-			break;
-		case '11':
-			return 'Novembro';
-			break;
-		case '12':
-			return 'Dezembro';
-			break;
-		default:
-			return 'Indefinido';
-			break;
-	}
-}
+
+	
+
 }

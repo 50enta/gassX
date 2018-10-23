@@ -12,7 +12,7 @@
                                     <form class="form-horizontal float-right" role="form" method="POST" action="{{ url('/admin/atualizarFinancas/'.$dados['usuario']->id) }}">
 										{{csrf_field() }}
 										<div class="form-group row">
-										    <input name="mes_ano" type="text" class="col-sm-5   form-control form-control-1 input-sm from" placeholder="Mês e ano" >
+										    <input name="mes_ano" type="text" class="col-sm-5   form-control form-control-1 input-sm from" placeholder="{{$dados['data']['mes_int'].'/'.$dados['data']['ano']}}" >
 										    <button type="submit" class="btn btn-success waves-effect waves-light btn-sm m-b-5">Buscar</button>
 										</div>
 									</form>
@@ -33,9 +33,9 @@
                                     </div>
                                     <div class="text-right">
                                         <h3 class="text-dark m-t-10">
-                                        	<b>64,570</b>
+                                        	<b>{{$dados['numero_total_entradas']}}</b>
                                         </h3>
-                                        <p class="text-muted mb-0">Today's Visits</p>
+                                        <p class="text-muted mb-0">Numero de Entradas</p>
                                     </div>
                                     <div class="clearfix"></div>
                                 </div>
@@ -47,9 +47,9 @@
                                     </div>
                                     <div class="text-right">
                                         <h3 class="text-dark m-t-10">
-                                        	<b>31,570</b>
+                                        	<b>{{$dados['valor_total_entradas']}}</b>
                                         </h3>
-                                        <p class="text-muted mb-0">Total Revenue</p>
+                                        <p class="text-muted mb-0">Total de Entradas</p>
                                     </div>
                                     <div class="clearfix"></div>
                                 </div>
@@ -61,8 +61,8 @@
                                         <i class="ti-shopping-cart text-pink"></i>
                                     </div>
                                     <div class="text-right">
-                                        <h3 class="text-dark m-t-10"><b>280</b></h3>
-                                        <p class="text-muted mb-0">Today's Sales</p>
+                                        <h3 class="text-dark m-t-10"><b>{{$dados['numero_total_saidas']}}</b></h3>
+                                        <p class="text-muted mb-0">Numero Total de Saidas</p>
                                     </div>
                                     <div class="clearfix"></div>
                                 </div>
@@ -74,8 +74,8 @@
                                         <i class="ti-stats-up text-purple"></i>
                                     </div>
                                     <div class="text-right">
-                                        <h3 class="text-dark m-t-10"><b>0.16</b>%</h3>
-                                        <p class="text-muted mb-0">Conversion</p>
+                                        <h3 class="text-dark m-t-10"><b>{{$dados['valor_total_saidas']}}</b></h3>
+                                        <p class="text-muted mb-0">Total de saidas</p>
                                     </div>
                                     <div class="clearfix"></div>
                                 </div>
@@ -102,49 +102,14 @@
                                             <th>autor</th>
                                         </tr>
                                         </thead>
-
-
                                         <tbody>
+                                        @foreach($dados['tab_entradas_admin'] as $k)
                                         <tr>
-                                            <td>14/10/2017</td>
-                                            <td>13,098</td>
-                                            <td>Lucília Manjate</td>
+                                            <td>{{$k['data']}}</td>
+                                            <td>{{$k['valor']}}</td>
+                                            <td>{{$k['autor']}}</td>
                                         </tr>
-                                        <tr>
-                                            <td>14/10/2017</td>
-                                            <td>13,098</td>
-                                            <td>Lucília Manjate</td>
-                                        </tr>
-                                        <tr>
-                                            <td>14/10/2017</td>
-                                            <td>13,098</td>
-                                            <td>Lucília Manjate</td>
-                                        </tr>
-                                        <tr>
-                                            <td>14/10/2017</td>
-                                            <td>13,098</td>
-                                            <td>Lucília Manjate</td>
-                                        </tr>
-                                        <tr>
-                                            <td>14/10/2017</td>
-                                            <td>13,098</td>
-                                            <td>Lucília Manjate</td>
-                                        </tr>
-                                        <tr>
-                                            <td>14/10/2017</td>
-                                            <td>13,098</td>
-                                            <td>Lucília Manjate</td>
-                                        </tr>
-                                        <tr>
-                                            <td>14/10/2017</td>
-                                            <td>13,098</td>
-                                            <td>Lucília Manjate</td>
-                                        </tr>
-                                        <tr>
-                                            <td>14/10/2017</td>
-                                            <td>13,098</td>
-                                            <td>Lucília Manjate</td>
-                                        </tr>
+                                       @endforeach
                                         </tbody>
                                     </table>
                                 </div>
@@ -171,46 +136,14 @@
 
 
                                         <tbody>
+                                       @foreach($dados['tab_saidas_admin'] as $k)
                                         <tr>
-                                            <td>14/10/2017</td>
-                                            <td>13,098</td>
-                                            <td>Lucília Manjate</td>
+                                            <td>{{$k['data']}}</td>
+                                            <td>{{$k['valor']}}</td>
+                                            <td>{{$k['autor']}}</td>
                                         </tr>
-                                        <tr>
-                                            <td>14/10/2017</td>
-                                            <td>13,098</td>
-                                            <td>Lucília Manjate</td>
-                                        </tr>
-                                        <tr>
-                                            <td>14/10/2017</td>
-                                            <td>13,098</td>
-                                            <td>Lucília Manjate</td>
-                                        </tr>
-                                        <tr>
-                                            <td>14/10/2017</td>
-                                            <td>13,098</td>
-                                            <td>Lucília Manjate</td>
-                                        </tr>
-                                        <tr>
-                                            <td>14/10/2017</td>
-                                            <td>13,098</td>
-                                            <td>Lucília Manjate</td>
-                                        </tr>
-                                        <tr>
-                                            <td>14/10/2017</td>
-                                            <td>13,098</td>
-                                            <td>Lucília Manjate</td>
-                                        </tr>
-                                        <tr>
-                                            <td>14/10/2017</td>
-                                            <td>13,098</td>
-                                            <td>Lucília Manjate</td>
-                                        </tr>
-                                        <tr>
-                                            <td>14/10/2017</td>
-                                            <td>13,098</td>
-                                            <td>Lucília Manjate</td>
-                                        </tr>
+                                       @endforeach
+                                        
                                         </tbody>
                                     </table>
                                 </div>

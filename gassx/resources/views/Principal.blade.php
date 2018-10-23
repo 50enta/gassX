@@ -219,7 +219,7 @@
                                     <li><a href="form-advanced.html">Não lidas</a></li>
                                 </ul>
                             </li>
-                        @if($dados['usuario']->isAdmin() == true)
+                        @if($dados['usuario']->isAdmin())
                             <li class="menu-title">Mais</li>
                             <li class="has_sub">
                                 <a href="javascript:void(0);" class="waves-effect waves-primary">
@@ -257,13 +257,13 @@
             <div class="content-page">
 
             <br><br><br><br><br>
-               {{--  @foreach($dados['tab_contribuicoes_membros_admin'] as $k)
+               {{--  @foreach($dados['total_entradas'] as $k)
                         {{
-                            $k['data'].'  ......  '.$k['valor']
+                           $k['valor']
                     }}<br>
                 @endforeach --}}
-                
-                
+               
+
       
                 <!-- Start content -->
                      {{-- @yield('base') --}}
