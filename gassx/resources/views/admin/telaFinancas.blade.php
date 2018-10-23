@@ -43,7 +43,7 @@
                             <div class="col-lg-6 col-xl-3">
                                 <div class="widget-bg-color-icon card-box fadeInDown animated">
                                     <div class="bg-icon bg-icon-primary pull-left">
-                                        <i class=" ti-money text-info"></i>
+                                        <i class="  fa-money"></i>
                                     </div>
                                     <div class="text-right">
                                         <h3 class="text-dark m-t-10">
@@ -58,7 +58,7 @@
                             <div class="col-lg-6 col-xl-3">
                                 <div class="widget-bg-color-icon card-box">
                                     <div class="bg-icon bg-icon-danger pull-left">
-                                        <i class="ti-shopping-cart text-pink"></i>
+                                        <i class=" fa-angle-double-down"></i>
                                     </div>
                                     <div class="text-right">
                                         <h3 class="text-dark m-t-10"><b>{{$dados['numero_total_saidas']}}</b></h3>

@@ -32,7 +32,7 @@ Route::group(['prefix' => 'user'], function () {
     Route::post('/atualizarTodosEventos/{user_id}',  'EventoController@store'); 
     Route::get('/meusEventos/{user_id}/{ma?}',  'EventoController@telaMeusEventos');
     Route::post('/atualizarMeusEventos/{user_id}',  'EventoController@store1'); 
-    Route::get('detalhesEvento/{user_id}/{ma?}', 'EventoController@telaDetalhesEvento');
+    Route::get('detalhesEvento_user/{user_id}/{ma?}', 'EventoController@telaDetalhesEvento');
     Route::post('/atualizarDetalhesEvento/{user_id}',  'EventoController@store2');
 
     
@@ -51,7 +51,8 @@ Route::group(['prefix' => 'admin'], function () {
     Route::post('/atualizarQuotas/{user_id}', 'QuotaController@store');    
     Route::get('/utilizadores/{user_id}/{ma?}', 'UserController@telaUtilizadores'); 
     Route::get('/parceiros/{user_id}/{ma?}', 'ParceiroController@telaParceiros'); 
-    Route::get('/eventos/{user_id}/{ma?}', 'EventoController@telaEventos'); 
+    Route::get('/eventos/{user_id}/{ma?}', 'EventoController@telaEventos');
+     Route::get('detalhesEvento_admin/{user_id}/{ma?}', 'EventoController@telaDetalhesEvento'); 
     Route::get('/outros/{user_id}/{ma?}', 'Controller@telaOutros');  
 
 

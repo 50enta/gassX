@@ -183,7 +183,7 @@
                                     <div class="card-body">
                                         <h5 class="card-title">Evento 4</h5>
                                         <p class="card-text">Some quick example text to build on the card title and make.</p>
-                                        <a href="#" class="btn btn-primary">Detalhes</a>
+                                        <a  href="{{url('user/detalhesEvento_admin/'.$dados['usuario']->id)}}" class="btn btn-primary">Detalhes</a>
                                     </div>
                                 </div>
                             </div><!-- end col -->

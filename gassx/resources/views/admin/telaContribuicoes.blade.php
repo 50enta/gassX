@@ -13,7 +13,7 @@
                                     <form class="form-horizontal float-right" role="form" method="POST" action="{{ url('/admin/atualizarContribuicoes/'.$dados['usuario']->id) }}">
 										{{csrf_field() }}
 										<div class="form-group row">
-										    <input name="mes_ano" type="text" class="col-sm-5 form-control form-control-1 input-sm from" placeholder="Mês e ano" >
+										   <input name="mes_ano" type="text" class="col-sm-5   form-control form-control-1 input-sm from" placeholder="mes e ano" >
 										    <button type="submit" class="btn btn-success waves-effect waves-light btn-sm m-b-5">Buscar</button>
 										</div>
 									</form>
@@ -58,29 +58,15 @@
 
 
                                         <tbody>
-                                       
+                                       @foreach($dados['tab_contribuicoes_parceiros_admin'] as $k)
                                         <tr>
-                                            <td>Cedric Kelly</td>
-                                            <td>Senior Javascript Developer</td>
-                                      		<td>Evento ou Associação</td>
-                                            <td>2012/03/29</td>
-                                            <td>$433,060</td>
+                                           <td>{{$k['descricao']}}</td>
+                                            <td>{{$k['tipo']}}</td>
+                                            <td>{{$k['parceiro']}}</td>
+                                            <td>{{$k['data']}}</td>
+                                            <td>{{$k['valor']}}</td>
                                         </tr>
-                                        <tr>
-                                            <td>Airi Satou</td>
-                                            <td>Accountant</td>
-                                      
-                                            <td>2008/11/28</td>
-                                            <td>$162,700</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Brielle Williamson</td>
-                                            <td>Integration Specialist</td>
-                                       
-                                            <td>2012/12/02</td>
-                                            <td>$372,000</td>
-                                        </tr>
-                                        
+                                        @endforeach
                                         </tbody>
                                     </table>
                               
@@ -90,7 +76,7 @@
                          <div class="col-12">
                               
                                 
-                                    <table id="datatable-buttons" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                                    <table id="datatable-butt__---ons" class="table table-striped table-bordered" cellspacing="0" width="100%">
                                         <thead>
                                         <tr>
                                             <th>Descrição</th>
@@ -103,28 +89,18 @@
 
 
                                         <tbody>
-                                        <tr>
-                                            <td>Tiger Nixon</td>
-                                            <td>System Architect</td>
-                                   
-                                            <td>2011/04/25</td>
-                                            <td>$320,800</td>
-                                        </tr>
                                         
+                                            @foreach($dados['tab_contribuicoes_membros_admin'] as $k)
                                         <tr>
-                                            <td>Airi Satou</td>
-                                            <td>Accountant</td>
-                                      
-                                            <td>2008/11/28</td>
-                                            <td>$162,700</td>
+                                            <td>{{$k['descricao']}}</td>
+                                            <td>{{$k['tipo']}}</td>
+                                            <td>{{$k['membro']}}</td>
+                                            <td>{{$k['data']}}</td>
+                                            <td>{{$k['valor']}}</td>
                                         </tr>
-                                        <tr>
-                                            <td>Brielle Williamson</td>
-                                            <td>Integration Specialist</td>
-                                       
-                                            <td>2012/12/02</td>
-                                            <td>$372,000</td>
-                                        </tr>
+                                        @endforeach
+                                    
+                                        
                                         
                                         </tbody>
                                     </table>
