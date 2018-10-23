@@ -20,6 +20,7 @@ class ContribuicaoController extends Controller
 		$ano =  (int) $data[1];
         $dados['tab_contribuicoes_parceiros_admin'] = $this->tab_contribuicoes_parceiros_admin($mes, $ano);
         $dados['tab_contribuicoes_membros_admin'] = $this->tab_contribuicoes_membros_admin($mes, $ano);
+
         $dados['numero_de_contribuicoes'] = $this->getTotais($mes, $ano)['a'];
         $dados['total_com_membros'] = $this->getTotais($mes, $ano)['b'];
         $dados['total_com_parceiros'] = $this->getTotais($mes, $ano)['c'];
@@ -42,7 +43,7 @@ class ContribuicaoController extends Controller
 
 
     // about gastoUsers
-	public function telaContribuicoesUser($user_id, $ma = '0/0'){
+	public function telaContribuicoesUser($user_id, $ma = '10/2018'){
 		$dados['usuario'] = User::find($user_id);
 
 		$data = explode('/', $ma);
