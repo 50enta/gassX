@@ -32,5 +32,6 @@ class UserController extends Controller{
         
         return view('user.telaPerfil', compact('dados'));
 	}
+    
 
 }
