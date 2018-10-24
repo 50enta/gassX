@@ -96,7 +96,8 @@ class QuotaController extends Controller{
 			$linha['codigo'] = $key->gastoUser()->first()->user()->first()->codigo;
 			$linha['membro'] = $key->gastoUser()->first()->user()->first()->name;
 			$linha['data_pagamento'] = $key->created_at;
-			$linha['valor_multa'] = $key->quotaPagamentos()->get()->first()->quota()->first()->multa()->first()->percentagem;
+			// $linha['valor_multa'] = $key->quotaPagamentos()->get()->first()->quota()->first()->multa()->first()->percentagem;
+			$linha['valor_multa'] = '0';
 			$linha['n_prestacoes'] = $key->quotaPagamentos()->count();
 			$linha['estado'] = 'pago';
 

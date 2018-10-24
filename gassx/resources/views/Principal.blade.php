@@ -257,7 +257,7 @@
             <!-- ============================================================== -->                      
             <div class="content-page">
 
-            <br><br><br><br><br>
+            {{-- <br><br><br><br><br> --}}
                {{--  @foreach($dados['total_entradas'] as $k)
                         {{
                            $k['valor']
