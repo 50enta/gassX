@@ -41,11 +41,25 @@ class DinheiroController extends Controller
     public function store(Request $request, $user_id){
 		$dados['usuario'] = User::find($user_id);
 
-		$data = explode('/', $request['mes_ano']);
+		$data = explode('/', $request->all()['mes_ano']);
 		$mes = (int) $data[0];
 		$ano =  (int) $data[1];
-        
-        return view('admin.telaFinancas', compact('dados'));
+		
+		$dados['tab_saidas_admin'] = $this->tab_saidas_admin($mes, $ano);
+		$dados['tab_entradas_admin'] = $this->tab_entradas_admin($mes, $ano);
+		$dados['valor_total_saidas']= $this->total_saidas($mes, $ano)['valor'];
+		$dados['numero_total_saidas']= $this->total_saidas($mes, $ano)['numero'];
+
+		$dados['valor_total_entradas']= $this->total_entradas($mes, $ano)['valor'];
+		$dados['numero_total_entradas']= $this->total_entradas($mes, $ano)['numero'];
+
+
+		$dados['data']['mes_int'] = $mes;
+		$u = new Util();
+		$dados['data']['mes_str'] = $u->getMes($mes);
+		$dados['data']['ano'] = $ano;
+		
+		return view("admin.telaFinancas", compact('dados'));
 	}
 
   ////////////////////////////////////////////////////////////////

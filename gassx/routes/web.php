@@ -24,8 +24,8 @@ Route::get('/principal/{user_id}', 'Controller@telaInicio');
 Route::group(['prefix' => 'user'], function () {
     Route::get('/perfil/{user_id}/{ma?}', 'UserController@telaPerfil');
     Route::post('/atualizarPerfil/{user_id}', 'UserController@store');
-    Route::get('/quotas/{user_id}/{ma?}', 'QuotaController@telaQuotasUser');
-    Route::post('/atualizarQuotas/{user_id}', 'QuotaController@store1');
+    Route::get('/quotas/{user_id}/{ma?}', 'PagamentoController@telaQuotasUser');
+    Route::post('/atualizarQuotas/{user_id}', 'PagamentoController@store1');
     Route::get('/contribuicoes/{user_id}/{ma?}', 'ContribuicaoController@telaContribuicoesUser');
     Route::post('/atualizarContribuicoes/{user_id}', 'ContribuicaoController@store1');
     Route::get('/todosEventos/{user_id}/{ma?}', 'EventoController@telaTodosEventos');
@@ -35,6 +35,9 @@ Route::group(['prefix' => 'user'], function () {
     Route::get('/detalhesEvento_user/{user_id}/{ma?}', 'EventoController@telaDetalhesEvento_user');
     Route::post('/atualizarDetalhesEvento/{user_id}',  'EventoController@store2');
 
+
+    Route::post('/salvarMembro/{user_id}',  'UserController@salvarMembro');
+    
     
 });
 
@@ -52,11 +55,16 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/utilizadores/{user_id}/{ma?}', 'UserController@telaUtilizadores'); 
     Route::get('/parceiros/{user_id}/{ma?}', 'ParceiroController@telaParceiros'); 
     Route::get('/eventos/{user_id}/{ma?}', 'EventoController@telaEventos');
+<<<<<<< HEAD
      Route::get('/detalhesEvento_admin/{user_id}/{ma?}', 'EventoController@telaDetalhesEvento_admin'); 
+=======
+    Route::get('/detalhesEvento_admin/{user_id}/{ma?}', 'EventoController@telaDetalhesEvento_admin'); 
+>>>>>>> 20544855e6e9b2346c0abf08e6e587be66d98692
     Route::get('/outros/{user_id}/{ma?}', 'Controller@telaOutros');  
 
 
-    Route::post('/salvarMulta/{user_id}/{ma?}', 'MultaController@salvarMulta');
+    Route::post('/salvarMulta/{user_id}/{ma?}', 'MultaController@salvarMulta'); 
+    Route::post('/salvarValorQuota/{user_id}/{ma?}', 'ValorQuotaController@salvarValorQuota');
     
 });
 

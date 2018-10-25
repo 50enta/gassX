@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Util extends Model
 {
       protected $fillable = [
-         'dataLimitePagamento', 
+         'diaLimitePagamento', 
     ];
 
 
@@ -20,40 +20,40 @@ class Util extends Model
 public function getMes($mes_int){
 	switch ($mes_int) {
 		case '1':
-			return 'Janeiro';
+			return 'Jan';
 			break;
 		case '2':
-			return 'Fevereiro';
+			return 'Fev';
 			break;
 		case '3':
-			return 'Março';
+			return 'Mar';
 			break;
 		case '4':
-			return 'Abril';
+			return 'Abr';
 			break;
 		case '5':
-			return 'Maio';
+			return 'Mai';
 			break;
 		case '6':
-			return 'Junho';
+			return 'Jun';
 			break;
 		case '7':
-			return 'Julho';
+			return 'Jul';
 			break;
 		case '8':
-			return 'Agosto';
+			return 'Ago';
 			break;
 		case '9':
-			return 'Setembro';
+			return 'Set';
 			break;
 		case '10':
-			return 'Outubro';
+			return 'Out';
 			break;
 		case '11':
-			return 'Novembro';
+			return 'Nov';
 			break;
 		case '12':
-			return 'Dezembro';
+			return 'Dez';
 			break;
 		default:
 			return 'Indefinido';

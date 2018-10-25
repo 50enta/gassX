@@ -17,8 +17,8 @@ class CreateValorQuotasTable extends Migration
             $table->increments('id');
             $table->boolean('ativo')->default('1');
             $table->double('valor')->default('0');
-            $table->date('dataInicio')->useCurrent();
-            $table->date('dataFim')->useCurrent();
+            $table->date('dataInicio')->nullable();
+            $table->date('dataFim')->nullable();
             $table->timestamps();
         });
     }

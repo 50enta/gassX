@@ -33,26 +33,29 @@
                                         </div>
 
                                         <div class="">
-                                            <h5 class="m-b-5">Valter Cinquenta</h5>
-                                            <p class="text-muted">@5enta</p>
+                                            <h5 class="m-b-5">{{$dados['usuario']->name}}</h5>
+                                            <p class="text-muted">{{'@'.$dados['usuario']->username}}</p>
                                         </div>
-
-                                        <button type="button" class="btn btn-success btn-sm w-sm waves-effect m-t-10 waves-light">Ativo</button>
-                                        {{-- Opção para inativo (btn-danger) --}}
+                                        @if($dados['usuario']->activo)
+                                            <button type="button" class="btn btn-success btn-sm w-sm waves-effect m-t-10 waves-light">Ativo</button>
+                                        @else
+                                             <button type="button" class="btn btn-danger btn-sm w-sm waves-effect m-t-10 waves-light">Inactivo</button>
+                                        @endif
+                                        
 
 
                                         <div class="text-left m-t-40">
-                                        	 <p class="text-muted font-13"><strong>Código :</strong> <span class="m-l-15">20189843</span></p>
+                                        	 <p class="text-muted font-13"><strong>Código :</strong> <span class="m-l-15">{{$dados['usuario']->codigo}} </span></p>
 
-                                            <p class="text-muted font-13"><strong>Nome :</strong> <span class="m-l-15">Valter Cinquenta</span></p>
+                                            <p class="text-muted font-13"><strong>Nome :</strong> <span class="m-l-15"> {{$dados['usuario']->name}} </span></p>
 
-                                            <p class="text-muted font-13"><strong>Celular :</strong><span class="m-l-15">(123) 123 1234</span></p>
+                                            <p class="text-muted font-13"><strong>Celular :</strong><span class="m-l-15">(+258) {{$dados['usuario']->contacto()->first()->numero}}</span></p>
 
-                                            <p class="text-muted font-13"><strong>Email :</strong> <span class="m-l-15">cinquenta@gmail.com</span></p>
+                                            <p class="text-muted font-13"><strong>Email :</strong> <span class="m-l-15">{{$dados['usuario']->email}}</span></p>
 
-                                            <p class="text-muted font-13"><strong>Endereço :</strong> <span class="m-l-15">USA</span></p>
+                                            <p class="text-muted font-13"><strong>Endereço :</strong> <span class="m-l-15">{{$dados['usuario']->endereco()->first()->descricao}}</span></p>
 
-                                            <p class="text-muted font-13"><strong>Genero :</strong> <span class="m-l-15">Masculino</span></p>
+                                            <p class="text-muted font-13"><strong>Genero :</strong> <span class="m-l-15">{{$dados['usuario']->genero()->first()->descricao}}</span></p>
                                         </div>
 
                                         <ul class="social-links list-inline m-t-30">
@@ -77,17 +80,17 @@
                                     <div class="p-b-10">
                                         <p>Quotas</p>
                                         <div class="progress progress-sm">
-                                            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: {{$dados['avaliacao_user']['quotas']}}%">
                                             </div>
                                         </div>
                                         <p>Contribuíções</p>
                                         <div class="progress progress-sm">
-                                            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {{$dados['avaliacao_user']['contribuicoes']}}%">
                                             </div>
                                         </div>
                                         <p>Eventos</p>
                                         <div class="progress progress-sm mb-0">
-                                            <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:  {{$dados['avaliacao_user']['eventos']}}%">
                                             </div>
                                         </div>
                                     </div>
@@ -107,7 +110,7 @@
                                                 </a>
                                             </li>
                                             <li class="nav-item">
-                                                <a href="#home" data-toggle="tab" aria-expanded="false" class="nav-link">
+                                                <a href="#home1" data-toggle="tab" aria-expanded="false" class="nav-link">
                                                     BIOGRAFIA
                                                 </a>
                                             </li>
@@ -117,11 +120,11 @@
                                                 </a>
                                             </li>
                                         </ul>
-                                        <div class="tab-content">
-                                            <div class="tab-pane" id="home">
-                                                <p class="m-b-5">Olá, eu sou Cinquenta, blá blá blá...</p>
+                <div class="tab-content">
+                                            <div class="tab-pane" id="home1">
+                                                <p class="m-b-5">{{$dados['usuario']->obs}}</p>
                                             </div>
-                                            <div class="tab-pane active" id="atualizarPerfil">
+                     <div class="tab-pane active" id="conta">
                                         <div class="col-md-12">
                                         <div class="card-box">
                                             <div class="row">
@@ -134,9 +137,9 @@
                                     </div>
                                     <div class="text-right">
                                         <h3 class="text-dark m-t-10">
-                                            <b class="counter">31,570</b>
+                                            <b >{{$dados['usuario']->saldo}},00 Mt</b>
                                         </h3>
-                                        <p class="text-muted mb-0">Total entrada</p>
+                                        <p class="text-muted mb-0">Saldo actual</p>
                                     </div>
                                     <div class="clearfix"></div>
                                 </div>
@@ -145,11 +148,11 @@
 
                              <div class="col-lg-6 col-md-6">
                                 <div class=" text-right ">
-                                    <form class="form-horizontal float-right" role="form" method="POST" action="{{ url('/user/atualizarPerfil'.$dados['usuario']->id) }}">
+                                    <form class="form-horizontal float-right" role="form" method="POST" action="{{ url('/user/atualizarPerfil/'.$dados['usuario']->id) }}">
                                         {{csrf_field() }}
                                           <div style="padding-bottom: 30px;"class=""></div>
                                         <div class="form-group row">
-                                            <input name="mes_ano" type="text" class="col-sm-5 form-control form-control-1 input-sm from" placeholder="Mês e ano" >
+                                            <input name="mes_ano" type="text" class="col-sm-5 form-control form-control-1 input-sm from" placeholder="{{$dados['data']['mes_int'].'/'.$dados['data']['ano']}}" >
                                             <button type="submit" class="btn btn-success waves-effect waves-light btn-sm m-b-5">Buscar</button>
                                         </div>
                                     </form>
@@ -161,16 +164,16 @@
                                             <div class="tabs-vertical-env">
                                                 <ul class="nav tabs-vertical">
                                                     <li class="nav-item">
-                                                        <a href="#v-profile" class="nav-link active" data-toggle="tab" aria-expanded="true">Gastos</a>
+                                                        <a href="#v-gastos" class="nav-link active" data-toggle="tab" aria-expanded="true">Gastos</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a href="#v-messages" class="nav-link" data-toggle="tab" aria-expanded="false">Recargas
+                                                        <a href="#v-recargas" class="nav-link" data-toggle="tab" aria-expanded="false">Recargas
                                                         </a>
                                                     </li>
                                                 </ul>
 
                                                 <div class="tab-content">
-                                 <div class="tab-pane active" id="v-profile">
+                     <div class="tab-pane active" id="v-gastos">
                          <div class="row">
                             <div class="col-lg-12">
                                 <div class="card-box col-lg-12">
@@ -185,13 +188,19 @@
                                             </tr>
                                             </thead>
                                             <tbody>
+                                        @foreach($dados['tab_gastos_user'] as $v)
                                             <tr>
                                                 <td>12/09/2017</td>
                                                 <td>57.000,00</td>
-                                                <td><span class="badge badge-info">Pagamento de quota</span></td>
-                                               <td>--</td>
+                                                <td>
+                                                    <span class="badge badge-info">
+                                                        Pagamento de quota
+                                                    </span>
+                                                </td>
+                                                <td>--</td>
                                             </tr>
-                                            <tr>
+                                        @endforeach
+                                            {{-- <tr>
                                                 <td>01/01/2017</td>
                                                 <td>7.000,00</td>
                                                 <td><span class="badge badge-success">Contribuíção para evento</span></td>
@@ -216,7 +225,7 @@
                                                 <td>57.000,07</td>
                                                 <td><span class="badge badge-warning">Coming soon</span></td>
                                                 <td>--</td>
-                                            </tr>
+                                            </tr> --}}
             
                                             </tbody>
                                         </table>
@@ -225,9 +234,9 @@
                             </div>
                             <!-- end col -8 -->
                         </div>
-                                    </div>
-                                                    <div class="tab-pane" id="v-messages">
-                                                       <div class="row">
+                    </div>
+                 <div class="tab-pane" id="v-recargas">
+                        <div class="row">
                             <div class="col-lg-12">
                                 <div class="card-box col-lg-12">
                                     <div class="table-responsive">
@@ -236,43 +245,18 @@
                                             <tr>
                                                 <th>Data</th>
                                                 <th>Valor</th>
-                                              
                                                 <th>Observações</th>
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            <tr>
-                                                <td>12/09/2017</td>
-                                                <td>57.000,00</td>
-                                                
-                                               <td>--</td>
-                                            </tr>
-                                            <tr>
-                                                <td>01/01/2017</td>
-                                                <td>7.000,00</td>
-                                                
-                                                <td>--</td>
-                                            </tr>
-                                            <tr>
-                                                <td>01/01/2017</td>
-                                                <td>500,00</td>
-                                                
-                                                <td>--</td>
-                                            </tr>
-                                            <tr>
-                                                <td>01/01/2017</td>
-                                                <td>1.000,00</td>
-                                               
-                                                <td>--</td>
-                                                
-                                            </tr>
-                                            <tr>
-                                                <td>01/01/2017</td>
-                                                <td>57.000,07</td>
-                                                
-                                                <td>--</td>
-                                            </tr>
-            
+                                                @foreach($dados['tab_recargas_user'] as $v)
+                                                    <tr>
+                                                        <td>{{$v['data']}}</td>
+                                                        <td>{{$v['valor']}},00</td>
+                                                        
+                                                       <td>--</td>
+                                                    </tr>
+                                                @endforeach
                                             </tbody>
                                         </table>
                                     </div>
@@ -286,24 +270,46 @@
                                             </div>
                                 </div>
                             </div> <!-- end col -->
-                                            </div>
+                    </div>
                                             <div class="tab-pane" id="atualizarPerfi">
-                                                <form role="form">
+                                                 <form role="form" method="POST" action="{{ url('/user/salvarMembro/'.$dados['usuario']->id) }}">
+                                                {{csrf_field() }}
                                                     <div class="form-group">
                                                         <label for="FullName">Nome completo</label>
-                                                        <input type="text" placeholder="Valter Cinquenta" id="FullName" class="form-control">
+                                                        <input type="text" placeholder="{{$dados['usuario']->name }}" name="name" id="FullName" class="form-control">
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="Email">Email</label>
-                                                        <input type="email" placeholder="cinquenta@gmail.com" id="Email" class="form-control">
+                                                        <label for="Email">E-mail</label>
+                                                        <input type="email" placeholder="{{$dados['usuario']->email }}" name="email" id="Email" class="form-control">
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="Username">Username</label>
-                                                        <input type="text" placeholder="cinquenta" id="Username" class="form-control">
+                                                        <input type="text" placeholder="{{$dados['usuario']->username }}" name="username" id="Username" class="form-control">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="Username">Contacto</label>
+                                                        <input type="text" placeholder="(+258) {{$dados['usuario']->contacto()->first()->numero }}" id="contacto" name="contacto" class="form-control">
+                                                    </div>
+                                                     <div class="form-group">
+                                                                <label for="Membro-1" class="control-label">Gênero</label>
+                                                                <select name="genero" class="form-control select2">
+                                                                    @foreach($dados['generos'] as $g)
+                                                                    <option value="{{$g->id}}">{{$g->descricao}}</option>
+                                                                    @endforeach
+                                                                </select>
+                                                    </div>
+                                                     <div class="form-group">
+                                                                <label for="Membro-1" class="control-label">Endereco</label>
+                                                                <select name="endereco" class="form-control select2">
+                                                                     @foreach($dados['enderecos'] as $g)
+                                                                    <option value="{{$g->id}}">{{$g->descricao}}
+                                                                    </option>
+                                                                    @endforeach
+                                                                </select>
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="Password">Senha</label>
-                                                        <input type="password" placeholder="8 - 15 carateres" id="Password" class="form-control">
+                                                        <input type="password" placeholder="8 - 15 carateres" name="password" id="Password" class="form-control">
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="RePassword">Redefinir senha</label>
@@ -311,11 +317,13 @@
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="AboutMe">Outros</label>
-                                                        <textarea style="height: 125px" id="AboutMe" class="form-control ">
+                                                        <textarea style="height: 125px" name="obs" id="AboutMe" class="form-control ">
                                                         	
                                                         </textarea>
                                                     </div>
-                                                    <button class="btn btn-primary waves-effect waves-light w-md" type="submit">Salvar</button>
+                                                    <button class="btn btn-primary waves-effect waves-light w-md" type="submit">
+                                                        Salvar
+                                                    </button>
                                                 </form>
                                             </div>
                                         </div>

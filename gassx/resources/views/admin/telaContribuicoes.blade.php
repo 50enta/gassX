@@ -13,7 +13,7 @@
                                     <form class="form-horizontal float-right" role="form" method="POST" action="{{ url('/admin/atualizarContribuicoes/'.$dados['usuario']->id) }}">
 										{{csrf_field() }}
 										<div class="form-group row">
-										   <input name="mes_ano" type="text" class="col-sm-5   form-control form-control-1 input-sm from" placeholder="mes e ano" >
+										   <input name="mes_ano" type="text" class="col-sm-5   form-control form-control-1 input-sm from" placeholder="{{$dados['data']['mes_int'].'/'.$dados['data']['ano']}}" >
 										    <button type="submit" class="btn btn-success waves-effect waves-light btn-sm m-b-5">Buscar</button>
 										</div>
 									</form>
@@ -86,11 +86,8 @@
                                             <th>Valor</th>
                                         </tr>
                                         </thead>
-
-
                                         <tbody>
-                                        
-                                            @foreach($dados['tab_contribuicoes_membros_admin'] as $k)
+                                        @foreach($dados['tab_contribuicoes_membros_admin'] as $k)
                                         <tr>
                                             <td>{{$k['descricao']}}</td>
                                             <td>{{$k['tipo']}}</td>
@@ -99,9 +96,6 @@
                                             <td>{{$k['valor']}}</td>
                                         </tr>
                                         @endforeach
-                                    
-                                        
-                                        
                                         </tbody>
                                     </table>
                               
@@ -126,7 +120,7 @@
                                         	<i class=" ti-stats-up text-success"></i>
                                     	</div>
                                     	<div class="text-right">
-                                       		 <h3 class="text-dark m-t-10"><b >64</b></h3>
+                                       		 <h3 class="text-dark m-t-10"><b >{{$dados['numero_de_contribuicoes']}}</b></h3>
                                         	<p class="text-muted mb-0">Número de contribuíções</p>
                                     	</div>
                                   	  	<div class="clearfix"></div>
@@ -139,7 +133,7 @@
                                         <i class="ti-eye text-pink"></i>
                                     </div>
                                     <div class="text-right">
-                                        <h3 class="text-dark m-t-10"><b>31,570</b></h3>
+                                        <h3 class="text-dark m-t-10"><b>{{ $dados['total_com_membros']}},00 Mt</b></h3>
                                         <p class="text-muted mb-0">Total com membros</p>
                                     </div>
                                     <div class="clearfix"></div>
@@ -152,7 +146,7 @@
                                         <i class=" ti-money text-info"></i>
                                     </div>
                                     <div class="text-right">
-                                        <h3 class="text-dark m-t-10"><b>31,570</b></h3>
+                                        <h3 class="text-dark m-t-10"><b>{{$dados['total_com_parceiros']}},00 Mt</b></h3>
                                         <p class="text-muted mb-0">Total com parceiros</p>
                                     </div>
                                     <div class="clearfix"></div>

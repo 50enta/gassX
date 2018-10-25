@@ -10,8 +10,6 @@ use App\Multa;
 use App\Util;
 
 class QuotaController extends Controller{
-    
-
 	
 
 // formatação da tela quotas do admn
@@ -26,7 +24,9 @@ class QuotaController extends Controller{
 		$dados['tab_pagamentos_admin'] = $this->tab_pagamentos_admin($mes, $ano);
 		$dados['est_pagamentos_admin'] = $this->est_pagamentos_admin($mes, $ano);
 		$dados['tab_multas_admin'] = $this->tab_multas_admin($mes, $ano);
+		$dados['tab_quota_valor_admin'] = $this->tab_quota_valor_admin($mes, $ano);
 		$dados['valor_quota'] = $this->valorQuota($mes, $ano);
+
 		$dados['data']['mes_int'] = $mes;
 		$u = new Util();
 		$dados['data']['mes_str'] = $u->getMes($mes);
@@ -49,6 +49,7 @@ class QuotaController extends Controller{
 		$dados['tab_pagamentos_admin'] = $this->tab_pagamentos_admin($mes, $ano);
 		$dados['est_pagamentos_admin'] = $this->est_pagamentos_admin($mes, $ano);
 		$dados['tab_multas_admin'] = $this->tab_multas_admin($mes, $ano);
+		$dados['tab_quota_valor_admin'] = $this->tab_quota_valor_admin($mes, $ano);
 		$dados['valor_quota'] = $this->valorQuota($mes, $ano);
 		$dados['data']['mes_int'] = $mes;
 		$u = new Util();
@@ -61,30 +62,6 @@ class QuotaController extends Controller{
 
 
 
-	// about gastoUsers
-	public function telaQuotasUser($user_id, $ma = '0/0'){
-		$dados['usuario'] = User::find($user_id);
-
-		$data = explode('/', $ma);
-		$mes = (int) $data[0];
-		$ano =  (int) $data[1];
-
-		
-		return view("user.telaQuotas", compact('dados'));
-	}
-
-	/**
-
-	*/
-	public function store1(Request $request, $user_id){
-		$dados['usuario'] = User::find($user_id);
-		
-		$data = explode('/', $request['mes_ano']);
-		$mes = (int) $data[0];
-		$ano =  (int) $data[1];
-        
-        return view('user.telaQuotas', compact('dados'));
-	}
 
 /////////////////////////////////////
 
@@ -96,7 +73,8 @@ class QuotaController extends Controller{
 			$linha['codigo'] = $key->gastoUser()->first()->user()->first()->codigo;
 			$linha['membro'] = $key->gastoUser()->first()->user()->first()->name;
 			$linha['data_pagamento'] = $key->created_at;
-			$linha['valor_multa'] = $key->quotaPagamentos()->first()->quota()->first()->multa()->first()->percentagem;
+			// $linha['valor_multa'] = $key->quotaPagamentos()->get()->first()->quota()->first()->multa()->first()->percentagem;
+			$linha['valor_multa'] = '0';
 			$linha['n_prestacoes'] = $key->quotaPagamentos()->count();
 			$linha['estado'] = 'pago';
 
@@ -145,6 +123,29 @@ class QuotaController extends Controller{
 		return $linha;
 	}
 
+
+/**
+	Retorna os dados sobre relatórios, para preencher o cabeçalho colorido, 
+	Atenção que é sobre o mês e ano 
+	*/
+	//dias, percentagem, status, 
+	public function tab_quota_valor_admin($mes, $ano){
+		$linha = [];
+		$mult = ValorQuota::all(); //pagamentos dado uma dada
+
+		foreach ($mult as $key) {
+			$a['de'] = $key->created_at;
+			$a['ate'] = $key->updated_at;
+			$a['status'] = $key->ativo;
+			$a['valor'] = $key->valor;
+
+			$linha[] = $a;
+		}
+
+		return $linha;
+	}
+
+
 function pagosComMulta($pags){
 	$cont = 0;
 	foreach ($pags as $key) {
@@ -156,6 +157,7 @@ function pagosComMulta($pags){
 	}
 	return $cont;
 }
+
 function valorQuota(){
 	 $val = ValorQuota::where('ativo', '1')->get();
 	 foreach ($val as $key) {

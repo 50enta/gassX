@@ -27,6 +27,11 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
+
+            $table->string('obs');
+            $table->boolean('confirmado')->default('0');
+
+           
             
             $table->integer('contacto_id')->unsigned()->nullable();
             $table->integer('genero_id')->unsigned()->nullable();    //unsigned();
