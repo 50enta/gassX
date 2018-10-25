@@ -1,16 +1,21 @@
 @extends('layouts.app')
 
 @section('content')
+<style type="text/css">
+    beground
+</style>
 
 <div class="container">
   <div class="row justify-content-center">
+
                     <div class="col-lg-5">
+
                         <div class="card">
 
                             <!-- Logo -->
-                            <div class="card-header pt-4 pb-4 text-center bg-primary">
-                                <a href="#">GassX
-                                    <span><img src="" alt="" height="18"></span>
+                            <div class="card-header pt-4 pb-4 text-center bg-info">
+                                <a href="#">
+                                    <!-- <span><img src="{{asset('minton/images/logo/Capture9.jpg')}}" alt=""  width="350"  height="90"></span> -->
                                 </a>
                             </div>
 
@@ -19,11 +24,21 @@
                                 <div class="text-center w-75 m-auto">
                                     <h4 class="text-dark-50 text-center mt-0 font-weight-bold">Registo
                                     </h4>
-                                    {{-- <p class="text-muted mb-4">Preencha os campos e faça parte desta família.</p> --}}
+                                     <p class="text-muted mb-4">Preencha os campos para tornar se membro da associacao.</p> 
                                 </div>
 
                                 <form method="POST" action="{{ route('register') }}">
                                 @csrf
+
+                                <div class="form-group">
+                                        <label for="Nome">{{ __('Nome') }}</label>
+                                        <input id="nome" type="text" class="form-control{{ $errors->has('nome') ? ' is-invalid' : '' }}" name="nome" value="{{ old('nome') }}" required autofocus>
+                                        @if ($errors->has('nome'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('nome') }}</strong>
+                                    </span>
+                                    @endif
+                                    </div>
 
                                     <div class="form-group">
                                         <label for="emailaddress">{{ __('E-Mail') }}</label>
@@ -36,46 +51,28 @@
                                 @endif
                                     </div>
 
-                                    <div class="form-group">
-                                        <label for="username">{{ __('Username') }}</label>
-                                        <input id="username" type="text" class="form-control{{ $errors->has('username') ? ' is-invalid' : '' }}" name="username" value="{{ old('username') }}" required autofocus>
-                                        @if ($errors->has('username'))
-                                        <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('username') }}</strong>
-                                    </span>
-                                    @endif
-                                    </div>
+                                    
 
                                    <div class="form-group">
-                                        <label for="password">{{ __('Password') }}</label>
-                                        <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+                                        <label for="senha">{{ __('Senha') }}</label>
+                                        <input id="senha" type="password" class="form-control{{ $errors->has('senha') ? ' is-invalid' : '' }}" name="senha" required>
 
-                                        @if ($errors->has('password'))
+                                        @if ($errors->has('senha'))
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('password') }}</strong>
+                                        <strong>{{ $errors->first('senha') }}</strong>
                                     </span>
                                     @endif
                                     </div>
                                     
                                     <div class="form-group">
-                                        <label for="password-confirm">{{ __('Confirmar Password') }}</label>
-                                        <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                                        <label for="senha-confirm">{{ __('Confirmar Senha') }}</label>
+                                        <input id="senha-confirm" type="password" class="form-control" name="senha_confirmation" required>
 
-                                        @if ($errors->has('password'))
+                                        @if ($errors->has('senha'))
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('password') }}</strong>
+                                        <strong>{{ $errors->first('senha') }}</strong>
                                     </span>
                                      @endif
-                                    </div>
-
-                                    <div class="form-group mb-3">
-                                        <div class="custom-control custom-checkbox">
-                                            <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
-                                    </label>
-                                        </div>
                                     </div>
 
                                     <div class="form-group mb-0 text-center">
@@ -95,6 +92,8 @@
                 </div>
                     
             </div> <!-- end col -->
+
+
         </div>
     </div>
                 

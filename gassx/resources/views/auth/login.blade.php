@@ -2,21 +2,26 @@
 
 @section('content')
 <div class="container">
+
   <div class="row justify-content-center">
+   <div class="row"> <div class="col-lg-8"><h2> Gestão de Associações -Xitiques</h2></div></div>
                     <div class="col-lg-5">
+                       
+                        <br>
                         <div class="card">
 
                             <!-- Logo -->
                             <div class="card-header pt-4 pb-4 text-center bg-primary">
-                                <a href="#">GassX
-                                    <span><img src="assets/images/logo.png" alt="" height="18"></span>
+                                <a href="#">
+                                  <span></span> 
                                 </a>
+                                <h3> Entrar</h3>
                             </div>
 
                             <div class="card-body p-4">
                                 
                                 <div class="text-center w-75 m-auto">
-                                    <h4 class="text-dark-50 text-center mt-0 font-weight-bold">Entrar</h4>
+                                    <!-- <h4 class="text-dark-50 text-center mt-0 font-weight-bold">Entrar</h4> -->
                                     <p class="text-muted mb-4">Introduza o seu e-mail e senha para aceder ao sistema</p>
                                 </div>
 
@@ -34,7 +39,7 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <a href="pages-recoverpw.html" class="text-muted float-right"><small>Esqueceu a senha?</small></a>
+                                        
                                         <label for="password">{{ __('Password') }}</label>
                                         <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
 
@@ -52,6 +57,7 @@
                                     <label class="form-check-label" for="remember">
                                         {{ __('Remember Me') }}
                                     </label>
+                                    <a href="pages-recoverpw.html" class="text-muted float-right"><small>Esqueceu a senha?</small></a>
                                         </div>
                                     </div>
 
@@ -66,7 +72,7 @@
 
                         <div class="row mt-3">
                     <div class="col-12 text-center">
-                        <p class="text-muted">Não tem conta? <a href="{{ route('register') }}" class="text-dark ml-1"><b>Cadastre-se</b></a></p>
+                        <p class="text-muted">Não tem conta? <a href="{{ route('register') }}" class="text-dark ml-1"><b>Regista-se</b></a></p>
                    
                     </div>  
                 </div>

@@ -146,10 +146,10 @@
                              <div class="col-sm-4 col-lg-3 col-xs-12">
                                 <!-- Simple card -->
                                 <div class="card m-b-20">
-                                    <img class="card-img-top img-fluid" src="{{url('minton/images/gallery/9.jpg')}}" alt="Card image cap">
+                                    <img class="card-img-top img-fluid" src="{{url('minton/images/gallery/6.jpg')}}" alt="Card image cap">
                                     <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make.</p>
+                                        <h5 class="card-title">Visita ao Orfanato Dom Orion</h5>
+                                        <p class="card-text">Some quick example text to build.</p>
                                         <a href="{{url('admin/detalhesEvento_admin/'.$dados['usuario']->id)}}" class="btn btn-primary">Detalhes</a>
                                     </div>
                                 </div>
@@ -157,7 +157,7 @@
                             <div class="col-sm-4 col-lg-3 col-xs-12">
                                 <!-- Simple card -->
                                 <div class="card m-b-20">
-                                    <img class="card-img-top img-fluid" src="{{url('minton/images/gallery/10.jpg')}}" alt="Card image cap">
+                                    <img class="card-img-top img-fluid" src="{{url('minton/images/gallery/7.jpg')}}" alt="Card image cap">
                                     <div class="card-body">
                                         <h5 class="card-title">Churasco</h5>
                                         <p class="card-text">Some quick example text to build on the card title and make.</p>
@@ -168,18 +168,18 @@
                             <div class="col-sm-4 col-lg-3 col-xs-12">
                                 <!-- Simple card -->
                                 <div class="card m-b-20">
-                                    <img class="card-img-top img-fluid" src="{{url('minton/images/gallery/3.jpg')}}" alt="Card image cap">
+                                    <img class="card-img-top img-fluid" src="{{url('minton/images/gallery/8.jpg')}}" alt="Card image cap">
                                     <div class="card-body">
-                                        <h5 class="card-title">Evento 07</h5>
+                                        <h5 class="card-title">Casamento na Familia Mandlate</h5>
                                         <p class="card-text">Some quick example text to build on the card title and make.</p>
-                                        <a href="{{url('admin/detalhesEvento_admin/'.$dados['usuario']->id)}}" class="btn btn-primary">Detalhes</a>
+                                         <a href="{{url('admin/detalhesEvento_admin/'.$dados['usuario']->id)}}" class="btn btn-primary">Detalhes</a>
                                     </div>
                                 </div>
                             </div><!-- end col -->
                             <div class="col-sm-4 col-lg-3 col-xs-12">
                                 <!-- Simple card -->
                                 <div class="card m-b-20">
-                                    <img class="card-img-top img-fluid" src="{{url('minton/images/gallery/5.jpg')}}" alt="Card image cap">
+                                    <img class="card-img-top img-fluid" src="{{url('minton/images/gallery/10.jpg')}}" alt="Card image cap">
                                     <div class="card-body">
                                         <h5 class="card-title">Evento 4</h5>
                                         <p class="card-text">Some quick example text to build on the card title and make.</p>
@@ -189,23 +189,12 @@
                             </div><!-- end col -->
                         </div>
                         <div class="row">
-                             <div class="col-sm-4 col-lg-3 col-xs-12">
+                              <div class="col-sm-4 col-lg-3 col-xs-12">
                                 <!-- Simple card -->
                                 <div class="card m-b-20">
-                                    <img class="card-img-top img-fluid" src="{{url('minton/images/gallery/7.jpg')}}" alt="Card image cap">
+                                    <img class="card-img-top img-fluid" src="{{url('minton/images/gallery/1.jpg')}}" alt="Card image cap">
                                     <div class="card-body">
-                                        <h5 class="card-title">Teatro</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make.</p>
-                                        <a href="{{url('admin/detalhesEvento_admin" class="btn btn-primary">Detalhes</a>
-                                    </div>
-                                </div>
-                            </div><!-- end col -->
-                            <div class="col-sm-4 col-lg-3 col-xs-12">
-                                <!-- Simple card -->
-                                <div class="card m-b-20">
-                                    <img class="card-img-top img-fluid" src="{{url('minton/images/gallery/9.jpg')}}" alt="Card image cap">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
+                                        <h5 class="card-title"> Futebol</h5>
                                         <p class="card-text">Some quick example text to build on the card title and make.</p>
                                         <a href="{{url('admin/detalhesEvento_admin/'.$dados['usuario']->id)}}" class="btn btn-primary">Detalhes</a>
                                     </div>
@@ -214,9 +203,9 @@
                             <div class="col-sm-4 col-lg-3 col-xs-12">
                                 <!-- Simple card -->
                                 <div class="card m-b-20">
-                                    <img class="card-img-top img-fluid" src="{{url('minton/images/gallery/8.jpg')}}" alt="Card image cap">
+                                    <img class="card-img-top img-fluid" src="{{url('minton/images/gallery/12.jpg')}}" alt="Card image cap">
                                     <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
+                                        <h5 class="card-title">Graduacao do Mandlate</h5>
                                         <p class="card-text">Some quick example text to build on the card title and make.</p>
                                         <a href="{{url('admin/detalhesEvento_admin/'.$dados['usuario']->id)}}" class="btn btn-primary">Detalhes</a>
                                     </div>
@@ -225,20 +214,29 @@
                             <div class="col-sm-4 col-lg-3 col-xs-12">
                                 <!-- Simple card -->
                                 <div class="card m-b-20">
-                                    <img class="card-img-top img-fluid" src="{{url('minton/images/gallery/9.jpg')}}" alt="Card image cap">
+                                    <img class="card-img-top img-fluid" src="{{url('minton/images/gallery/3.jpg')}}" alt="Card image cap">
                                     <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
+                                        <h5 class="card-title">Aniversario da Associacao</h5>
                                         <p class="card-text">Some quick example text to build on the card title and make.</p>
-                                        <a href="{{url('admin/detalhesEvento_admin/'.$dados['usuario']->id)}}" class="btn btn-primary">Detalhes</a>
+                                         <a href="{{url('admin/detalhesEvento_admin/'.$dados['usuario']->id)}}" class="btn btn-primary">Detalhes</a>
                                     </div>
                                 </div>
                             </div><!-- end col -->
-                        </div>
-                        
+                            <div class="col-sm-4 col-lg-3 col-xs-12">
+                                <!-- Simple card -->
+                                <div class="card m-b-20">
+                                    <img class="card-img-top img-fluid" src="{{url('minton/images/gallery/11.jpg')}}" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Evento 8</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make.</p>
+                                        <a  href="{{url('admin/detalhesEvento_admin/'.$dados['usuario']->id)}}" class="btn btn-primary">Detalhes</a>
+                                    </div>
+                                </div>
+                            </div><!-- end col -->
                                   
-                    </div>
-                  </div>
-
+            </div>
         </div>
+
+    </div>
 </div>
 @endsection
