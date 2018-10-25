@@ -12,7 +12,7 @@
                                     <form class="form-horizontal float-right" role="form" method="POST" action="{{ url('/user/atualizarQuotas/'.$dados['usuario']->id) }}">
 										{{csrf_field() }}
 										<div class="form-group row">
-										    <input name="mes_ano" type="text" class="col-sm-5 form-control form-control-1 input-sm from" placeholder="Mês e ano" >
+										    <input name="mes_ano" type="text" class="col-sm-5 form-control form-control-1 input-sm from" placeholder="{{$dados['data']['mes_int'].'/'.$dados['data']['ano']}}" >
 										    <button type="submit" class="btn btn-success waves-effect waves-light btn-sm m-b-5">Buscar</button>
 										</div>
 									</form>
@@ -104,9 +104,13 @@
                                     <table class="table table-striped table-bordered toggle-circle m-b-0" data-page-size="7">
                                         <thead>
                                         <tr>
+
                                             <th data-toggle="true"></th>
-                                            <th data-toggle="true">Jan</th>
-                                            <th data-hide="phone">Fev</th>
+                                            @for($i = 1; $i <= $dados['data']['mes_int']; $i++)
+                                                <th data-toggle="true">{{$dados['util']->getMes($i)}}</th>
+                                            @endfor
+                                           {{--   <th data-toggle="true">Jan</th>
+                                           <th data-hide="phone">Fev</th>
                                             <th data-hide="phone">Mar</th>
                                             <th data-hide="phone, tablet">Abr</th>
                                             <th data-hide="phone, tablet">Mai</th>
@@ -116,15 +120,22 @@
                                             <th data-hide="phone, tablet">Set</th>
                                             <th data-hide="phone, tablet">Out</th>
                                             <th data-hide="phone, tablet">Nov</th>
-                                            <th data-hide="phone, tablet">Dez</th>
+                                            <th data-hide="phone, tablet">Dez</th> --}}
                                         </tr>
                                         </thead>
                                         <div class="form-inline m-b-20">
                                         </div>
                                         <tbody>
                                         <tr>
-                                            <td>Stat</td>
-                                             <td><span class="badge label-table badge-success">pago</span></td>
+                                            <td>Estado</td>
+                                            @for($i = 1; $i <= $dados['data']['mes_int']; $i++)
+                                              <td>
+                                                <span class="badge label-table badge-success">
+                                                    {{'pago'}}
+                                                </span>
+                                              </td>
+                                            @endfor
+                                             {{-- <td><span class="badge label-table badge-success">pago</span></td>
                                              <td><span class="badge label-table badge-success">pago</span></td>
                                              <td><span class="badge label-table badge-success">pago</span></td>
                                              <td><span class="badge label-table badge-success">pago</span></td>
@@ -135,11 +146,19 @@
                                             <td><span class="badge label-table badge-danger">não</span></td>
                                             <td><span class="badge label-table badge-danger">não</span></td>
                                             <td><span class="badge label-table badge-danger">não</span></td>
-                                            <td><span class="badge label-table badge-danger">não</span></td>
+                                            <td><span class="badge label-table badge-danger">não</span></td> --}}
 
                                         </tr>
                                         <tr>
-                                            <td>Mult</td>
+                                            <td>Multa</td>
+                                            @for($i = 1; $i <= $dados['data']['mes_int']; $i++)
+                                              <td>
+                                               
+                                                    {{'0,0'}}
+                                                
+                                              </td>
+                                            @endfor
+                                           {{--  <td>0,00</td>
                                             <td>0,00</td>
                                             <td>0,00</td>
                                             <td>0,00</td>
@@ -150,8 +169,7 @@
                                             <td>0,00</td>
                                             <td>0,00</td>
                                             <td>0,00</td>
-                                            <td>0,00</td>
-                                            <td>0,00</td>
+                                            <td>0,00</td> --}}
                                         </tr>
                                        
                                       

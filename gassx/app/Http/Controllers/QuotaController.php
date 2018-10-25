@@ -49,6 +49,7 @@ class QuotaController extends Controller{
 		$dados['tab_pagamentos_admin'] = $this->tab_pagamentos_admin($mes, $ano);
 		$dados['est_pagamentos_admin'] = $this->est_pagamentos_admin($mes, $ano);
 		$dados['tab_multas_admin'] = $this->tab_multas_admin($mes, $ano);
+		$dados['tab_quota_valor_admin'] = $this->tab_quota_valor_admin($mes, $ano);
 		$dados['valor_quota'] = $this->valorQuota($mes, $ano);
 		$dados['data']['mes_int'] = $mes;
 		$u = new Util();
@@ -61,30 +62,6 @@ class QuotaController extends Controller{
 
 
 
-	// about gastoUsers
-	public function telaQuotasUser($user_id, $ma = '0/0'){
-		$dados['usuario'] = User::find($user_id);
-
-		$data = explode('/', $ma);
-		$mes = (int) $data[0];
-		$ano =  (int) $data[1];
-
-		
-		return view("user.telaQuotas", compact('dados'));
-	}
-
-	/**
-
-	*/
-	public function store1(Request $request, $user_id){
-		$dados['usuario'] = User::find($user_id);
-		
-		$data = explode('/', $request['mes_ano']);
-		$mes = (int) $data[0];
-		$ano =  (int) $data[1];
-        
-        return view('user.telaQuotas', compact('dados'));
-	}
 
 /////////////////////////////////////
 
