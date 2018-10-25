@@ -14,6 +14,7 @@ class DespesaController extends Controller
     public function telaDespesas($user_id, $ma = '10/2018') {
         $dados['usuario'] = User::find($user_id);
 
+        $ma = date("m/Y/d"); 
         $data = explode('/', $ma);
         $mes = (int) $data[0];
         $ano =  (int) $data[1];
