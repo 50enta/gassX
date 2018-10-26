@@ -114,7 +114,7 @@
                                         <tbody>
                                     @foreach($dados['tab_despesas_associacao'] as $k)
                                         <tr>
-                                           <td>{{$k['descricao']}}</td>
+                                            <td>{{$k['descricao']}}</td>
                                             <td>{{$k['autor']}}</td>
                                             <td>{{$k['data']}}</td>
                                             <td>{{$k['valor']}}</td>
@@ -145,13 +145,13 @@
                                                         <div class="col-md-6">
                                                             <div class="form-group">
                                                                 <label for="field-1" class="control-label">Descrição</label>
-                                                                <input type="text" class="form-control" id="field-1" placeholder="Compra de cerveja">
+                                                                <input name="descricao" type="text" class="form-control" id="field-1" placeholder="Compra de cerveja">
                                                             </div>
                                                         </div>
                                                         <div class="col-md-6">
                                                             <div class="form-group">
                                                                 <label for="field-2" class="control-label">valor</label>
-                                                                <input type="text" class="form-control" id="field-2" placeholder="3000,00">
+                                                                <input name="valor" type="text" class="form-control" id="field-2" placeholder="3000,00">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -159,13 +159,14 @@
                                                         <div class="col-md-12">
                                                             <div class="form-group">
                                                                 <label for="field-1" class="control-label">Membro</label>
-                                                                <select class="form-control select2">
+                                                                <select name="membro" class="form-control select2">
                                                                 <option>Selecione o Membro</option>
-                                                               
-                                                                    <option value="1">Valter Cinquenta</option>
-                                                                    <option value="2">Maria Lurdes</option>
-                                                                    <option value="4">José Alfeu</option>
-                                                                    <option value="3">Washington</option>
+                                                                @foreach($dados['membros'] as $m)
+                                                                    <option value="{{$m->id}}">
+                                                                        {{$m->name}}
+                                                                    </option>
+                                                                @endforeach
+                                                                    
                                                                 </select>
                                                             </div>
                                                         </div>

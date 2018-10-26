@@ -34,12 +34,12 @@
 
                                         <div class="">
                                             <h5 class="m-b-5">{{$dados['usuario']->name}}</h5>
-                                            <p class="text-muted">@ {{$dados['usuario']->username}}</p>
+                                            <p class="text-muted">{{'@'.$dados['usuario']->username}}</p>
                                         </div>
                                         @if($dados['usuario']->activo)
                                             <button type="button" class="btn btn-success btn-sm w-sm waves-effect m-t-10 waves-light">Ativo</button>
                                         @else
-                                             <button type="button" class="btn btn-danger btn-sm w-sm waves-effect m-t-10 waves-light">Ativo</button>
+                                             <button type="button" class="btn btn-danger btn-sm w-sm waves-effect m-t-10 waves-light">Inactivo</button>
                                         @endif
                                         
 
@@ -122,7 +122,7 @@
                                         </ul>
                 <div class="tab-content">
                                             <div class="tab-pane" id="home1">
-                                                <p class="m-b-5">Olá, eu sou Cinquenta, blá blá blá...</p>
+                                                <p class="m-b-5">{{$dados['usuario']->obs}}</p>
                                             </div>
                      <div class="tab-pane active" id="conta">
                                         <div class="col-md-12">
@@ -148,11 +148,11 @@
 
                              <div class="col-lg-6 col-md-6">
                                 <div class=" text-right ">
-                                    <form class="form-horizontal float-right" role="form" method="POST" action="{{ url('/user/atualizarPerfil'.$dados['usuario']->id) }}">
+                                    <form class="form-horizontal float-right" role="form" method="POST" action="{{ url('/user/atualizarPerfil/'.$dados['usuario']->id) }}">
                                         {{csrf_field() }}
                                           <div style="padding-bottom: 30px;"class=""></div>
                                         <div class="form-group row">
-                                            <input name="mes_ano" type="text" class="col-sm-5 form-control form-control-1 input-sm from" placeholder="Mês e ano" >
+                                            <input name="mes_ano" type="text" class="col-sm-5 form-control form-control-1 input-sm from" placeholder="{{$dados['data']['mes_int'].'/'.$dados['data']['ano']}}" >
                                             <button type="submit" class="btn btn-success waves-effect waves-light btn-sm m-b-5">Buscar</button>
                                         </div>
                                     </form>

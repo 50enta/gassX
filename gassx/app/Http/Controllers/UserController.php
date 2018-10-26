@@ -49,9 +49,21 @@ class UserController extends Controller{
 		$dados['usuario'] = User::find($user_id);
 
 		$data = explode('/', $request['mes_ano']);
-		$mes = (int) $data[0];
-		$ano =  (int) $data[1];
-        
+        $mes = (int) $data[0];
+        $ano =  (int) $data[1];
+
+        $dados['tab_recargas_user']  = $this->tab_recargas_user($mes, $ano, $user_id);
+        $dados['tab_gastos_user'] = $this->tab_gastos_user($mes, $ano, $user_id);
+        $dados['avaliacao_user'] = $this->avaliacao_user($mes, $ano, $user_id);
+        $dados['enderecos'] = Endereco::all();
+        $dados['generos'] = Genero::all();
+
+        $dados['data']['mes_int'] = $mes;
+        $u = new Util();
+        $dados['data']['mes_str'] = $u->getMes($mes);
+        $dados['data']['ano'] = $ano;
+
+
         return view('user.telaPerfil', compact('dados'));
 	}
     
@@ -74,11 +86,11 @@ class UserController extends Controller{
         // $usu->contacto_id = $cont->id;
         $usu->contacto()->associate($cont);
         $usu->email = $req->all()['email'];
-        // $usu->confirmado = true;
-        // $usu->obs = $req->all()['obs'];
+        $usu->confirmado = true;
+        $usu->obs = $req->all()['obs'];
 
        if ($usu->save()) {
-             echo "Salvei com sucesoo";
+             return redirect("/user/perfil/".$user_id)->with('message', "Sucesso!");
         } else{
             echo "Salvo sem sucesso";
         } 

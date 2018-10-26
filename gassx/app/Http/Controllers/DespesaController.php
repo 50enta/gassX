@@ -19,10 +19,10 @@ class DespesaController extends Controller
         $mes = (int) $data[0];
         $ano =  (int) $data[1];
 
+        $dados['membros'] = User::all();
         $dados['tab_despesas_associacao'] = $this->tab_despesas_associacao($mes, $ano);
         $dados['tab_despesas_membro'] = $this->tab_despesas_membro($mes, $ano);
         $dados['tab_despesas_associacao'] = $this->tab_despesas_associacao($mes, $ano);
-        
         $dados['total_com_associacao']  = $this->getTotais($mes, $ano)['associacao'];
         $dados['total_com_membros'] = $this->getTotais($mes, $ano)['membros'];
         $dados['data']['mes_int'] = $mes;

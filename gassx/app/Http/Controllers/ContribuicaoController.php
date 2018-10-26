@@ -7,23 +7,27 @@ use App\Pagamento;
 use App\User;
 use App\UserContribuicao;
 use App\ParceiroContribuicao;
+use App\Util;
 
-class ContribuicaoController extends Controller
-{
+class ContribuicaoController extends Controller{
     //
     public function telaContribuicoes($user_id, $ma = '10/2018') {
     	$dados['usuario'] = User::find($user_id);
         
-
+    	$ma = date("m/Y/d");
         $data = explode('/', $ma);
 		$mes = (int) $data[0];
 		$ano =  (int) $data[1];
         $dados['tab_contribuicoes_parceiros_admin'] = $this->tab_contribuicoes_parceiros_admin($mes, $ano);
         $dados['tab_contribuicoes_membros_admin'] = $this->tab_contribuicoes_membros_admin($mes, $ano);
-
         $dados['numero_de_contribuicoes'] = $this->getTotais($mes, $ano)['a'];
         $dados['total_com_membros'] = $this->getTotais($mes, $ano)['b'];
         $dados['total_com_parceiros'] = $this->getTotais($mes, $ano)['c'];
+
+         $dados['data']['mes_int'] = $mes;
+        $u = new Util();
+        $dados['data']['mes_str'] = $u->getMes($mes);
+        $dados['data']['ano'] = $ano;
 
         return view('admin.telaContribuicoes', compact('dados'));
     }
@@ -35,7 +39,17 @@ class ContribuicaoController extends Controller
 		$data = explode('/', $request->all()['mes_ano']);
 		$mes = (int) $data[0];
 		$ano =  (int) $data[1];
-        
+        $dados['tab_contribuicoes_parceiros_admin'] = $this->tab_contribuicoes_parceiros_admin($mes, $ano);
+        $dados['tab_contribuicoes_membros_admin'] = $this->tab_contribuicoes_membros_admin($mes, $ano);
+        $dados['numero_de_contribuicoes'] = $this->getTotais($mes, $ano)['a'];
+        $dados['total_com_membros'] = $this->getTotais($mes, $ano)['b'];
+        $dados['total_com_parceiros'] = $this->getTotais($mes, $ano)['c'];
+
+ 		$dados['data']['mes_int'] = $mes;
+        $u = new Util();
+        $dados['data']['mes_str'] = $u->getMes($mes);
+        $dados['data']['ano'] = $ano;
+
         return view('admin.telaContribuicoes', compact('dados'));
 	}
 
@@ -50,12 +64,7 @@ class ContribuicaoController extends Controller
 		$mes = (int) $data[0];
 		$ano =  (int) $data[1];
 
-		$dados['pagamentos'] = Pagamento::all();
 		
-		foreach ($dados['pagamentos'] as $k) {
-			// $dados['gastoUsers'][] = $k->gastoUser();
-			$dados['quotaPagamentos'][] = $k->quotaPagamentos();
-		}
 		return view("user.telaContribuicoes", compact('dados'));
 	}
 
@@ -67,6 +76,8 @@ class ContribuicaoController extends Controller
         
         return view('user.telaContribuicoes', compact('dados'));
 	}
+
+
 
 	/////////////////////////////////
 

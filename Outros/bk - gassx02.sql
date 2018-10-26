@@ -92,13 +92,13 @@ VALUES
 --
 
 INSERT INTO `users` 
-(`id`, `activo`, `codigo`, `name`, `email`, `status`, `foto`, `saldo`, `username`, `email_verified_at`, `password`, `remember_token`, `contacto_id`, `genero_id`, `endereco_id`, `created_at`, `updated_at`) 
+(`id`, `activo`,`confirmado`, `codigo`, `name`, `email`, `status`, `foto`, `saldo`, `username`, `email_verified_at`, `password`, `remember_token`, `contacto_id`, `genero_id`, `endereco_id`, `created_at`, `updated_at`,`obs`) 
 VALUES
-(null, 1, '20189832', 'Lucilia Manjate', 'lucilia@gmail.com', 'ATIVO', NULL, 0, 'lucilia', '2018-10-17 12:00:00', '$2y$10$DZgaitAyCFNq3KxyytpQ6uhtbIaAeyukppgMqWa8elhOM4/CMliou', NULL, 2, 2, 4, '2018-10-17 21:02:00', '2018-10-17 21:02:00'),
-(null, 1, '20189076', 'Alfredo sumbane', 'sumbane@gmail.com', 'ATIVO', NULL, 60533, 'sumbane', '2018-10-17 21:02:00', '$2y$10$DZgaitAyCFNq3KxyytpQ6uhtbIaAeyukppgMqWa8elhOM4/CMliou', NULL, 2, 1, 3, '2018-10-17 21:02:00', '2018-10-17 21:02:00'),
-(null, 1, '20188432', 'Vaalter Cinquenta', 'cinquenta@gmail.com', 'ATIVO', NULL, 765, 'cinquenta', '2018-10-17 21:02:00', '$2y$10$DZgaitAyCFNq3KxyytpQ6uhtbIaAeyukppgMqWa8elhOM4/CMliou', NULL, 2, 1, 3, '2018-10-17 21:02:00', '2018-10-17 21:02:00'),
-(null, 1, '20181233', 'Maria Timane', 'timane@gmail.com', 'ATIVO', NULL, 94, 'timane', '2018-10-17 21:02:00', '$2y$10$DZgaitAyCFNq3KxyytpQ6uhtbIaAeyukppgMqWa8elhOM4/CMliou', NULL, 2, 1, 3, '2018-10-17 21:02:00', '2018-10-17 21:02:00'),
-(null, 1, '20180943', 'Tomás Alceu', 'alceu@gmail.com', 'ATIVO', NULL, 231, 'alceu', '2018-10-17 21:02:00', '$2y$10$DZgaitAyCFNq3KxyytpQ6uhtbIaAeyukppgMqWa8elhOM4/CMliou', NULL, 2, 1, 3, '2018-10-17 21:02:00', '2018-10-17 21:02:00');
+(null, 1, 1, '20189832', 'Lucilia Manjate', 'lucilia@gmail.com', 'ATIVO', NULL, 0, 'lucilia', '2018-10-17 12:00:00', '$2y$10$DZgaitAyCFNq3KxyytpQ6uhtbIaAeyukppgMqWa8elhOM4/CMliou', NULL, 2, 2, 4, '2018-10-17 21:02:00', '2018-10-17 21:02:00','Qualquer informção util sobre mim no link www.fb.com'),
+(null, 1, 1,'20189076', 'Alfredo sumbane', 'sumbane@gmail.com', 'ATIVO', NULL, 60533, 'sumbane', '2018-10-17 21:02:00', '$2y$10$DZgaitAyCFNq3KxyytpQ6uhtbIaAeyukppgMqWa8elhOM4/CMliou', NULL, 2, 1, 3, '2018-10-17 21:02:00', '2018-10-17 21:02:00', 'Qualquer informção util sobre mim no link www.fb.com'),
+(null, 1, 0,  '20188432', 'Vaalter Cinquenta', 'cinquenta@gmail.com', 'ATIVO', NULL, 765, 'cinquenta', '2018-10-17 21:02:00', '$2y$10$DZgaitAyCFNq3KxyytpQ6uhtbIaAeyukppgMqWa8elhOM4/CMliou', NULL, 2, 1, 3, '2018-10-17 21:02:00', '2018-10-17 21:02:00', 'Qualquer informção util sobre mim no link www.fb.com'),
+(null, 1, 1, '20181233', 'Maria Timane', 'timane@gmail.com', 'ATIVO', NULL, 94, 'timane', '2018-10-17 21:02:00', '$2y$10$DZgaitAyCFNq3KxyytpQ6uhtbIaAeyukppgMqWa8elhOM4/CMliou', NULL, 2, 1, 3, '2018-10-17 21:02:00', '2018-10-17 21:02:00', 'Qualquer informção util sobre mim no link www.fb.com'),
+(null, 1, 0, '20180943', 'Tomás Alceu', 'alceu@gmail.com', 'ATIVO', NULL, 231, 'alceu', '2018-10-17 21:02:00', '$2y$10$DZgaitAyCFNq3KxyytpQ6uhtbIaAeyukppgMqWa8elhOM4/CMliou', NULL, 2, 1, 3, '2018-10-17 21:02:00', '2018-10-17 21:02:00', 'Qualquer informção util sobre mim no link www.fb.com');
 
 
 --
