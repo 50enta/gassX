@@ -55,11 +55,7 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/utilizadores/{user_id}/{ma?}', 'UserController@telaUtilizadores'); 
     Route::get('/parceiros/{user_id}/{ma?}', 'ParceiroController@telaParceiros'); 
     Route::get('/eventos/{user_id}/{ma?}', 'EventoController@telaEventos');
-<<<<<<< HEAD
-     Route::get('/detalhesEvento_admin/{user_id}/{ma?}', 'EventoController@telaDetalhesEvento_admin'); 
-=======
     Route::get('/detalhesEvento_admin/{user_id}/{ma?}', 'EventoController@telaDetalhesEvento_admin'); 
->>>>>>> 20544855e6e9b2346c0abf08e6e587be66d98692
     Route::get('/outros/{user_id}/{ma?}', 'Controller@telaOutros');  
 
 

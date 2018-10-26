@@ -20,6 +20,9 @@ class CreateEventosTable extends Migration
             $table->string('descricao');
             $table->string('objectivo')->nullable();
             $table->double('valorAContribuir');
+            $table->boolean('fechado')->default('0');
+            $table->boolean('decorreu')->default('0');
+
             $table->date('dataInicio')->useCurrent();
             $table->date('dataFim')->useCurrent();
 

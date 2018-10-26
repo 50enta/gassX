@@ -257,15 +257,13 @@
             <!-- ============================================================== -->                      
             <div class="content-page">
 
-            <br><br><br><br><br>
-               {{--  @foreach($dados['data'] as $k)
+               {{--  <br><br><br><br><br>
+                @foreach($dados['data'] as $k)
                         {{
                            $k
                     }} <br>
                 @endforeach --}}
-               
-
-      
+              
                 <!-- Start content -->
                      {{-- @yield('base') --}}
                      @yield('base', new Illuminate\Support\HtmlString(view('minton.inicio1')))

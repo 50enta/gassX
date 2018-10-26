@@ -71,9 +71,16 @@ VALUES
 -- Extraindo dados da tabela `eventos`
 --
 
-INSERT INTO `eventos` (`id`, `activo`, `descricao`, `objectivo`, `valorAContribuir`, `dataInicio`, `dataFim`, `categoria_id`, `created_at`, `updated_at`) VALUES
-(1, 1, 'churasco no Sitoe', 'Dar força a familia Sitoe pelo o acidente', 200, '2018-10-17', '2018-10-18', 1, '2018-10-17 21:02:00', '2018-10-17 21:02:00'),
-(2, 1, 'evento 03', 'hmmmm, complicado. nem sei exatamente', 780, '2018-10-30', '2018-10-24', 1, '2018-10-17 21:02:00', '2018-10-17 21:02:00');
+INSERT INTO `eventos` 
+(`id`, `activo`, `fechado`,`decorreu`,`descricao`, `objectivo`, `valorAContribuir`, `dataInicio`, `dataFim`, `categoria_id`, `created_at`, `updated_at`) 
+VALUES
+(null, 1,0,0, 'churasco no Sitoe', 'Dar força a familia Sitoe pelo o acidente', 200, '2018-10-17', '2018-10-18', 1, '2018-10-17 21:02:00', '2018-10-17 21:02:00'),
+(null, 1,0,0, 'churasco no Sitoe', 'Dar força a familia Sitoe pelo o acidente', 650, '2018-10-17', '2018-10-18', 1, '2018-10-17 21:02:00', '2018-10-17 21:02:00'),
+(null, 1,0,0, 'churasco no Sitoe', 'Dar força a familia Sitoe pelo o acidente', 200, '2018-10-17', '2018-10-18', 1, '2018-10-17 21:02:00', '2018-10-17 21:02:00'),
+(null, 1,0,0 ,'churasco no Sitoe', 'Dar força a familia Sitoe pelo o acidente', 321, '2018-10-17', '2018-10-18', 1, '2018-10-17 21:02:00', '2018-10-17 21:02:00'),
+(null, 1,0,0 ,'churasco no Sitoe', 'Dar força a familia Sitoe pelo o acidente', 0, '2018-10-17', '2018-10-18', 1, '2018-10-17 21:02:00', '2018-10-17 21:02:00'),
+(null, 1,0,0, 'churasco no Sitoe', 'Dar força a familia Sitoe pelo o acidente', 74, '2018-10-17', '2018-10-18', 1, '2018-10-17 21:02:00', '2018-10-17 21:02:00'),
+(null, 1,0,0, 'evento 03', 'hmmmm, complicado. nem sei exatamente', 780, '2018-10-30', '2018-10-24', 1, '2018-10-17 21:02:00', '2018-10-17 21:02:00');
 
 
 --
@@ -845,10 +852,11 @@ INSERT INTO `parceiro_contribuicaos` (`id`, `activo`, `parceiro_id`, `contribuic
 --
 
 INSERT INTO `contribuicao_eventos` 
-(`id`, `activo`, `evento_id`, `entrada_id`, `created_at`, `updated_at`) 
+(`id`, `activo`,`descricao`,`valor`, `evento_id`, `entrada_id`, `created_at`, `updated_at`) 
 VALUES
-(3, 1, 1, 4, '2018-10-17 12:00:00', NULL),
-(4, 1, 2, 3, '2018-10-17 17:04:04', NULL);
+(null, 1,'Dinheiro para comprar pães', 3492, 1, 32, '2018-10-17 12:00:00', NULL),
+(null, 1, 'Taku de som', 6754, 2, 9, '2018-10-17 17:04:04', NULL),
+(null, 1, 'Taku de som e iluminação', 654, 3, 21, '2018-10-17 17:04:04', NULL);
 
 
 --
@@ -887,8 +895,8 @@ VALUES
 INSERT INTO `user_contribuicao_eventos` 
 (`id`, `activo`, `gasto_user_id`, `contribuicao_evento_id`, `created_at`, `updated_at`) 
 VALUES 
-(NULL, '1', '2', '3', '2018-10-17 00:00:00', NULL), 
-(NULL, '1', '1', '4', '2018-10-17 00:00:00', NULL);
+(NULL, '1', '2', '1', '2018-10-17 00:00:00', NULL), 
+(NULL, '1', '1', '2', '2018-10-17 00:00:00', NULL);
 
 
 --
@@ -896,8 +904,8 @@ VALUES
 --
 
 INSERT INTO `despesa_eventos` (`id`, `activo`, `contribuicao_evento_id`, `despesa_id`, `created_at`, `updated_at`) VALUES
-(1, 1, 4, 2, '2018-10-17 12:00:00', NULL),
-(2, 1, 3, 1, '2018-10-18 12:00:00', '2018-10-31 12:00:00');
+(1, 1, 2, 2, '2018-10-17 12:00:00', NULL),
+(2, 1, 1, 1, '2018-10-18 12:00:00', '2018-10-31 12:00:00');
 
 
 --

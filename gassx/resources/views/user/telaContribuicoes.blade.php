@@ -12,7 +12,7 @@
                                     <form class="form-horizontal float-right" role="form" method="POST" action="{{ url('/user/atualizarContribuicoes/'.$dados['usuario']->id) }}">
 										{{csrf_field() }}
 										<div class="form-group row">
-										    <input name="mes_ano" type="text" class="col-sm-5 form-control form-control-1 input-sm from" placeholder="Mês e ano" >
+										    <input name="mes_ano" type="text" class="col-sm-5 form-control form-control-1 input-sm from" placeholder="{{$dados['data']['mes_int'].'/'.$dados['data']['ano']}}" >
 										    <button type="submit" class="btn btn-success waves-effect waves-light btn-sm m-b-5">Buscar</button>
 										</div>
 									</form>
@@ -32,50 +32,28 @@
 
                         {{-- end row --}}
 
-
-
                       {{-- histórico de pagamento --}}
                           <div class="row">
                           	<div class="card-box table-responsive">
-                          		
-                             
-                            
                                 <h4 class="m-t-0 header-title">Histórico de contribuições</h4>
                           		<table id="datatable-buttons" class="table table-striped table-bordered" cellspacing="0" width="100%">
                                         <thead>
                                         <tr>
                                             <th>Descrição</th>
                                             <th>Tipo contribuíção</th>
-                                            <th>Data do pagamento </th>
-                                            <th>Valor</th>
+                                            <th>Data da contribuição </th>
+                                            <th>Valor (Mt)</th>
                                         </tr>
                                         </thead>
                                         <tbody>
+                                        @foreach($dados['tab_contribuicoes_user'] as $k)
                                         <tr>
-                                            <td>Tiger Nixon</td>
-                                            <td>Evento</td>
-                                            <td>2011/04/25</td>
-                                            <td>$320,800</td>
+                                            <td>{{$k['descricao']}}</td>
+                                            <td>{{$k['tipo_contribuicao']}}</td>
+                                            <td>{{$k['data']}}</td>
+                                            <td>{{$k['valor']}}</td>
                                         </tr>
-                                        <tr>
-                                            <td>Cedric Kelly</td>
-                                            <td>Associação</td>
-                                            <td>2012/03/29</td>
-                                            <td>Fevereiro</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Airi Satou</td>
-                                            <td>Dezembro</td>
-                                            <td>2008/11/28</td>
-                                            <td>$162,700</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Brielle Williamson</td>
-                                            <td>Associação</td>
-                                            <td>2012/12/02</td>
-                                            <td>$372,000</td>
-                                        </tr>
-                                        
+                                        @endforeach
                                         </tbody>
                                     </table>
                                     <br>
@@ -146,34 +124,32 @@
                             <!-- end col -8 -->
                         <div class="col-lg-3">
 
-                                <div class="card-box widget-user">
-                                    <div class="widget-bg-color-icon">
-                                    	<div class="bg-icon bg-icon-success pull-left">
-                                        	<i class=" ti-stats-up text-success"></i>
-                                    	</div>
-                                    	<div class="text-right">
-                                       		 <h3 class="text-dark m-t-10"><b>64570</b></h3>
-                                        	<p class="text-muted mb-0">Total gasto em contribuições</p>
-                                    	</div>
-                                  	  	<div class="clearfix"></div>
-                               		</div>
-                                </div>
-
                               <div class="card-box widget-user">
                                 <div class="widget-bg-color-icon fadeInDown animated">
                                     <div class="bg-icon bg-icon-primary pull-left">
                                         <i class="ti-eye text-pink"></i>
                                     </div>
                                     <div class="text-right">
-                                        <h3 class="text-dark m-t-10"><b>31</b></h3>
+                                        <h3 class="text-dark m-t-10"><b>{{$dados['numero_contribuicoes']}}</b></h3>
                                         <p class="text-muted mb-0">Número de contribuições</p>
                                     </div>
                                     <div class="clearfix"></div>
                                 </div>
-                           	  </div>
-
-                           	  
-
+                              </div>
+                                <div class="card-box widget-user">
+                                    <div class="widget-bg-color-icon">
+                                    	<div class="bg-icon bg-icon-success pull-left">
+                                        	<i class=" ti-stats-up text-success"></i>
+                                    	</div>
+                                    	<div class="text-right">
+                                       		 <h3 class="text-dark m-t-10"><b>{{
+                                             $dados['total_gastos_contribuicoes']
+                                         }},00</b></h3>
+                                        	<p class="text-muted mb-0">Total gasto em contribuições</p>
+                                    	</div>
+                                  	  	<div class="clearfix"></div>
+                               		</div>
+                                </div>
                             </div>
 
                         </div>

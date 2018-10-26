@@ -17,6 +17,8 @@ class CreateContribuicaoEventosTable extends Migration
             $table->increments('id');
             $table->boolean('activo')->default('1');
             
+            $table->string('descricao');
+            $table->double('valor')->default('0');
             $table->integer('evento_id')->unsigned();
             $table->foreign('evento_id')->references('id')->on('eventos');
             $table->integer('entrada_id')->unsigned();
