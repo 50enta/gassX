@@ -80,12 +80,14 @@ class PagamentoController extends Controller
 			}
 		}
 
-		$todasQuotas = [];
+
 		//filtrando as quotas do pagamento
-		foreach ($pagsDoUser as $q) {
-			$todasQuotas[] = $q->quotaPagamentos()->first()->quota()->first();
+		$todasQuotas = [];
+		
+		// foreach ($pagsDoUser as $q) {
+		// 	$todasQuotas[] = $q->quotaPagamentos()->first()->quota()->first();
 			
-		}
+		// }
 
 
 		$quotasAno = [];

@@ -62,6 +62,7 @@ class ContribuicaoController extends Controller{
 	public function telaContribuicoesUser($user_id, $ma = '10/2018'){
 		$dados['usuario'] = User::find($user_id);
 
+		$ma = date("m/Y/d");
 		$data = explode('/', $ma);
 		$mes = (int) $data[0];
 		$ano =  (int) $data[1];
@@ -85,9 +86,16 @@ class ContribuicaoController extends Controller{
 		$mes = (int) $data[0];
 		$ano =  (int) $data[1];
 
+		$dados['tab_contribuicoes_user'] = $this->tab_contribuicoes_user($mes, $ano, $user_id);
+		$dados['numero_contribuicoes'] = $this->getTotaisUser($mes, $ano, $user_id)['b'];
+		$dados['total_gastos_contribuicoes'] = $this->getTotaisUser($mes, $ano, $user_id)['a'];
 
-        
-        return view('user.telaContribuicoes', compact('dados'));
+		$dados['data']['mes_int'] = $mes;
+        $u = new Util();
+        $dados['data']['mes_str'] = $u->getMes($mes);
+        $dados['data']['ano'] = $ano;
+		
+		return view("user.telaContribuicoes", compact('dados'));
 	}
 
 
@@ -127,7 +135,6 @@ class ContribuicaoController extends Controller{
 			
 			$tabela['a']  += $ke->contribuicaoEvento()->first()->valor;
 			$tabela['b']++;
-			
 		}
 
 		return $tabela;
