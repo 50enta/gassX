@@ -13,7 +13,7 @@ class Evento extends Model
      * @var array
      */
     protected $fillable = [
-        'activo', 'descricao', 'objectivo', 'valorAContribuir','dataInicio','dataFim', 
+        'activo', 'descricao', 'objectivo', 'valorAContribuir','dataInicio','dataFim', 'fechado', 'decorreu', 
         'endereco_id', 'categoria_id', 
     ];
 

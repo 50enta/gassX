@@ -13,7 +13,7 @@ class Contribuicao extends Model
      * @var array
      */
     protected $fillable = [
-        'ativo', 'descricao'
+        'ativo', 'descricao', 'entrada_id',
     ];
 
 

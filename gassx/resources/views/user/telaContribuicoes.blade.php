@@ -63,20 +63,24 @@
                             <div class="col-12">
                                 <div id="con-close-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
                                         <div class="modal-dialog">
+                                             <form class="form-horizontal float-right" role="form" method="POST" action="{{ url('/user/salvarContribuicao/'.$dados['usuario']->id) }}">
+                                        {{csrf_field() }}
                                             <div class="modal-content">
+                                                 <div class="modal-body">
+                                                    
                                                 <div class="modal-header">
                                                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                                                     <h4 class="modal-title">
                                                         Registar contriuíção
                                                     </h4>
                                                 </div>
-                                                <div class="modal-body">
+                                               
                                                    <div class="row">
                                                         <div class="col-md-12">
                                                             <div class="form-group">
                                                                 <label for="field-1" class="control-label">Valor a contribuir
                                                                 </label>
-                                                                 <input id="demo0" type="text" value="3" name="demo0" data-bts-min="0" data-bts-max="30" data-bts-init-val="" data-bts-step="1" data-bts-decimal="0" data-bts-step-interval="100" data-bts-force-step-divisibility="round" data-bts-step-interval-delay="500" data-bts-prefix="" data-bts-postfix="" data-bts-prefix-extra-class="" data-bts-postfix-extra-class="" data-bts-booster="true" data-bts-boostat="10" data-bts-max-boosted-step="false" data-bts-mousewheel="true" data-bts-button-down-class="btn btn-default" data-bts-button-up-class="btn btn-default"/>
+                                                                 <input id="demo0" type="text" value="3" name="valor" data-bts-min="0" data-bts-max="30" data-bts-init-val="" data-bts-step="1" data-bts-decimal="0" data-bts-step-interval="100" data-bts-force-step-divisibility="round" data-bts-step-interval-delay="500" data-bts-prefix="" data-bts-postfix="" data-bts-prefix-extra-class="" data-bts-postfix-extra-class="" data-bts-booster="true" data-bts-boostat="10" data-bts-max-boosted-step="false" data-bts-mousewheel="true" data-bts-button-down-class="btn btn-default" data-bts-button-up-class="btn btn-default"/>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -88,16 +92,19 @@
                                                         <div class="col-md-12">
                                                             <div class="form-group no-margin">
                                                                 <label for="field-7" class="control-label">Descrição</label>
-                                                                <textarea class="form-control" id="field-7" placeholder="Qualquer coisa sobre a despesa"></textarea>
+                                                                <textarea name="descricao" class="form-control" id="field-7" placeholder="Qualquer coisa sobre a despesa"></textarea>
                                                             </div>
                                                         </div>
                                                     </div>
+
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">Cancelar</button>
                                                     <button type="submit" class="btn btn-info waves-effect waves-light">Concluir</button>
                                                 </div>
+                                                
                                             </div>
+                                        </form>
                                         </div>
                                     </div><!-- /.modal -->
 

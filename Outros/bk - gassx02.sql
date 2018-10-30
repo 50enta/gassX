@@ -72,15 +72,15 @@ VALUES
 --
 
 INSERT INTO `eventos` 
-(`id`, `activo`, `fechado`,`decorreu`,`descricao`, `objectivo`, `valorAContribuir`, `dataInicio`, `dataFim`, `categoria_id`, `created_at`, `updated_at`) 
+(`id`, `activo`, `fechado`,`decorreu`,`descricao`, `objectivo`, `valorAContribuir`, `dataInicio`, `dataFim`, `categoria_id`, `endereco_id`,`created_at`, `updated_at`) 
 VALUES
-(null, 1,0,0, 'churasco no Sitoe', 'Dar força a familia Sitoe pelo o acidente', 200, '2018-10-17', '2018-10-18', 1, '2018-10-17 21:02:00', '2018-10-17 21:02:00'),
-(null, 1,0,0, 'churasco no Sitoe', 'Dar força a familia Sitoe pelo o acidente', 650, '2018-10-17', '2018-10-18', 1, '2018-10-17 21:02:00', '2018-10-17 21:02:00'),
-(null, 1,0,0, 'churasco no Sitoe', 'Dar força a familia Sitoe pelo o acidente', 200, '2018-10-17', '2018-10-18', 1, '2018-10-17 21:02:00', '2018-10-17 21:02:00'),
-(null, 1,0,0 ,'churasco no Sitoe', 'Dar força a familia Sitoe pelo o acidente', 321, '2018-10-17', '2018-10-18', 1, '2018-10-17 21:02:00', '2018-10-17 21:02:00'),
-(null, 1,0,0 ,'churasco no Sitoe', 'Dar força a familia Sitoe pelo o acidente', 0, '2018-10-17', '2018-10-18', 1, '2018-10-17 21:02:00', '2018-10-17 21:02:00'),
-(null, 1,0,0, 'churasco no Sitoe', 'Dar força a familia Sitoe pelo o acidente', 74, '2018-10-17', '2018-10-18', 1, '2018-10-17 21:02:00', '2018-10-17 21:02:00'),
-(null, 1,0,0, 'evento 03', 'hmmmm, complicado. nem sei exatamente', 780, '2018-10-30', '2018-10-24', 1, '2018-10-17 21:02:00', '2018-10-17 21:02:00');
+(null, 1,0,0, 'churasco no Sitoe', 'Dar força a familia Sitoe pelo o acidente', 200, '2018-11-05 21:02:00', '2018-11-05 21:02:00', 1, 2,'2018-10-17 21:02:00', '2018-10-17 21:02:00'),
+(null, 1,0,0, 'churasco no Sitoe', 'Dar força a familia Sitoe pelo o acidente', 650, '2018-11-05 21:02:00', '2018-11-05 21:02:00', 1, 1, '2018-10-17 21:02:00', '2018-10-17 21:02:00'),
+(null, 1,0,0, 'churasco no Sitoe', 'Dar força a familia Sitoe pelo o acidente', 200, '2018-11-05 21:02:00', '2018-11-05 21:02:00', 1, 2, '2018-10-17 21:02:00', '2018-10-17 21:02:00'),
+(null, 1,0,0 ,'churasco no Sitoe', 'Dar força a familia Sitoe pelo o acidente', 321, '2018-11-05 21:02:00', '2018-11-05 21:02:00', 1,1,  '2018-10-17 21:02:00', '2018-10-17 21:02:00'),
+(null, 1,0,0 ,'churasco no Sitoe', 'Dar força a familia Sitoe pelo o acidente', 0, '2018-11-05 21:02:00', '2018-11-05 21:02:00', 1, 3, '2018-10-17 21:02:00', '2018-10-17 21:02:00'),
+(null, 1,0,0, 'churasco no Sitoe', 'Dar força a familia Sitoe pelo o acidente', 74, '2018-11-05 21:02:00', '2018-11-05 21:02:00', 1, 3,  '2018-10-17 21:02:00', '2018-10-17 21:02:00'),
+(null, 1,0,0, 'evento 03', 'hmmmm, complicado. nem sei exatamente', 780, '2018-10-30', '2018-10-24', 1, 2, '2018-10-17 21:02:00', '2018-10-17 21:02:00');
 
 
 --
@@ -115,8 +115,14 @@ VALUES
 INSERT INTO `evento_users` 
 (`id`, `activo`, `user_id`, `evento_id`, `created_at`, `updated_at`) 
 VALUES
-(1, 1, 1, 1, '2018-10-17 12:00:00', '2018-10-17 17:04:04'),
-(2, 1, 2, 1, '2018-10-17 17:04:04', '2018-10-17 17:04:04');
+(null, 1, 1, 1, '2018-10-17 12:00:00', '2018-10-17 17:04:04'),
+(null, 1, 1, 1, '2018-10-17 12:00:00', '2018-10-17 17:04:04'),
+(null, 1, 1, 2, '2018-10-17 12:00:00', '2018-10-17 17:04:04'),
+(null, 1, 1, 4, '2018-10-17 12:00:00', '2018-10-17 17:04:04'),
+(null, 1, 1, 3, '2018-10-17 12:00:00', '2018-10-17 17:04:04'),
+(null, 1, 1, 2, '2018-10-17 12:00:00', '2018-10-17 17:04:04'),
+(null, 1, 1, 3, '2018-10-17 12:00:00', '2018-10-17 17:04:04'),
+(null, 1, 2, 1, '2018-10-17 17:04:04', '2018-10-17 17:04:04');
 
 
 
@@ -1026,7 +1032,13 @@ VALUES
 INSERT INTO `quotas` 
 (`id`, `activo`, `mes_id`, `ano_id`, `multa_id`, `valor_quota_id`, `created_at`, `updated_at`) 
 VALUES
-(null, 1, 12, 1, 1, 1, '2018-10-17 12:00:00', NULL),
+(null, 1, 12, 11, 1, 1, '2018-10-17 12:00:00', NULL),
+(null, 1, 1, 11, 1, 1, '2018-10-17 12:00:00', NULL),
+(null, 1, 12, 11, 1, 1, '2018-10-17 12:00:00', NULL),
+(null, 1, 12, 10, 1, 1, '2018-10-17 12:00:00', NULL),
+(null, 1, 12, 2, 1, 1, '2018-10-17 12:00:00', NULL),
+(null, 1, 2, 3, 1, 1, '2018-10-17 12:00:00', NULL),
+(null, 1, 12, 12, 1, 1, '2018-10-17 12:00:00', NULL),
 (null, 1, 10, 6, 2, 2, '2018-10-17 17:04:04', NULL);
 
 

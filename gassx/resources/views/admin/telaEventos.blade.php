@@ -12,7 +12,7 @@
                                     <form class="form-horizontal float-right" role="form" method="POST" action="{{ url('/admin/atualizarFinancas/'.$dados['usuario']->id) }}">
                                         {{csrf_field() }}
                                         <div class="form-group row">
-                                            <input name="mes_ano" type="text" class="col-sm-5   form-control form-control-1 input-sm from" placeholder="Mês e ano" >
+                                            <input name="mes_ano" type="text" class="col-sm-5   form-control form-control-1 input-sm from" placeholder="{{$dados['data']['mes_int'].'/'.$dados['data']['ano']}}" >
                                             <button type="submit" class="btn btn-success waves-effect waves-light btn-sm m-b-5">Buscar</button>
                                         </div>
                                     </form>
@@ -33,9 +33,9 @@
                                     </div>
                                     <div class="text-right">
                                         <h3 class="text-dark m-t-10">
-                                            <b>64,570</b>
+                                            <b>64</b>
                                         </h3>
-                                        <p class="text-muted mb-0">Today's Visits</p>
+                                        <p class="text-muted mb-0">Todos eventos</p>
                                     </div>
                                     <div class="clearfix"></div>
                                 </div>
@@ -47,9 +47,9 @@
                                     </div>
                                     <div class="text-right">
                                         <h3 class="text-dark m-t-10">
-                                            <b>31,570</b>
+                                            <b>12</b>
                                         </h3>
-                                        <p class="text-muted mb-0">Total Revenue</p>
+                                        <p class="text-muted mb-0">Eventos decorridos</p>
                                     </div>
                                     <div class="clearfix"></div>
                                 </div>
@@ -61,8 +61,8 @@
                                         <i class="ti-shopping-cart text-pink"></i>
                                     </div>
                                     <div class="text-right">
-                                        <h3 class="text-dark m-t-10"><b>280</b></h3>
-                                        <p class="text-muted mb-0">Today's Sales</p>
+                                        <h3 class="text-dark m-t-10"><b>2</b></h3>
+                                        <p class="text-muted mb-0">Eventos pendentes</p>
                                     </div>
                                     <div class="clearfix"></div>
                                 </div>
@@ -74,8 +74,8 @@
                                         <i class="ti-stats-up text-purple"></i>
                                     </div>
                                     <div class="text-right">
-                                        <h3 class="text-dark m-t-10"><b>0.16</b>%</h3>
-                                        <p class="text-muted mb-0">Conversion</p>
+                                        <h3 class="text-dark m-t-10"><b>---</b></h3>
+                                        <p class="text-muted mb-0">Outro</p>
                                     </div>
                                     <div class="clearfix"></div>
                                 </div>
@@ -93,6 +93,8 @@
                             <div class="col-12">
                                 <div id="con-close-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
                                         <div class="modal-dialog">
+                                             <form class="form-horizontal float-right" role="form" method="POST" action="{{ url('/admin/salvarEvento/'.$dados['usuario']->id) }}">
+                                        {{csrf_field() }}
                                             <div class="modal-content">
                                                 <div class="modal-header">
                                                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
@@ -105,22 +107,72 @@
                                                         <div class="col-md-6">
                                                             <div class="form-group">
                                                                 <label for="field-1" class="control-label">Descrição</label>
-                                                                <input type="text" class="form-control" id="field-1" placeholder="Compra de cerveja">
+                                                                <input type="text" name="descricao" class="form-control" id="field-1" placeholder="Compra de cerveja">
                                                             </div>
                                                         </div>
                                                         <div class="col-md-6">
                                                             <div class="form-group">
-                                                                <label for="field-2" class="control-label">valor</label>
-                                                                <input type="text" class="form-control" id="field-2" placeholder="3000,00">
+                                                                <label for="field-2" class="control-label">valor a contribuir
+                                                                </label>
+                                                                <input type="text" name="valorAContribuir" class="form-control" id="field-2" placeholder="3000,00">
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-md-12">
                                                             <div class="form-group no-margin">
-                                                                <label for="field-7" class="control-label">Observações</label>
-                                                                <textarea class="form-control" id="field-7" placeholder="Qualquer coisa sobre a despesa"></textarea>
+                                                                <label for="field-7" class="control-label">Objectivo</label>
+                                                                <textarea name="objectivo" class="form-control" id="field-7" placeholder="Objectivo do evento"></textarea>
                                                             </div>
+                                                        </div>
+                                                    </div>
+                                                     <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="field-1" class="control-label">        
+                                                                     Categoria
+                                                                </label>
+                                                                <select name="categoria" class="form-control select2">
+                                                                    @foreach($dados['categorias'] as $cat)
+                                                                    <option value="{{$cat->id}}">{{$cat->descricao}}</option>
+                                                                    @endforeach
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                         <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="field-1" class="control-label">Endereço do local</label>
+                                                                <select name="endereco" class="form-control select2">
+                                                                    @foreach($dados['enderecos'] as $end)
+                                                                        <option value="{{$end->id}}">{{$end->descricao}}</option>
+                                                                    @endforeach
+                                                                </select>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                        <label class="control-label col-sm-4">Data início</label>
+                                                        <div class="col-sm-8">
+                                                            <div class="input-group">
+                                                                <input name="dataInicio" type="text" class="form-control" placeholder="mm/dd/yyyy" id="datepicker-autoclose">
+                                                                <div class="input-group-append">
+                                                                    <span class="input-group-text"><i class="ion-calendar"></i></span>
+                                                                </div>
+                                                            </div><!-- input-group -->
+                                                        </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                        <label class="control-label col-sm-4">Data fim</label>
+                                                        <div class="col-sm-8">
+                                                            <div class="input-group">
+                                                                <input name="dataFim" type="text" class="form-control" placeholder="mm/dd/yyyy" id="datepicker-autoclose">
+                                                                <div class="input-group-append">
+                                                                    <span class="input-group-text"><i class="ion-calendar"></i></span>
+                                                                </div>
+                                                            </div><!-- input-group -->
+                                                        </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -129,7 +181,9 @@
                                                     <button type="submit" class="btn btn-info waves-effect waves-light">Salvar</button>
                                                 </div>
                                             </div>
+                                             </form>
                                         </div>
+                                   
                                     </div><!-- /.modal -->
 
                                 <div class="button-list">
