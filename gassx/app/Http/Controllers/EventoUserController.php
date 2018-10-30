@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\User;
 use App\Evento;
 
+
 class EventoUserController extends Controller
 {
     //
@@ -36,7 +37,15 @@ class EventoUserController extends Controller
 
 	public function salvarParticipacao($user_id, $evento_id){
 
-			echo "string";
+		$evu = EventoUser::create(['user_id' => $user_id, 
+									'evento_id' => $evento_id]);
+
+		if (!empty($evu)) {
+             return redirect("/user/todosEventos/".$user_id)->with('message', "Sucesso!");
+        } else{
+            echo "Salvo sem sucesso";
+        }
+
 	}
 
 	public function cancelarParticipacao($user_id, $evento_id){
