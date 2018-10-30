@@ -9,6 +9,8 @@ use App\ValorQuota;
 use App\Multa;
 use App\Util;
 use App\quotaPagamento;
+use App\Ano;
+use App\Mes;
 
 class PagamentoController extends Controller
 {
@@ -25,6 +27,7 @@ class PagamentoController extends Controller
 		$ano =  (int) $data[1];
 
 		$dados['quotas_ano'] = $this->getQuotasUser($ano, $user_id);
+		$dados['tab_historico_pagamentos'] = $this->tab_historico_pagamentos($mes, $ano, $user_id);
 
 		$dados['data']['mes_int'] = $mes;
 		$u = new Util();
@@ -42,9 +45,12 @@ class PagamentoController extends Controller
 	public function store1(Request $request, $user_id){
 		$dados['usuario'] = User::find($user_id);
 		
-		$data = explode('/', $request['mes_ano']);
+		$data = explode('/', $request->all()['mes_ano']);
 		$mes = (int) $data[0];
 		$ano =  (int) $data[1];
+		$dados['quotas_ano'] = $this->getQuotasUser($ano, $user_id);
+		$dados['tab_historico_pagamentos'] = $this->tab_historico_pagamentos($mes, $ano, $user_id);
+
 
 		$dados['data']['mes_int'] = $mes;
 		$u = new Util();
@@ -58,6 +64,16 @@ class PagamentoController extends Controller
 
 	//////////////////////////////
 
+	public function tab_historico_pagamentos($mes, $ano, $user_id){
+		$tabela = [];
+
+		//pegar um ano e pegar todas quotas 
+		$ano = Ano::where('ano',$ano)->get()->first();
+		$quotas = $ano->quotas();
+
+		return $quotas;
+		// return $tabela;
+	}
 
 	public function tab_pagamentos_do_ano($ano, $user_id){
 		
