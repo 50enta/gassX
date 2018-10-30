@@ -23,7 +23,7 @@ class Ano extends Model
      *
      * @var array
      */
-    public function quota(){
+    public function quotas(){
         return $this->hasMany('App\Quota');
     }
 }
