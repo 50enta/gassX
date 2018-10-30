@@ -71,9 +71,6 @@ class UserController extends Controller{
 
     public function salvarMembro(Request $req, $user_id){
         //salvando contacto
-        $c = new Contacto();
-        $c->numero = $req->all()['contacto'];
-
         $cont = Contacto::create(['numero' => $req->all()['contacto']]);
 
 
@@ -93,10 +90,7 @@ class UserController extends Controller{
              return redirect("/user/perfil/".$user_id)->with('message', "Sucesso!");
         } else{
             echo "Salvo sem sucesso";
-        } 
-
-      
-
+        }
     }
 
     ////////////////////////////////////////

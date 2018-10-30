@@ -23,11 +23,13 @@ class CreateEventosTable extends Migration
             $table->boolean('fechado')->default('0');
             $table->boolean('decorreu')->default('0');
 
-            $table->date('dataInicio')->useCurrent();
-            $table->date('dataFim')->useCurrent();
+            $table->timestamp('dataInicio')->useCurrent();
+            $table->timestamp('dataFim')->useCurrent();
 
             $table->integer('categoria_id')->unsigned();
             $table->foreign('categoria_id')->references('id')->on('categorias');
+            $table->integer('endereco_id')->unsigned();
+            $table->foreign('endereco_id')->references('id')->on('enderecos');
             $table->timestamps();
         });
     }
