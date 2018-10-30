@@ -32,10 +32,10 @@
 
                                 <div class="form-group">
                                         <label for="Nome">{{ __('Nome') }}</label>
-                                        <input id="nome" type="text" class="form-control{{ $errors->has('nome') ? ' is-invalid' : '' }}" name="nome" value="{{ old('nome') }}" required autofocus>
-                                        @if ($errors->has('nome'))
+                                        <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
+                                        @if ($errors->has('name'))
                                         <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('nome') }}</strong>
+                                        <strong>{{ $errors->first('name') }}</strong>
                                     </span>
                                     @endif
                                     </div>
@@ -54,23 +54,23 @@
                                     
 
                                    <div class="form-group">
-                                        <label for="senha">{{ __('Senha') }}</label>
-                                        <input id="senha" type="password" class="form-control{{ $errors->has('senha') ? ' is-invalid' : '' }}" name="senha" required>
+                                        <label for="password">{{ __('Senha') }}</label>
+                                        <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
 
-                                        @if ($errors->has('senha'))
+                                        @if ($errors->has('password'))
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('senha') }}</strong>
+                                        <strong>{{ $errors->first('password') }}</strong>
                                     </span>
                                     @endif
                                     </div>
                                     
                                     <div class="form-group">
-                                        <label for="senha-confirm">{{ __('Confirmar Senha') }}</label>
-                                        <input id="senha-confirm" type="password" class="form-control" name="senha_confirmation" required>
+                                        <label for="password-confirm">{{ __('Confirmar Senha') }}</label>
+                                        <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
 
-                                        @if ($errors->has('senha'))
+                                        @if ($errors->has('password'))
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('senha') }}</strong>
+                                        <strong>{{ $errors->first('password') }}</strong>
                                     </span>
                                      @endif
                                     </div>

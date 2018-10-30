@@ -4,7 +4,8 @@
 <div class="container">
 
   <div class="row justify-content-center">
-   <div class="row"> <div class="col-lg-8"><h2> Gestão de Associações -Xitiques</h2></div></div>
+
+   <div class="row"> <div class="col-lg-8"><h2> Gestão de Associações</h2></div></div>
                     <div class="col-lg-5">
                        
                         <br>
@@ -28,7 +29,7 @@
                                 <form method="POST" action="{{ route('login') }}">
                                      @csrf
                                     <div class="form-group">
-                                        <label for="emailaddress">{{ __('E-Mail Address') }}</label>
+                                        <label for="emailaddress">{{ __('Endereço e-mail') }}</label>
                                         <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
 
                                 @if ($errors->has('email'))
@@ -40,8 +41,8 @@
 
                                     <div class="form-group">
                                         
-                                        <label for="password">{{ __('Password') }}</label>
-                                        <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+                                        <label for="password">{{ __('Senha') }}</label>
+                                        <input id="password" type="password" class="form-control{{ $errors->has('password') ? 'ínválido' : '' }}" name="password" required>
 
                                 @if ($errors->has('password'))
                                     <span class="invalid-feedback" role="alert">
@@ -55,14 +56,14 @@
                                             <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
                                     <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
+                                        {{ __('memorizar') }}
                                     </label>
                                     <a href="pages-recoverpw.html" class="text-muted float-right"><small>Esqueceu a senha?</small></a>
                                         </div>
                                     </div>
 
                                     <div class="form-group mb-0 text-center">
-                                        <button class="btn btn-primary" type="submit"> Log In </button>
+                                        <button class="btn btn-primary" type="submit"> Entrar </button>
                                     </div>
 
                                 </form>
@@ -72,7 +73,7 @@
 
                         <div class="row mt-3">
                     <div class="col-12 text-center">
-                        <p class="text-muted">Não tem conta? <a href="{{ route('register') }}" class="text-dark ml-1"><b>Regista-se</b></a></p>
+                        <p class="text-muted">Não tem conta? <a href="{{ route('register') }}" class="text-dark ml-1"><b>Registe-se</b></a></p>
                    
                     </div>  
                 </div>
