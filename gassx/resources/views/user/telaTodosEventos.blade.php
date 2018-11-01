@@ -46,9 +46,6 @@
 			                <div class="card-body">
 			                    <p class="card-text">{{$item->objectivo}}</p>
 			                     <a href="{{url('user/salvarParticipacao/'.$dados['usuario']->id.'/'.$item->id)}}" data-toggle="#con-close-modal" class="btn btn-primary sweet-1 botao" >Participar</a>
-
-			                    <a href="{{url('user/detalhesEvento/'.$dados['usuario']->id)}}"  class="card-link text-custom" id ="det_1"><i class="mdi mdi-arrow-right-bold-hexagon-outline" data-target=""></i>  detalhes</a>
-
 			                    <a href="{{url('user/detalhesTodosEvento_user/'.$dados['usuario']->id.'/'.$item->id)}}"  class="card-link text-custom" id ="det_1"><i class="mdi mdi-arrow-right-bold-hexagon-outline" data-target=""></i>detalhes</a>
 
 			                </div> <!-- end card-body-->
