@@ -14,7 +14,7 @@ class Quota extends Model
      * @var array
      */
     protected $fillable = [
-        'activo', 'mes_id', 'ano_id' ,'valor_multa_id', 'multa_id'
+        'activo', 'mes_id', 'ano_id' ,'valor_multa_id', 'multa_id', 'valor_quota_id',
     ];
 
      /**
