@@ -34,6 +34,8 @@ class QuotaController extends Controller{
 		
 		
 		return view("admin.telaQuotas", compact('dados'));
+		// $view = view("admin.telaQuotas",compact('dados'))->render();
+  //   	return response()->json(['html'=>$view]);
 	}
 
 

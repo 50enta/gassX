@@ -39,7 +39,7 @@
         <script src="{{asset('minton/js/modernizr.min.js')}}"></script>
         <script src="{{asset('minton/js/fullcalendar.min.css')}}"></script>
         <link href="{{asset('minton/plugins/fullcalendar/css/fullcalendar.min.css')}}" rel="stylesheet">
-        
+        <script src="http://demo.itsolutionstuff.com/plugin/jquery.js"></script>
         
         
     </head>
@@ -236,6 +236,16 @@
                                     <li><a href="{{url('/admin/parceiros/'.$dados['usuario']->id)}}">Parceiros</a></li>
                                     <li><a href="{{url('/admin/eventos/'.$dados['usuario']->id)}}">Eventos</a></li>
                                     <li><a href="{{url('/admin/outros/'.$dados['usuario']->id)}}">Outros</a></li>
+
+                                  {{--   <li><a href="#" onclick="irPara('/admin/quotas/{{$dados['usuario']->id}}')">Quotas</a></li>
+                                    <li><a href="#" onclick="irPara('/admin/contribuicoes/{{$dados['usuario']->id}}')">Contribuíções</a></li>
+                                    <li><a href="#" onclick="irPara('/admin/despesas/{{$dados['usuario']->id}}')">Despesas</a></li>
+                                    <li><a href="#" onclick="irPara('/admin/financas/{{$dados['usuario']->id}}')">Finanças</a></li>
+                                    <li><a href="#" onclick="irPara('/admin/membros/{{$dados['usuario']->id}}')">Membros</a></li>
+                                    <li><a href="#" onclick="irPara('/admin/parceiros/{{$dados['usuario']->id}}')">Parceiros</a></li>
+                                    <li><a href="#" onclick="irPara('/admin/eventos/{{$dados['usuario']->id}}')">Eventos</a></li>
+                                    <li><a href="#" onclick="irPara('/admin/outros/{{$dados['usuario']->id}}')">Outros</a></li> --}}
+
                                 </ul>
                             </li>
                         @endif
@@ -257,19 +267,21 @@
             <!-- ============================================================== -->                      
             <div class="content-page">
 
-               {{--  <br><br><br><br><br>
-                @foreach($dados['data'] as $k)
+                <br><br><br><br>
+              {{--   @foreach($dados['data'] as $k)
                         {{
                            $k
                     }} <br>
                 @endforeach --}}
               
                 <!-- Start content -->
-                     {{-- @yield('base') --}}
                      @yield('base', new Illuminate\Support\HtmlString(view('minton.inicio1')))
+                <div class="centro">
+
+                </div>
+
                 <footer class="footer">
-                        2018 © GassX <br/>
-                       
+                        2018 © GassX 
                 </footer>
    
             </div>
@@ -281,7 +293,7 @@
 
         </div>
         <!-- END wrapper -->
-
+        
 
     
         <script>
@@ -323,6 +335,7 @@
         <script src="{{asset('minton/plugins/bootstrap-daterangepicker/daterangepicker.js')}}"></script>
         
         <script src="{{asset('minton/pages/jquery.form-advanced.init.js')}}"></script>
+
         <!-- <script src="{{asset('minton/pages/jquery.wizard-init.js')}}" type="text/javascript"></script> -->
         <!-- Page js  -->
         <script src="{{asset('minton/pages/jquery.dashboard.js')}}"></script>
@@ -365,8 +378,8 @@
         <script type="text/javascript">
             jQuery(document).ready(function($) {
                 $('.counter').counterUp({
-                    delay: 100,
-                    time: 1200
+                    delay: 0,
+                    time: 120
                 });
             });
 
@@ -382,6 +395,7 @@
         </script>
 
         <script src="{{asset('minton/pages/datatables.editable.init.js')}}"></script>
+
         <script>
             var startDate = new Date();
             var fechaFin = new Date();
@@ -409,6 +423,7 @@
                 });
 
         </script>
+
         {{-- CENAS SOBRE TABELA PDF --}}
           <!-- Required datatable js -->
         <script src="{{asset('minton/plugins/datatables/jquery.dataTables.min.js')}}"></script>
@@ -470,6 +485,28 @@
             } );
 
         </script>
+
+
+        //para requisições ajax
+        <script type="text/javascript">
+                function irPara(rota){
+                        $.ajax(
+                        {
+                            // url: "/corpo",
+                            url: rota,
+                            type: 'GET',
+                        }).done( 
+                            function(data) 
+
+                            {
+                                $('.centro').html(data.html);
+                            }
+                        );
+                }
+                irPara("/principal/{{$dados['usuario']->id}}");
+        </script>
+
+
     </body>
 
 </html>
