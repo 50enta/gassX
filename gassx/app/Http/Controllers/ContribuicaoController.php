@@ -32,6 +32,8 @@ class ContribuicaoController extends Controller{
         $dados['data']['ano'] = $ano;
 
         return view('admin.telaContribuicoes', compact('dados'));
+     //    $view = view("admin.telaContribuicoes",compact('dados'))->render();
+    	// return response()->json(['html'=>$view]);
     }
 
 
