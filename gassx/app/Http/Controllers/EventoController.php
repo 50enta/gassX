@@ -72,7 +72,7 @@ class EventoController extends Controller{
 		$dados['data']['ano'] = $ano;
 		$dados['util'] = $u;
 
-        return view('user.telaMeusEventos', compact('dados'));
+        return view('user.telaTodosEventos', compact('dados'));
 	}
 
 
@@ -104,6 +104,14 @@ class EventoController extends Controller{
 		$data = explode('/', $request->all()['mes_ano']);
 		$mes = (int) $data[0];
 		$ano =  (int) $data[1];
+
+		$dados['lista_meus_eventos'] = $this->lista_meus_eventos($mes, $ano, $user_id);
+
+		$dados['data']['mes_int'] = $mes;
+		$u = new Util();
+		$dados['data']['mes_str'] = $u->getMes($mes);
+		$dados['data']['ano'] = $ano;
+		$dados['util'] = $u;
         
         return view('user.telaMeusEventos', compact('dados'));
 	}
@@ -151,7 +159,8 @@ class EventoController extends Controller{
 									'fechado' => false,
 									'decorreu' => false,
 									'dataInicio' =>  $daI.' 20:36:36',
-									'dataFim' => $daF.' 20:36:36'  ]);
+									'dataFim' => $daF.' 20:36:36' 
+							 ]);
 
 		if(!empty($ev)){
 			 return redirect("/admin/eventos/".$user_id)->with('message', "Sucesso!");
@@ -164,16 +173,18 @@ class EventoController extends Controller{
 
 	function lista_todos_eventos($mes, $ano){
 		$matriz = [];
-		
 
 		$evs = Evento::where('created_at', 'like', $ano.'-'.$mes.'%')->get();
 
+		$linha = 1;
+		$coluna = 1;
 		foreach ($evs as $key) {
-			$vetor = [];
-			for ($i=1; $i <= 4; $i++) { 
-				$vetor[] = $key;
+			$matriz[$linha][$coluna] = $key;
+			if ($coluna == 4) {
+				$linha++;
+				$coluna = 0;
 			}
-			$matriz[] = $vetor;
+			$coluna++;
 		}
 		return $matriz;
 	}
