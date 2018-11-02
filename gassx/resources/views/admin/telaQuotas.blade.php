@@ -1,5 +1,6 @@
 @extends('principal')
 @section('base')
+
 	 <!-- Start content -->
                 <div class="content">
                     <div class="container-fluid">
@@ -382,5 +383,42 @@
                     <!-- end container -->
                 </div>
                 <!-- end content -->
+
+{{-- 
+        <script>
+            var startDate = new Date();
+            var fechaFin = new Date();
+            var FromEndDate = new Date();
+            var ToEndDate = new Date();
+
+            $('.from').datepicker({
+                autoclose: true,
+                minViewMode: 1,
+                format: 'mm/yyyy'
+            }).on('changeDate', function(selected){
+                    startDate = new Date(selected.date.valueOf());
+                    startDate.setDate(startDate.getDate(new Date(selected.date.valueOf())));
+                    $('.to').datepicker('setStartDate', startDate);
+                }); 
+
+            $('.to').datepicker({
+                autoclose: true,
+                minViewMode: 1,
+                format: 'mm/yyyy'
+            }).on('changeDate', function(selected){
+                    FromEndDate = new Date(selected.date.valueOf());
+                    FromEndDate.setDate(FromEndDate.getDate(new Date(selected.date.valueOf())));
+                    $('.from').datepicker('setEndDate', FromEndDate);
+                });
+
+        </script>
+
+         {{-- Para formatação de tabelas - fltro e paginação --}}
+         <script type="text/javascript">
+            $(document).ready(function () {
+                $('#datatable').dataTable();
+            });
+        </script> --}}
+
 
 @endsection
