@@ -38,6 +38,7 @@ Route::group(['prefix' => 'user'], function () {
 
 
     Route::post('/salvarContribuicao/{user_id}',  'UserContribuicaoController@salvarContribuicao');
+    Route::post('/salvarPagamento/{user_id}',  'PagamentoController@salvarPagamento');
     Route::post('/salvarMembro/{user_id}',  'UserController@salvarMembro');
     Route::get('salvarParticipacao/{user_id}/{evento_id}', 'EventoUserController@salvarParticipacao');
     Route::get('cancelarParticipacao/{user_id}/{evento_id}', 'EventoUserController@cancelarParticipacao');

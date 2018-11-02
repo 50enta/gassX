@@ -1,6 +1,5 @@
 @extends('principal')
 
-
 @section('base')
 
  <div class="content">
@@ -25,7 +24,7 @@
                    		 <div style="padding-bottom: 18px;"class=""></div>
                    </div>
                 </div>
-            </div>
+        </div>
 
            
                

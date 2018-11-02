@@ -20,9 +20,6 @@
                                 </div>
                             </div>
                         </div>
-
-                    
-
                   <div class="row">
                     <div class="col-lg-9">
                       {{-- Visão geral dos mesmes --}}
@@ -34,7 +31,10 @@
                             <div class="col-12">
                                 <div id="con-close-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
                                         <div class="modal-dialog">
+                                            <form class="form-horizontal float-right" role="form" method="POST" action="{{ url('/user/salvarPagamento/'.$dados['usuario']->id) }}">
+                                        {{csrf_field() }}
                                             <div class="modal-content">
+
                                                 <div class="modal-header">
                                                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                                                     <h4 class="modal-title">
@@ -46,33 +46,34 @@
                                                         <div class="col-md-6">
                                                             <div class="form-group">
                                                                 <label for="field-1" class="control-label">Valor a pagar</label>
-                                                                 <input id="demo0" type="text" value="3" name="demo0" data-bts-min="0" data-bts-max="30" data-bts-init-val="" data-bts-step="1" data-bts-decimal="0" data-bts-step-interval="100" data-bts-force-step-divisibility="round" data-bts-step-interval-delay="500" data-bts-prefix="" data-bts-postfix="" data-bts-prefix-extra-class="" data-bts-postfix-extra-class="" data-bts-booster="true" data-bts-boostat="10" data-bts-max-boosted-step="false" data-bts-mousewheel="true" data-bts-button-down-class="btn btn-default" data-bts-button-up-class="btn btn-default"/>
+                                                                 <input id="demo0" type="text" value="3" name="demo0" data-bts-min="0" data-bts-max="30000" data-bts-init-val="" data-bts-step="1" data-bts-decimal="0" data-bts-step-interval="100" data-bts-force-step-divisibility="round" data-bts-step-interval-delay="500" data-bts-prefix="" data-bts-postfix="" data-bts-prefix-extra-class="" data-bts-postfix-extra-class="" data-bts-booster="true" data-bts-boostat="10" data-bts-max-boosted-step="false" data-bts-mousewheel="true" data-bts-button-down-class="btn btn-default" data-bts-button-up-class="btn btn-default"/>
                                                             </div>
                                                         </div>
                                                         <div class="col-md-6">
                                                                <div class="form-group">
                                                                 <label for="field-1" class="control-label">Multa</label>
-                                                                 <input id="demo0" type="text" value="3" name="demo0" data-bts-min="0" data-bts-max="30" data-bts-init-val="" data-bts-step="1" data-bts-decimal="0" data-bts-step-interval="100" data-bts-force-step-divisibility="round" data-bts-step-interval-delay="500" data-bts-prefix="" data-bts-postfix="" data-bts-prefix-extra-class="" data-bts-postfix-extra-class="" data-bts-booster="true" data-bts-boostat="10" data-bts-max-boosted-step="false" data-bts-mousewheel="true" data-bts-button-down-class="btn btn-default" data-bts-button-up-class="btn btn-default"/>
+                                                                 <input id="demo0" type="text" value="3" name="demo1" data-bts-min="0" data-bts-max="30000" data-bts-init-val="" data-bts-step="1" data-bts-decimal="0" data-bts-step-interval="100" data-bts-force-step-divisibility="round" data-bts-step-interval-delay="500" data-bts-prefix="" data-bts-postfix="" data-bts-prefix-extra-class="" data-bts-postfix-extra-class="" data-bts-booster="true" data-bts-boostat="10" data-bts-max-boosted-step="false" data-bts-mousewheel="true" data-bts-button-down-class="btn btn-default" data-bts-button-up-class="btn btn-default"/>
                                                             </div>
                                                         </div>
                                                     </div>
                                                      <div class="row">
-                                                        <div class="col-md-12">
+                                                        <div class="col-md-8">
                                                             <div class="form-group">
                                                                 <label for="field-1" class="control-label">Mês</label>
-                                                                <select class="form-control select2">
-                                                                    <option>Janeiro</option>
-                                                                    <option value="1">Fevereiro</option>
-                                                                    <option value="2">Março</option>
-                                                                    <option value="4">Abril</option>
-                                                                    <option value="3">Maio</option>
-                                                                    <option value="3">Junho</option>
-                                                                    <option value="3">julho</option>
-                                                                    <option value="3">Agosto</option>
-                                                                    <option value="3">Setembro</option>
-                                                                    <option value="3">Outubro</option>
-                                                                    <option value="3">Novembro</option>
-                                                                    <option value="3">Dezembro</option>
+                                                                <select name="mes" class="form-control select2">
+                                                                @foreach($dados['meses'] as $me)
+                                                                    <option value="{{$me->id}}">{{$me->mes}}</option>
+                                                                @endforeach
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                             <div class="form-group">
+                                                                <label for="field-1" class="control-label">Ano</label>
+                                                                <select name="ano" class="form-control select2">
+                                                                 @foreach($dados['anos'] as $me)
+                                                                    <option value="{{$me->id}}">{{$me->ano}}</option>
+                                                                 @endforeach
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -81,7 +82,7 @@
                                                         <div class="col-md-12">
                                                             <div class="form-group no-margin">
                                                                 <label for="field-7" class="control-label">Observações</label>
-                                                                <textarea class="form-control" id="field-7" placeholder="Qualquer coisa sobre a despesa"></textarea>
+                                                                <textarea name="descricao" class="form-control" id="field-7" placeholder="Qualquer coisa sobre a despesa"></textarea>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -91,6 +92,7 @@
                                                     <button type="submit" class="btn btn-info waves-effect waves-light">Concluir</button>
                                                 </div>
                                             </div>
+                                        </form>
                                         </div>
                                     </div><!-- /.modal -->
 
@@ -106,23 +108,11 @@
                                     <table class="table table-striped table-bordered toggle-circle m-b-0" data-page-size="7">
                                         <thead>
                                         <tr>
-
                                             <th data-toggle="true"></th>
-                                            @for($i = 1; $i <= $dados['data']['mes_int']; $i++)
-                                                <th data-toggle="true">{{$dados['util']->getMes($i)}}</th>
-                                            @endfor
-                                           {{--   <th data-toggle="true">Jan</th>
-                                           <th data-hide="phone">Fev</th>
-                                            <th data-hide="phone">Mar</th>
-                                            <th data-hide="phone, tablet">Abr</th>
-                                            <th data-hide="phone, tablet">Mai</th>
-                                            <th data-hide="phone, tablet">Jun</th>
-                                            <th data-hide="phone, tablet">Jul</th>
-                                            <th data-hide="phone, tablet">Ago</th>
-                                            <th data-hide="phone, tablet">Set</th>
-                                            <th data-hide="phone, tablet">Out</th>
-                                            <th data-hide="phone, tablet">Nov</th>
-                                            <th data-hide="phone, tablet">Dez</th> --}}
+                                            @foreach($dados['tab_pagamentos_do_ano'] as $m)
+                                                <th data-toggle="true">{{$m['mes']}}</th>
+                                            @endforeach
+                                        
                                         </tr>
                                         </thead>
                                         <div class="form-inline m-b-20">
@@ -130,37 +120,33 @@
                                         <tbody>
                                         <tr>
                                             <td>Estado</td>
-                                            @for($i = 1; $i <= $dados['data']['mes_int']; $i++)
+                                            @foreach($dados['tab_pagamentos_do_ano'] as $m)
                                               <td>
+                                                @if($m['estado'] == 'pago')
                                                 <span class="badge label-table badge-success">
-                                                    {{'pago'}}
+                                                    {{$m['estado']}}
                                                 </span>
+                                                @elseif($m['estado'] == 'não')
+                                                <span class="badge label-table badge-danger">
+                                                    {{$m['estado']}}
+                                                </span>
+                                                @endif
                                               </td>
-                                            @endfor
-                                             {{-- <td><span class="badge label-table badge-success">pago</span></td>
-                                             <td><span class="badge label-table badge-success">pago</span></td>
-                                             <td><span class="badge label-table badge-success">pago</span></td>
-                                             <td><span class="badge label-table badge-success">pago</span></td>
-                                            <td><span class="badge label-table badge-success">pago</span></td>
+                                            @endforeach
+                                             {{-- 
                                             <td><span class="badge label-table badge-warning">pend</span></td>
-                                            <td><span class="badge label-table badge-success">pago</span></td>
-                                             <td><span class="badge label-table badge-warning">pend</span></td>
-                                            <td><span class="badge label-table badge-danger">não</span></td>
-                                            <td><span class="badge label-table badge-danger">não</span></td>
-                                            <td><span class="badge label-table badge-danger">não</span></td>
-                                            <td><span class="badge label-table badge-danger">não</span></td> --}}
+                                             --}}
 
                                         </tr>
                                         <tr>
                                             <td>Multa</td>
-                                            @for($i = 1; $i <= $dados['data']['mes_int']; $i++)
+                                              @foreach($dados['tab_pagamentos_do_ano'] as $m)
                                               <td>
-                                               
-                                                    {{'0,0'}}
-                                                
+                                                    {{$m['multa']*100}}%
                                               </td>
-                                            @endfor
-                                           {{--  <td>0,00</td>
+                                             @endforeach
+                                           {{--  
+                                            <td>0,00</td>
                                             <td>0,00</td>
                                             <td>0,00</td>
                                             <td>0,00</td>
@@ -213,32 +199,32 @@
 
                                         <tbody>
                                         <tr>
-                                            <td>Tiger Nixon</td>
+                                            <td>pagamento</td>
                                             <td>Janeiro</td>
                                    
                                             <td>2011/04/25</td>
-                                            <td>$320,800</td>
+                                            <td>320,800</td>
                                         </tr>
                                         <tr>
-                                            <td>Cedric Kelly</td>
+                                            <td>xyz - abc</td>
                                             <td>Março</td>
                                       
                                             <td>2012/03/29</td>
                                             <td>Fevereiro</td>
                                         </tr>
                                         <tr>
-                                            <td>Airi Satou</td>
+                                            <td>pagando tudo</td>
                                             <td>Dezembro</td>
                                       
                                             <td>2008/11/28</td>
-                                            <td>$162,700</td>
+                                            <td>162,700</td>
                                         </tr>
                                         <tr>
-                                            <td>Brielle Williamson</td>
+                                            <td>liquidar divida</td>
                                             <td>Fevereiro</td>
                                        
                                             <td>2012/12/02</td>
-                                            <td>$372,000</td>
+                                            <td>372,000</td>
                                         </tr>
                                         
                                         </tbody>
