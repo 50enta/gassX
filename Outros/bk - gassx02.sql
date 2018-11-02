@@ -1,4 +1,4 @@
--- phpMyAdmin SQL Dump
+﻿-- phpMyAdmin SQL Dump
 -- version 4.7.9
 -- https://www.phpmyadmin.net/
 --
@@ -79,6 +79,7 @@ VALUES
 (null, 1,0,0, 'churasco nos Sumbane', 'Dar força a familia Sitoe pelo o acidente', 200, '2018-11-05 21:02:00', '2018-11-05 21:02:00', 1, 2, '2018-10-17 21:02:00', '2018-10-17 21:02:00'),
 (null, 1,0,0 ,'churasco nos Madlate', 'Dar força a familia Sitoe pelo o acidente', 321, '2018-11-05 21:02:00', '2018-11-05 21:02:00', 1,1,  '2018-10-17 21:02:00', '2018-10-17 21:02:00'),
 (null, 1,0,0 ,'evento XYZ', 'Dar força a familia Sitoe pelo o acidente', 0, '2018-11-05 21:02:00', '2018-11-05 21:02:00', 1, 3, '2018-10-17 21:02:00', '2018-10-17 21:02:00'),
+
 (null, 1,0,0, 'churasco no Sitoe', 'Dar força a familia Sitoe pelo o acidente', 74, '2018-11-05 21:02:00', '2018-11-05 21:02:00', 1, 3,  '2018-10-17 21:02:00', '2018-10-17 21:02:00'),
 (null, 1,0,0, 'evento 03', 'hmmmm, complicado. nem sei exatamente', 780, '2018-10-30', '2018-10-24', 1, 2, '2018-10-17 21:02:00', '2018-10-17 21:02:00');
 

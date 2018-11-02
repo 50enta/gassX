@@ -6,7 +6,6 @@
  <div class="content">
 	<div class="container-fluid">
 
-                        <!-- Page-Title -->
         <div class="row">
                  <div class="col-sm-12">
                      <div class="page-title-box">
@@ -44,7 +43,9 @@
 			                <div class="card-body">
 			                    <p class="card-text">{{$item->objectivo}}</p>
 			                    @if(!$item->fechado)
+
 			                     	<a href="{{url('user/cancelarParticipacao/'.$dados['usuario']->id.'/'.$item->id)}}" data-toggle="#con-close-modal" class="btn btn-danger sweet-1 botao" >Cancelar</a>
+
  								@endif
 			                    <a href="{{url('user/detalhesMeusEvento_user/'.$dados['usuario']->id.'/'.$item->id)}}"  class="card-link text-custom" id ="det_1"><i class="mdi mdi-arrow-right-bold-hexagon-outline" data-target=""></i>detalhes</a>
 			                </div> <!-- end card-body-->
@@ -58,7 +59,6 @@
       @endif  
 
 		
-
 
 	</div>
 

@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use App\Evento;
-use App\EventoUser;
+
 
 class EventoUserController extends Controller
 {
@@ -36,6 +36,7 @@ class EventoUserController extends Controller
 
 
 	public function salvarParticipacao($user_id, $evento_id){
+
 		$evu = EventoUser::create(['user_id' => $user_id, 
 									'evento_id' => $evento_id]);
 
@@ -44,6 +45,7 @@ class EventoUserController extends Controller
         } else{
             echo "Salvo sem sucesso";
         }
+
 	}
 
 	public function cancelarParticipacao($user_id, $evento_id){
