@@ -175,26 +175,26 @@ INSERT INTO `privilegio_users`
 --
 
 INSERT INTO `gasto_users`
- (`id`, `ativo`, `user_id`, `created_at`, `updated_at`)
+ (`id`, `ativo`, `valor`, `user_id`, `created_at`, `updated_at`)
   VALUES
-(null, 1, 2, '2018-10-17 17:04:04', '2018-10-17 17:04:04'),
-(null, 1, 3, '2018-10-17 17:04:04', '2018-10-17 17:04:04'),
-(null, 1, 2, '2018-10-17 17:04:04', '2018-10-17 17:04:04'),
-(null, 1, 1, '2018-10-17 17:04:04', '2018-10-17 17:04:04'),
-(null, 1, 1, '2018-10-17 17:04:04', '2018-10-17 17:04:04'),
-(null, 1, 1, '2018-10-17 17:04:04', '2018-10-17 17:04:04'),
-(null, 1, 1, '2018-10-17 17:04:04', '2018-10-17 17:04:04'),
-(null, 1, 3, '2018-10-17 17:04:04', '2018-10-17 17:04:04'),
-(null, 1, 2, '2018-10-17 17:04:04', '2018-10-17 17:04:04'),
-(null, 1, 3, '2018-10-17 17:04:04', '2018-10-17 17:04:04'),
-(null, 1, 2, '2018-10-17 17:04:04', '2018-10-17 17:04:04'),
-(null, 1, 1, '2018-10-17 17:04:04', '2018-10-17 17:04:04'),
-(null, 1, 1, '2018-10-17 17:04:04', '2018-10-17 17:04:04'),
-(null, 1, 1, '2018-10-17 17:04:04', '2018-10-17 17:04:04'),
-(null, 1, 1, '2018-10-17 17:04:04', '2018-10-17 17:04:04'),
-(null, 1, 1, '2018-10-17 17:04:04', '2018-10-17 17:04:04'),
-(null, 1, 2, '2018-10-17 17:04:04', '2018-10-17 17:04:04'),
-(null, 1, 1, '2018-10-17 17:04:04', '2018-10-17 17:04:04');
+(null, 1,345, 2, '2018-10-17 17:04:04', '2018-10-17 17:04:04'),
+(null, 1, 6463, 3, '2018-10-17 17:04:04', '2018-10-17 17:04:04'),
+(null, 1, 453, 2, '2018-10-17 17:04:04', '2018-10-17 17:04:04'),
+(null, 1, 645,  1, '2018-10-17 17:04:04', '2018-10-17 17:04:04'),
+(null, 1, 55, 1, '2018-10-17 17:04:04', '2018-10-17 17:04:04'),
+(null, 1, 453, 1, '2018-10-17 17:04:04', '2018-10-17 17:04:04'),
+(null, 1, 234, 1, '2018-10-17 17:04:04', '2018-10-17 17:04:04'),
+(null, 1, 76, 3, '2018-10-17 17:04:04', '2018-10-17 17:04:04'),
+(null, 1, 453, 2, '2018-10-17 17:04:04', '2018-10-17 17:04:04'),
+(null, 1, 453, 3, '2018-10-17 17:04:04', '2018-10-17 17:04:04'),
+(null, 1, 453, 2, '2018-10-17 17:04:04', '2018-10-17 17:04:04'),
+(null, 1, 43, 1, '2018-10-17 17:04:04', '2018-10-17 17:04:04'),
+(null, 1, 43, 1, '2018-10-17 17:04:04', '2018-10-17 17:04:04'),
+(null, 1, 443, 1, '2018-10-17 17:04:04', '2018-10-17 17:04:04'),
+(null, 1, 123, 1, '2018-10-17 17:04:04', '2018-10-17 17:04:04'),
+(null, 1, 43, 1, '2018-10-17 17:04:04', '2018-10-17 17:04:04'),
+(null, 1, 3, 2, '2018-10-17 17:04:04', '2018-10-17 17:04:04'),
+(null, 1, 213, 1, '2018-10-17 17:04:04', '2018-10-17 17:04:04');
 
 
 --
@@ -214,7 +214,7 @@ VALUES
 (null, 1, 432, '2018-10-17 17:04:04', '2018-10-17 17:04:04'),
 (null, 1, 098, '2018-10-17 17:04:04', '2018-10-17 17:04:04'),
 (null, 1, 453, '2018-10-17 17:04:04', '2018-10-17 17:04:04'),
-(null, 1, 0987, '2018-10-17 17:04:04', '2018-10-17 17:04:04'),
+(null, 1, 987, '2018-10-17 17:04:04', '2018-10-17 17:04:04'),
 (null, 1, 764, '2018-10-17 17:04:04', '2018-10-17 17:04:04'),
 (null, 1, 34, '2018-10-17 17:04:04', '2018-10-17 17:04:04'),
 (null, 1, 9865, '2018-10-17 17:04:04', '2018-10-17 17:04:04'),
@@ -853,9 +853,21 @@ INSERT INTO `contribuicaos`
 -- Extraindo dados da tabela `parceiros`
 --
 
-INSERT INTO `parceiros` (`id`, `ativo`, `created_at`, `updated_at`) VALUES
-(1, 1, '2018-10-17 12:00:00', NULL),
-(2, 1, '2018-10-17 17:04:04', NULL);
+INSERT INTO `parceiros`
+(`id`, `ativo`, `codigo`, `nome`, `descricao`, `endereco_id`, `created_at`, `updated_at`) 
+VALUES
+(NULL, 1,'20176543', 'Facebook', 'Empresa que actua no ramo de tecnologia, redes sociais mais concretamnte','2', '2018-10-17 12:00:00', NULL),
+(NULL, 1,'20176543', 'Oracle', 'Empresa que actua no ramo de tecnologia, redes sociais mais concretamnte','1', '2018-10-17 12:00:00', NULL),
+(NULL, 1,'20176543', 'INCM', 'Empresa que actua no ramo de tecnologia, redes sociais mais concretamnte','2', '2018-10-17 12:00:00', NULL),
+(NULL, 1,'20176543', 'MEDH', 'Empresa que actua no ramo de tecnologia, redes sociais mais concretamnte','1', '2018-10-17 12:00:00', NULL),
+(NULL, 1,'20176543', 'CDM', 'Empresa que actua no ramo de tecnologia, redes sociais mais concretamnte','3', '2018-10-17 12:00:00', NULL),
+(NULL, 1,'20176543', 'Coca - Cola', 'Empresa que actua no ramo de tecnologia, redes sociais mais concretamnte','1', '2018-10-17 12:00:00', NULL),
+(NULL, 1,'20176543', 'WhatsApp', 'Empresa que actua no ramo de tecnologia, redes sociais mais concretamnte','2', '2018-10-17 12:00:00', NULL),
+(NULL, 1,'20176543', 'Microsoft', 'Empresa que actua no ramo de tecnologia, redes sociais mais concretamnte','1', '2018-10-17 12:00:00', NULL),
+(NULL, 1,'20176543', 'Airbnb Inc.', 'Empresa que actua no ramo de tecnologia, redes sociais mais concretamnte','1', '2018-10-17 12:00:00', NULL),
+(NULL, 1,'20176543', 'Google LLC', 'Empresa que actua no ramo de tecnologia, redes sociais mais concretamnte','1', '2018-10-17 12:00:00', NULL),
+(NULL, 1,'20176543', 'Facebook', 'Empresa que actua no ramo de tecnologia, redes sociais mais concretamnte','1', '2018-10-17 12:00:00', NULL);
+
 
 
 --

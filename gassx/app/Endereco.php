@@ -33,4 +33,13 @@ class Endereco extends Model
     public function users(){
         return $this->hasMany('App\User');
     }
+
+    /**
+     * Retorna 
+     *
+     * @var array
+     */
+    public function parceiro(){
+        return $this->hasOne('App\Parceiro');
+    }
 }

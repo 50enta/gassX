@@ -15,7 +15,11 @@ class CreateParceirosTable extends Migration
         Schema::create('parceiros', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('ativo')->default('1');
-            
+            $table->string('codigo')->nullable();
+            $table->string('nome');
+            $table->string('descricao');
+            $table->integer('endereco_id')->unsigned();
+            $table->foreign('endereco_id')->references('id')->on('enderecos');
             $table->timestamps();
         });
     }
