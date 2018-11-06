@@ -267,8 +267,8 @@
             <!-- ============================================================== -->                      
             <div class="content-page">
 
-                <br><br><br><br>
-              {{--   @foreach($dados['data'] as $k)
+            {{--      <br><br><br><br>
+               @foreach($dados['data'] as $k)
                         {{
                            $k
                     }} <br>
@@ -276,9 +276,9 @@
               
                 <!-- Start content -->
                      @yield('base', new Illuminate\Support\HtmlString(view('minton.inicio1')))
-                <div class="centro">
+                {{-- <div class="centro">
 
-                </div>
+                </div> --}}
 
                 <footer class="footer">
                         2018 © GassX 

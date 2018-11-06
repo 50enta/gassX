@@ -66,6 +66,7 @@ Route::group(['prefix' => 'admin'], function () {
     Route::post('/salvarMulta/{user_id}', 'MultaController@salvarMulta'); 
     Route::post('/salvarValorQuota/{user_id}', 'ValorQuotaController@salvarValorQuota');
     Route::post('/salvarEvento/{user_id}',  'EventoController@salvarEvento');
+     Route::post('/salvarParceiro/{user_id}', 'ParceiroController@salvarParceiro'); 
     
     
 });

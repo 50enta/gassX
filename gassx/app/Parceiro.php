@@ -8,6 +8,14 @@ class Parceiro extends Model
 {
     //
 
+     /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'ativo', 'codigo',  'nome', 'descricao', 'endereco_id', 
+    ];
 
 	/**
      * Retorna todos os eventos de um certo utilizador
@@ -35,5 +43,14 @@ class Parceiro extends Model
      */
     public function parceiroContribuicaos(){
         return $this->hasMany('App\ParceiroContribuicao');
+    }
+
+    /**
+     * Retorna o 
+     *
+     * @var array
+     */
+    public function endereco(){
+        return $this->belongsTo('App\Endereco');
     }
 }
