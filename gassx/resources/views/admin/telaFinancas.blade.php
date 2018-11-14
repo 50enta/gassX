@@ -117,7 +117,7 @@
                             <!-- termina aqui -->
                          </div>
                          {{-- Exites --}}
-                         <div class="col-lg-6">
+                         <!-- <div class="col-lg-6">
                             <div class="col-12">
                                 <div class="card-box table-responsive">
                                     <h4 class="m-t-0 header-title">Saídas</h4>
@@ -147,9 +147,9 @@
                                         </tbody>
                                     </table>
                                 </div>
-                            </div> 
+                            </div>  -->
                             <!-- termina aqui -->
-                         </div>
+                         <!-- </div> -->
                   </div>
 
         </div>
