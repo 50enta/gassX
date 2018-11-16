@@ -267,6 +267,12 @@
             <!-- ============================================================== -->                      
             <div class="content-page">
 
+<<<<<<< HEAD
+
+                <!-- <br><br><br><br> -->
+                     
+=======
+>>>>>>> 1901396c1a30c27ecf932676edcf5d0e88e00b1b
                 <!-- Start content -->
                      @yield('base', new Illuminate\Support\HtmlString(view('minton.inicio1')))
 
